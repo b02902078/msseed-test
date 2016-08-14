@@ -13,13 +13,13 @@
 	* limitations under the License. 
 	*/
 	
-include_once 'taskmodel.php';
+include_once 'dbconfig.php';
 
 // Assumes database already exists.
 $conn = connect();
 
 $sql = "CREATE TABLE account(
-			id INT NOT NULL AUTO_INCREMENT, 
+			p_id INT NOT NULL AUTO_INCREMENT, 
 			PRIMARY KEY(id),
 			account VARCHAR(30),
 			password VARCHAR(30)

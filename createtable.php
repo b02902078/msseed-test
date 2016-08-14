@@ -33,4 +33,22 @@ catch(Exception $e){
 }
 
 echo "<h3>Table created.</h3>";
+
+$sql = "CREATE TABLE user(
+			p_id INT NOT NULL, 
+			PRIMARY KEY(p_id),
+			name VARCHAR(30),
+			nationality VARCHAR(30),
+			room VARCHAR(30),
+			team VARCHAR(30)
+			)";
+
+try{
+	$conn->query($sql);
+}
+catch(Exception $e){
+	print_r($e);
+}
+
+echo "<h3>Table created.</h3>";
 ?>

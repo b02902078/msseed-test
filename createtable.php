@@ -20,8 +20,8 @@ $conn = connect();
 
 $sql = "CREATE TABLE account(
 			p_id INT NOT NULL AUTO_INCREMENT, 
-			PRIMARY KEY(id),
-			account VARCHAR(30),
+			PRIMARY KEY(p_id),
+			email VARCHAR(30),
 			password VARCHAR(30)
 			)";
 

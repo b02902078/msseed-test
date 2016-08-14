@@ -16,7 +16,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 	if ($user != false) {
 
 		$stmt = $this->conn->prepare("SELECT * FROM user WHERE p_id = ?");
-		$stmt->bind_param("s", $user["p_id"]);
+		$stmt->bind_param("i", $user["p_id"]);
 		if ($stmt->execute())
 			$stmt->bind_result($_SESSION["p_id"], $_SESSION["name"], $_SESSION["nationality"], $_SESSION["room"], $_SESSION["team"]);
 		$_SESSION['login'] = true;

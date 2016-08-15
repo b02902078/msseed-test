@@ -12,9 +12,10 @@
 	* See the License for the specific language governing permissions and 
 	* limitations under the License. 
 	*/
-	
-include_once 'dbconfig.php';
-echo "in create table file";
+
+echo "in create table file";	
+/*include_once 'dbconfig.php';
+
 
 // Assumes database already exists.
 $conn = connect();
@@ -51,5 +52,5 @@ catch(Exception $e){
 	print_r($e);
 }
 
-echo "<h3>Table created.</h3>";
+echo "<h3>Table created.</h3>";*/
 ?>

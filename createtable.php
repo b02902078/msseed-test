@@ -12,7 +12,7 @@
 	* See the License for the specific language governing permissions and 
 	* limitations under the License. 
 	*/
-include_once 'dbconfig.php';
+require_once('dbconfig.php');
 echo "in create table file";	
 
 

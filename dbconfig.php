@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DB Testing</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  
+</head>
+
+<body>
+	<p>Testing my php</p>
+
 <?php
 /*fServer: msseed-server.database.windows.net,1433
 SQL Database: msseed
@@ -28,3 +40,7 @@ PHP Data Objects(PDO) Sample Code:*/
 		die(print_r($e));
 	}
 ?>
+
+</body>
+
+</html>

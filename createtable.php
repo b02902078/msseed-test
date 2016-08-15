@@ -12,9 +12,9 @@
 	* See the License for the specific language governing permissions and 
 	* limitations under the License. 
 	*/
-
-echo "in create table file";	
 include_once 'dbconfig.php';
+echo "in create table file";	
+
 
 
 // Assumes database already exists.

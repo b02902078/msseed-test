@@ -19,7 +19,7 @@ include_once 'dbconfig.php';
 
 // Assumes database already exists.
 $conn = connect();
-print_r($conn);
+echo($conn);
 /*
 $sql = "CREATE TABLE account(
 			p_id INT NOT NULL AUTO_INCREMENT, 

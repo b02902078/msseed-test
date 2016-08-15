@@ -30,10 +30,10 @@ SQL Database: msseed
 User Name: msseed
 
 PHP Data Objects(PDO) Sample Code:*/
-$host = "tcp:msseed-server.database.windows.net";
-$user = "msseed";
-$pwd = "12345678ms!";
-$db = "msseed";
+$host = "ap-cdbr-azure-east-c.cloudapp.net";
+$db = "testing_db";
+$user = "bc082d9a91de5b";
+$pwd = "8acf1055";
 try {
     $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );

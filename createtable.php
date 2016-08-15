@@ -14,6 +14,7 @@
 	*/
 	
 include_once 'dbconfig.php';
+echo "in create table file";
 
 // Assumes database already exists.
 $conn = connect();

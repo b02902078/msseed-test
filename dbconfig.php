@@ -15,6 +15,6 @@ $db = "msseed";
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	echo ("successfully connect");
+	print_r("successfully connect");
 	return $conn;
 ?>

@@ -34,14 +34,17 @@ $host = "ap-cdbr-azure-east-c.cloudapp.net";
 $db = "testing_db";
 $user = "bc082d9a91de5b";
 $pwd = "8acf1055";
-try {
-    $conn = new PDO( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
-    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    echo"<p>Successfully connected</p>"
-}
-catch(Exception $e){
-    die(var_dump($e));
-}
+
+    try{
+		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
+		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+		echo"<p>success</p>";
+	}
+	catch(Exception $e){
+		die(print_r($e));
+	}
+	return $conn;
+
 /*
     $host = "msseed-server.database.windows.net";
 	$user = "msseed";

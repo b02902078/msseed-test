@@ -12,13 +12,25 @@
 	* See the License for the specific language governing permissions and 
 	* limitations under the License. 
 	*/
-require_once('dbconfig.php');
+
 echo "in create table file";	
 
 
 
 // Assumes database already exists.
-$conn = connect();
+$host = "msseed-server.database.windows.net";
+$user = "msseed";
+$pwd = "12345678ms!";
+$db = "msseed";
+
+// DB connection info
+
+	try{
+		$conn = new mysqli($host, $user, $pwd, $db);
+	catch(Exception $e){
+		die(print_r($e));
+	}
+	print_r("successfully connect");
 echo($conn);
 /*
 $sql = "CREATE TABLE account(

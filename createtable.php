@@ -14,12 +14,12 @@
 	*/
 
 echo "in create table file";	
-/*include_once 'dbconfig.php';
+include_once 'dbconfig.php';
 
 
 // Assumes database already exists.
 $conn = connect();
-
+/*
 $sql = "CREATE TABLE account(
 			p_id INT NOT NULL AUTO_INCREMENT, 
 			PRIMARY KEY(p_id),

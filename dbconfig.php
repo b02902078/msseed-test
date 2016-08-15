@@ -17,4 +17,5 @@ $db = "msseed";
 	}
 	print_r("successfully connect");
 	return $conn;
+}
 ?>

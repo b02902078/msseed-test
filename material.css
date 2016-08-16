@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 499px){
 .nav-tabs > li > a {
-    padding: 5px;
+    padding: 10px;
 }
 
 .tab-content {

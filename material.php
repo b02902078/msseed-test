@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  header('Cache-Control: no-cache');
+  header('Pragma: no-cache');
+  $_SESSION["s_team"] = 'A';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,11 +39,10 @@
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
             <div class="count raw-count">
 <?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
+	
 	require_once "getitems.php";
 	#prepareResource();
-	$items = getGroupResources('A');
+	$items = getGroupResources($_SESSION["s_team"]);
 	if(!empty($items))
 	{
 		foreach($items as $item)

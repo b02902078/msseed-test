@@ -17,7 +17,7 @@ function connect()
 {
 	// DB connection info
 	$host = "ap-cdbr-azure-east-c.cloudapp.net";
-	$db = "testing_db";
+	$db = "acsm_5e80ee07b9a555e";
 	$user = "bc082d9a91de5b";
 	$pwd = "8acf1055";
 	try{

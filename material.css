@@ -1,0 +1,82 @@
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd; 
+    padding: 0.5em;
+}
+
+.tab-pane {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 1em;
+}
+
+/* Block */
+.wrapper {   
+    border-radius: 30px;   
+    padding: 1em;
+    padding-bottom: 0.5em;
+    position: relative;
+}
+.raw-wrapper {
+    border: 0.5em solid white;
+    background: #73AD21;
+}
+.component-wrapper {
+    border: 0.5em solid white;
+    background: #F3F781;
+}
+.symbol-wrapper {
+}
+
+/* Image */
+.icon-materials {
+    width: 100%;
+    height: 100%
+}
+.icon-components {
+    width: 100%;
+    height: 100%
+}
+.icon-equal {
+    margin-top: 0.5em;
+    height: 4em;
+}
+
+
+/* Number Count */
+.count {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 2em;
+}
+.compose-count {
+    font-size: 1em;
+}
+.raw-count {
+    color: blue;
+}
+.component-count {
+    color: orange;
+}
+
+/* Name */
+.name {
+    padding-top: 0.5em;
+    font-weight: bold;
+    font-size: 1em;
+}
+.compose-name {
+    font-size: 0.9em;
+}
+
+.ok-button {
+    margin-top: 2em;
+}
+
+

@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  header('Cache-Control: no-cache');
-  header('Pragma: no-cache');
-  $_SESSION['s_team'] = 'A';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,31 +31,36 @@
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
             <div class="count raw-count">
-              <?php
-              require_once "getitems.php";
-	             #prepareResource();
-              $items = getGroupResources($_SESSION['s_team']);
-              if(!empty($items)) {
-                foreach($items as $item) {
-                  echo $item[2];
-                }
-              }
-             ?>
-           </div>
-           <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">
-           <p class="name raw-name text-center">魔法粉末</p>
-         </div>
-         <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-          <div class="count raw-count">
-            <?php		
-            if(!empty($items)) {
-                foreach($items as $item) {
-                  echo $item[3];
-                }
-              }
-           }
-           ?>
-         </div>
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	#prepareResource();
+	$items = getGroupResources('A');
+	if(!empty($items))
+	{
+		foreach($items as $item)
+		{
+			echo $item[2];
+		}
+	}
+?>
+			</div>
+            <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">
+            <p class="name raw-name text-center">魔法粉末</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">
+<?php		
+	if(!empty($items))
+	{
+		foreach($items as $item)
+		{
+			echo $item[3];
+		}
+	}
+?>
+	</div>
             <img src="png/s_raw/cloth.png" class="img-responsive icon-materials" alt="布">
             <p class="name raw-name text-center">布</p>
           </div>

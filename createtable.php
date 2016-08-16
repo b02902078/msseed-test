@@ -18,13 +18,12 @@ include_once 'taskmodel.php';
 // Assumes database already exists.
 $conn = connect();
 
-$sql = "CREATE TABLE items(
+$sql = "CREATE TABLE account(
 			id INT NOT NULL AUTO_INCREMENT, 
 			PRIMARY KEY(id),
-			name VARCHAR(30),
-			category VARCHAR(30),
-			date DATE,
-			is_complete  BOOL)";
+			account VARCHAR(30),
+			password VARCHAR(30)
+			)";
 
 try{
 	$conn->query($sql);

@@ -27,9 +27,11 @@
   <div class="container">
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#raw">原料</a></li>
+      <li><a data-toggle="tab" href="#special">特殊原料</a></li>
       <li><a data-toggle="tab" href="#component">零件</a></li>
-      <li><a data-toggle="tab" href="#transport">交通工具</a></li>
       <li><a data-toggle="tab" href="#compose">合成</a></li>
+      <li><a data-toggle="tab" href="#transport">交通工具</a></li>
+      
     </ul>
 
     <div class="tab-content">
@@ -132,8 +134,53 @@
         </div>
       </div>
 
+      <!-- Special Materials -->
+      <div id="special" class="tab-pane fade">
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][27]; } ?></div>
+            <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">
+            <p class="name raw-name text-center">麋鹿</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][28]; } ?></div>
+            <img src="png/s_raw/cloth.png" class="img-responsive icon-materials" alt="布">
+            <p class="name raw-name text-center">S logo</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][29]; } ?></div>
+            <img src="png/s_raw/ruby.png" class="img-responsive icon-materials" alt="紅寶石">
+            <p class="name raw-name text-center">叫聲</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][30]; } ?></div>
+            <img src="png/s_raw/shaft.png" class="img-responsive icon-materials" alt="轉軸">
+            <p class="name raw-name text-center">SD卡</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][31]; } ?></div>
+            <img src="png/s_raw/fire.png" class="img-responsive icon-materials" alt="熊熊烈火">
+            <p class="name raw-name text-center">飛彈</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][32]; } ?></div>
+            <img src="png/s_raw/seed.png" class="img-responsive icon-materials" alt="種子">
+            <p class="name raw-name text-center">空姐</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][33]; } ?></div>
+            <img src="png/s_raw/water.png" class="img-responsive icon-materials" alt="生命之水">
+            <p class="name raw-name text-center">LED燈</p>
+          </div>
+          <div class="col-md-2 col-xs-3">
+          </div>
+        </div>
+      </div>
+
       <!-- Components -->
-      <div id="component" class="tab-pane fade in active">
+      <div id="component" class="tab-pane fade">
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper">
             <div class="count component-count"><?php if(!empty($items)) { echo $items[0][17]; } ?></div>
@@ -193,7 +240,7 @@
       </div>
 
       <!-- Compose List -->
-      <div id="compose" class="tab-pane fade in active">
+      <div id="compose" class="tab-pane fade">
         <!-- 魔法石 -->
         <div class="row">
           <div class="col-xs-1 wrapper">
@@ -649,90 +696,13 @@
           </div>         
         </div>
       </div>
+
+      <!-- Transportation -->
+      <div id="transport" class="tab-pane fade">
+      </div>
+
     </div>
   </div>
-
-<!--
-        Raw Materials
-        <table class="table-bordered table-responsive table-sm materials">
-          <tr>
-            <td><img src="png/material_test.png"/></td>
-            <td>魔法粉末<br>3</td> 
-            <td></td>
-            <td>布<br>3</td> 
-            <td></td>
-            <td>紅寶石<br>3</td> 
-            <td></td>
-            <td>轉軸<br>3</td> 
-          </tr>
-          <tr>
-            <td><img src="png/material_test.png"/></td>
-            <td>熊熊烈火<br>3</td> 
-            <td></td>
-            <td>種子<br>3</td> 
-            <td></td>
-            <td>生命之水<br>3</td> 
-            <td></td>
-            <td>神聖光芒<br>3</td> 
-          </tr>
-          <tr>
-            <td><img src="png/material_test.png"/></td>
-            <td>麻<br>3</td> 
-            <td></td>
-            <td>螺絲<br>3</td> 
-            <td></td>
-            <td>塑料<br>3</td> 
-            <td></td>
-            <td>十萬伏特<br>3</td> 
-          </tr>
-          <tr>
-            <td><img src="png/material_test.png"/></td>
-            <td>人體工學<br>3</td> 
-            <td></td>
-            <td>想像力<br>3</td> 
-            <td></td>
-            <td>金屬<br>3</td> 
-            <td></td>
-            <td>大地氧氣<br>3</td> 
-          </tr>
-        </table>
-      </div>
-      <div id="component" class="tab-pane fade">
-
-      </div>
-      <div id="transport" class="tab-pane fade">
-
-      </div>
-      <div id="compose" class="tab-pane fade">
-        <table class="table-responsive table-striped table-sm">
-          <tr>
-            <td><img src="png/material_test.png"/></td>
-            <td>魔法粉末<br>3</td> 
-            <td class="text-center">+</td>
-            <td><img src="png/material_test.png"/></td>
-            <td>布<br>3</td> 
-            <td class="text-center">=</td>
-            <td><img src="png/material_test.png"/></td>
-            <td>轉軸</td>
-            <td class="text-center"><form><input type="text" name="amount">個</form></td>
-            <td><div class="ok-btn">OK</div></td>
-          </tr>
-          <tr>
-            <td><img src="png/material_test.png"/></td>
-            <td>魔法粉末<br>3</td> 
-            <td class="text-center">+</td>
-            <td><img src="png/material_test.png"/></td>
-            <td>布<br>3</td> 
-            <td class="text-center">=</td>
-            <td><img src="png/material_test.png"/></td>
-            <td>轉軸</td>
-            <td class="text-center"><form><input type="text" name="amount">個</form></td>
-            <td><div class="ok-btn">OK</div></td>
-          </tr>
-        </table>
-      </div>
-      -->
-  
 
   
 

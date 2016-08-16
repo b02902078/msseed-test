@@ -59,7 +59,7 @@
     font-size: 16px;
 }
 .raw-count {
-    color: #113829;
+    color: #0f6537;
 }
 .component-count {
     color: orange;
@@ -85,8 +85,8 @@
 }
 
 .tab-pane {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     padding: 12px;
 }
 
@@ -117,7 +117,7 @@
     position: absolute;
     top: 5%;
     left: 10%;
-    font-size: 12px;
+    font-size: 14px;
 }
 .compose-count {
     font-size: 8px;
@@ -143,8 +143,8 @@
 }
 
 .tab-pane {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     padding: 16px;
 }
 

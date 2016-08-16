@@ -45,7 +45,7 @@
 	$items = getGroupResources($_SESSION["s_team"]);
 	if(!empty($items))
 	{
-		var_dump($items[0]);
+		echo $items[0][1];
 	}
 ?>
 			</div>

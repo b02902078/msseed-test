@@ -16,10 +16,10 @@
 function connect()
 {
 	// DB connection info
-	$host = "mysql12.000webhost.com";
-	$user = "a8479004_msseed";
-	$pwd = "12345678ms!";
-	$db = "a8479004_msseed";
+	$host = "ap-cdbr-azure-east-c.cloudapp.net";
+	$user = "bc082d9a91de5b";
+	$pwd = "8acf1055";
+	$db = "acsm_5e80ee07b9a555e";
 	try{
 		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );

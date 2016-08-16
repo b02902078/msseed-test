@@ -38,108 +38,94 @@
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
             <div class="count raw-count">
-<?php
-	
-	require_once "getitems.php";
-	#prepareResource();
-	$items = getGroupResources($_SESSION["s_team"]);
-	if(!empty($items))
-	{
-		echo $items[0][1];
-	}
-?>
-			</div>
+              <?php  
+              require_once "getitems.php";
+              #prepareResource();
+              $items = getGroupResources($_SESSION["s_team"]);
+              if(!empty($items)) { echo items[0][1]; }
+              ?>
+            </div>
             <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">
             <p class="name raw-name text-center">魔法粉末</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">
-<?php		
-	if(!empty($items))
-	{
-		foreach($items as $item)
-		{
-			echo $item[3];
-		}
-	}
-?>
-	</div>
+            <div class="count raw-count"><?php	if(!empty($items)) { echo items[0][2]; } ?></div>
             <img src="png/s_raw/cloth.png" class="img-responsive icon-materials" alt="布">
             <p class="name raw-name text-center">布</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][3]; } ?></div>
             <img src="png/s_raw/ruby.png" class="img-responsive icon-materials" alt="紅寶石">
             <p class="name raw-name text-center">紅寶石</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][4]; } ?></div>
             <img src="png/s_raw/shaft.png" class="img-responsive icon-materials" alt="轉軸">
             <p class="name raw-name text-center">轉軸</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][5]; } ?></div>
             <img src="png/s_raw/fire.png" class="img-responsive icon-materials" alt="熊熊烈火">
             <p class="name raw-name text-center">熊熊烈火</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][6]; } ?></div>
             <img src="png/s_raw/seed.png" class="img-responsive icon-materials" alt="種子">
             <p class="name raw-name text-center">種子</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][7]; } ?></div>
             <img src="png/s_raw/water.png" class="img-responsive icon-materials" alt="生命之水">
             <p class="name raw-name text-center">生命之水</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][8]; } ?><</div>
             <img src="png/s_raw/light.png" class="img-responsive icon-materials" alt="神聖光芒">
             <p class="name raw-name text-center">神聖光芒</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][9]; } ?><</div>
             <img src="png/s_raw/flax.png" class="img-responsive icon-materials" alt="麻">
             <p class="name raw-name text-center">麻</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][10]; } ?><</div>
             <img src="png/s_raw/screw.png" class="img-responsive icon-materials" alt="螺絲">
             <p class="name raw-name text-center">螺絲</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][11]; } ?><</div>
             <img src="png/s_raw/plastic.png" class="img-responsive icon-materials" alt="塑料">
             <p class="name raw-name text-center">塑料</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][12]; } ?><</div>
             <img src="png/s_raw/electron.png" class="img-responsive icon-materials" alt="十萬伏特">
             <p class="name raw-name text-center">十萬伏特</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][13]; } ?><</div>
             <img src="png/s_raw/ergonomic.png" class="img-responsive icon-materials" alt="人體工學">
             <p class="name raw-name text-center">人體工學</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][14]; } ?><</div>
             <img src="png/s_raw/imagine.png" class="img-responsive icon-materials" alt="想像力">
             <p class="name raw-name text-center">想像力</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][15]; } ?><</div>
             <img src="png/s_raw/metal.png" class="img-responsive icon-materials" alt="金屬">
             <p class="name raw-name text-center">金屬</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count"><?php  if(!empty($items)) { echo items[0][16]; } ?><</div>
             <img src="png/s_raw/air.png" class="img-responsive icon-materials" alt="大地氧氣">
             <p class="name raw-name text-center">大地氧氣</p>
           </div>

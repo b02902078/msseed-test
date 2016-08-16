@@ -31,6 +31,7 @@
       <li><a data-toggle="tab" href="#special">特殊原料</a></li>
       <li><a data-toggle="tab" href="#component">零件</a></li>
       <li><a data-toggle="tab" href="#transport">交通工具</a></li>
+      
     </ul>
 
     <div class="tab-content">
@@ -248,24 +249,22 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">魔法石 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][1]; } ?>/30</div>
-                    <img src="png/s_raw/magic_powder.png" class="img-responsive icon-components" alt="魔法粉末">
-                    <p class="name raw-name text-center">魔法粉末</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/18</div>
-                    <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
-                    <p class="name raw-name text-center">神聖光芒</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][14]; } ?>/36</div>
-                    <img src="png/s_raw/imagine.png" class="img-responsive icon-components" alt="想像力">
-                    <p class="name raw-name text-center">想像力</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][1]; } ?>/30</div>
+                  <img src="png/s_raw/magic_powder.png" class="img-responsive icon-components" alt="魔法粉末">
+                  <p class="name raw-name text-center">魔法粉末</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/18</div>
+                  <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+                  <p class="name raw-name text-center">神聖光芒</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][14]; } ?>/36</div>
+                  <img src="png/s_raw/imagine.png" class="img-responsive icon-components" alt="想像力">
+                  <p class="name raw-name text-center">想像力</p>
                 </div>
               </div>
             </div>
@@ -283,24 +282,22 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">控制面板 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/24</div>
-                    <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
-                    <p class="name raw-name text-center">金屬</p>
-                  </div> 
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/21</div>
-                    <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
-                    <p class="name raw-name text-center">神聖光芒</p>
-                  </div>        
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/18</div>
-                    <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
-                    <p class="name raw-name text-center">十萬伏特</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/24</div>
+                  <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+                  <p class="name raw-name text-center">金屬</p>
+                </div> 
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/21</div>
+                  <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+                  <p class="name raw-name text-center">神聖光芒</p>
+                </div>        
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/18</div>
+                  <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
+                  <p class="name raw-name text-center">十萬伏特</p>
                 </div>
               </div>
             </div>
@@ -318,24 +315,22 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">座位 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][2]; } ?>/12</div>
-                    <img src="png/s_raw/cloth.png" class="img-responsive icon-components" alt="布">
-                    <p class="name raw-name text-center">布</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/30</div>
-                    <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
-                    <p class="name raw-name text-center">塑料</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/24</div>
-                    <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
-                    <p class="name raw-name text-center">人體工學</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][2]; } ?>/12</div>
+                  <img src="png/s_raw/cloth.png" class="img-responsive icon-components" alt="布">
+                  <p class="name raw-name text-center">布</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/30</div>
+                  <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
+                  <p class="name raw-name text-center">塑料</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/24</div>
+                  <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
+                  <p class="name raw-name text-center">人體工學</p>
                 </div>
               </div>
             </div>
@@ -353,24 +348,22 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">方向盤 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/15</div>
-                    <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
-                    <p class="name raw-name text-center">塑料</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/24</div>
-                    <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
-                    <p class="name raw-name text-center">螺絲</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/30</div>
-                    <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
-                    <p class="name raw-name text-center">轉軸</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/15</div>
+                  <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
+                  <p class="name raw-name text-center">塑料</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/24</div>
+                  <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+                  <p class="name raw-name text-center">螺絲</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/30</div>
+                  <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
+                  <p class="name raw-name text-center">轉軸</p>
                 </div>
               </div>
             </div>
@@ -388,24 +381,22 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">繩子 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][9]; } ?>/30</div>
-                    <img src="png/s_raw/flax.png" class="img-responsive icon-components" alt="麻">
-                    <p class="name raw-name text-center">麻</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/21</div>
-                    <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
-                    <p class="name raw-name text-center">神聖光芒</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/24</div>
-                    <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
-                    <p class="name raw-name text-center">生命之水</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][9]; } ?>/30</div>
+                  <img src="png/s_raw/flax.png" class="img-responsive icon-components" alt="麻">
+                  <p class="name raw-name text-center">麻</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/21</div>
+                  <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+                  <p class="name raw-name text-center">神聖光芒</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/24</div>
+                  <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
+                  <p class="name raw-name text-center">生命之水</p>
                 </div>
               </div>
             </div>
@@ -423,29 +414,27 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">檜木 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/30</div>
-                    <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
-                    <p class="name raw-name text-center">生命之水</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/18</div>
-                    <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
-                    <p class="name raw-name text-center">神聖光芒</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][6]; } ?>/10</div>
-                    <img src="png/s_raw/seed.png" class="img-responsive icon-components" alt="種子">
-                    <p class="name raw-name text-center">種子</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/12</div>
-                    <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
-                    <p class="name raw-name text-center">大地氧氣</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/30</div>
+                  <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
+                  <p class="name raw-name text-center">生命之水</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/18</div>
+                  <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+                  <p class="name raw-name text-center">神聖光芒</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][6]; } ?>/10</div>
+                  <img src="png/s_raw/seed.png" class="img-responsive icon-components" alt="種子">
+                  <p class="name raw-name text-center">種子</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/12</div>
+                  <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
+                  <p class="name raw-name text-center">大地氧氣</p>
                 </div>
               </div>
             </div>
@@ -463,29 +452,27 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">螺旋槳 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/21</div>
-                    <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
-                    <p class="name raw-name text-center">塑料</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/21</div>
-                    <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
-                    <p class="name raw-name text-center">轉軸</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/12</div>
-                    <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
-                    <p class="name raw-name text-center">金屬</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/18</div>
-                    <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
-                    <p class="name raw-name text-center">螺絲</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/21</div>
+                  <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
+                  <p class="name raw-name text-center">塑料</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/21</div>
+                  <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
+                  <p class="name raw-name text-center">轉軸</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/12</div>
+                  <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+                  <p class="name raw-name text-center">金屬</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/18</div>
+                  <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+                  <p class="name raw-name text-center">螺絲</p>
                 </div>
               </div>
             </div>
@@ -503,29 +490,27 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">門 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/15</div>
-                    <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
-                    <p class="name raw-name text-center">金屬</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/15</div>
-                    <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
-                    <p class="name raw-name text-center">螺絲</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/12</div>
-                    <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
-                    <p class="name raw-name text-center">熊熊烈火</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/21</div>
-                    <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
-                    <p class="name raw-name text-center">人體工學</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/15</div>
+                  <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+                  <p class="name raw-name text-center">金屬</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/15</div>
+                  <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+                  <p class="name raw-name text-center">螺絲</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/12</div>
+                  <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
+                  <p class="name raw-name text-center">熊熊烈火</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/21</div>
+                  <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
+                  <p class="name raw-name text-center">人體工學</p>
                 </div>
               </div>
             </div>
@@ -543,29 +528,27 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">噴射器 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/9</div>
-                    <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
-                    <p class="name raw-name text-center">金屬</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/21</div>
-                    <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
-                    <p class="name raw-name text-center">螺絲</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/15</div>
-                    <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
-                    <p class="name raw-name text-center">熊熊烈火</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/24</div>
-                    <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
-                    <p class="name raw-name text-center">十萬伏特</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/9</div>
+                  <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+                  <p class="name raw-name text-center">金屬</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/21</div>
+                  <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+                  <p class="name raw-name text-center">螺絲</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/15</div>
+                  <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
+                  <p class="name raw-name text-center">熊熊烈火</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/24</div>
+                  <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
+                  <p class="name raw-name text-center">十萬伏特</p>
                 </div>
               </div>
             </div>
@@ -583,36 +566,34 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">機艙 x 1 合成</h4>
             </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/12</div>
-                    <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
-                    <p class="name raw-name text-center">金屬</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/15</div>
-                    <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
-                    <p class="name raw-name text-center">大地氧氣</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/9</div>
-                    <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
-                    <p class="name raw-name text-center">熊熊烈火</p>
-                  </div>
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/9</div>
-                    <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
-                    <p class="name raw-name text-center">螺絲</p>
-                  </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/12</div>
+                  <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+                  <p class="name raw-name text-center">金屬</p>
                 </div>
-                <div class="row-fluid">
-                  <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/18</div>
-                    <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
-                    <p class="name raw-name text-center">十萬伏特</p>
-                  </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/15</div>
+                  <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
+                  <p class="name raw-name text-center">大地氧氣</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/9</div>
+                  <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
+                  <p class="name raw-name text-center">熊熊烈火</p>
+                </div>
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/9</div>
+                  <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+                  <p class="name raw-name text-center">螺絲</p>
+                </div>
+              </div>
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper raw-wrapper">
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/18</div>
+                  <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
+                  <p class="name raw-name text-center">十萬伏特</p>
                 </div>
               </div>
             </div>
@@ -630,7 +611,6 @@
 
     </div>
   </div>
-
   
 
 

@@ -42,7 +42,9 @@
               require_once "getitems.php";
               #prepareResource();
               $items = getGroupResources($_SESSION["s_team"]);
-              if(!empty($items)) { echo items[0][1]; }
+              if(!empty($items)) { 
+                echo items[0][1]; 
+              }
               ?>
             </div>
             <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">

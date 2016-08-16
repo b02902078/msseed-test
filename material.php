@@ -49,7 +49,7 @@
             <p class="name raw-name text-center">魔法粉末</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][1]; } ?></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][2]; } ?></div>
             <img src="png/s_raw/cloth.png" class="img-responsive icon-materials" alt="布">
             <p class="name raw-name text-center">布</p>
           </div>

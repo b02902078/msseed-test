@@ -43,7 +43,8 @@
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
-	require_once "getitems.php";
+	require_once "createtable.php";
+	/*require_once "getitems.php";
 	$items = getItems();
 	if(!empty($items))
 	{
@@ -97,6 +98,6 @@
 			</tr>
 		</table>
 		<input type="submit" value="Add item"/>
-	</form>
+	</form>*/
 </body>
 </html>

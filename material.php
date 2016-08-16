@@ -88,44 +88,44 @@
         </div>
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][9]; } ?></div>
             <img src="png/s_raw/flax.png" class="img-responsive icon-materials" alt="麻">
             <p class="name raw-name text-center">麻</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?></div>
             <img src="png/s_raw/screw.png" class="img-responsive icon-materials" alt="螺絲">
             <p class="name raw-name text-center">螺絲</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?></div>
             <img src="png/s_raw/plastic.png" class="img-responsive icon-materials" alt="塑料">
             <p class="name raw-name text-center">塑料</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?></div>
             <img src="png/s_raw/electron.png" class="img-responsive icon-materials" alt="十萬伏特">
             <p class="name raw-name text-center">十萬伏特</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?></div>
             <img src="png/s_raw/ergonomic.png" class="img-responsive icon-materials" alt="人體工學">
             <p class="name raw-name text-center">人體工學</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][14]; } ?></div>
             <img src="png/s_raw/imagine.png" class="img-responsive icon-materials" alt="想像力">
             <p class="name raw-name text-center">想像力</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?></div>
             <img src="png/s_raw/metal.png" class="img-responsive icon-materials" alt="金屬">
             <p class="name raw-name text-center">金屬</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"></div>
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?></div>
             <img src="png/s_raw/air.png" class="img-responsive icon-materials" alt="大地氧氣">
             <p class="name raw-name text-center">大地氧氣</p>
           </div>
@@ -136,56 +136,56 @@
       <div id="component" class="tab-pane fade in active">
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][17]; } ?></div>
             <img src="png/s_component/magic_stone.png" class="img-responsive icon-components" alt="魔法石">
             <p class="name component-name text-center">魔法石</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][18]; } ?></div>
             <img src="png/s_component/control_panel.png" class="img-responsive icon-components" alt="控制面板">
             <p class="name component-name text-center">控制面板</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][19]; } ?></div>
             <img src="png/s_component/seat.png" class="img-responsive icon-components" alt="座位">
             <p class="name component-name text-center">座位</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][20]; } ?></div>
             <img src="png/s_component/wheel.png" class="img-responsive icon-components" alt="方向盤">
             <p class="name component-name text-center">方向盤</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][21]; } ?></div>
             <img src="png/s_component/rope.png" class="img-responsive icon-components" alt="繩子">
             <p class="name component-name text-center">繩子</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][22]; } ?></div>
             <img src="png/s_component/cypress.png" class="img-responsive icon-components" alt="檜木">
             <p class="name component-name text-center">檜木</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][23]; } ?></div>
             <img src="png/s_component/propeller.png" class="img-responsive icon-components" alt="螺旋槳">
             <p class="name component-name text-center">螺旋槳</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][24]; } ?></div>
             <img src="png/s_component/door.png" class="img-responsive icon-components" alt="門">
             <p class="name component-name text-center">門</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][25]; } ?></div>
             <img src="png/s_component/jet.png" class="img-responsive icon-components" alt="噴射器">
             <p class="name component-name text-center">噴射器</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper">
-            <div class="count component-count">3</div>
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][26]; } ?></div>
             <img src="png/s_component/gun.png" class="img-responsive icon-components" alt="機艙">
             <p class="name component-name text-center">機艙</p>
           </div>

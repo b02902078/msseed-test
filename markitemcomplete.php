@@ -15,23 +15,9 @@
 	
 include_once 'taskmodel.php';
 
-// Assumes database already exists.
-$conn = connect();
+$id = $_GET['id'];
 
-$sql = "CREATE TABLE items(
-			id INT NOT NULL AUTO_INCREMENT, 
-			PRIMARY KEY(id),
-			name VARCHAR(30),
-			category VARCHAR(30),
-			date DATE,
-			is_complete  BOOL)";
+markItemComplete($id);
 
-try{
-	$conn->query($sql);
-}
-catch(Exception $e){
-	print_r($e);
-}
-
-echo "<h3>Table created.</h3>";
+header('Location: index.php');
 ?>

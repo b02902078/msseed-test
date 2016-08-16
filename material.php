@@ -2,7 +2,7 @@
   session_start();
   header('Cache-Control: no-cache');
   header('Pragma: no-cache');
-  $_SESSION["s_team"] = 'A';
+  $_SESSION["s_team"] = 'B';
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +44,9 @@
 	#prepareResource();
 	$items = getGroupResources($_SESSION["s_team"]);
 	if(!empty($items))
-	{
-		foreach($items as $item)
-		{
-			echo $item[2];
-		}
+	
+			echo $items[1];
+		
 	}
 ?>
 			</div>

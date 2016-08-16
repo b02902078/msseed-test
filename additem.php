@@ -15,12 +15,10 @@
 	
 include_once 'taskmodel.php';
 
-$item_name = $_POST['itemname'];
-$item_category = $_POST['itemcategory'];
-$item_date = $_POST['itemdate'];
-$is_complete = 0;
+$account = $_POST['account'];
+$password = $_POST['password'];
 
-addItem($item_name, $item_category, $item_date, $is_complete);
+addAccount($account, $password);
 
-header('Location: index.php');
+header('Location: superAdmin.php');
 ?>

@@ -19,5 +19,5 @@ $id = $_GET['id'];
 
 deleteItem($id);
 
-header('Location: index.php');
+header('Location: superAdmin.php');
 ?>

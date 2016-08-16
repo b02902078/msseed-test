@@ -7,6 +7,7 @@
     border-right: 1px solid #ddd; 
     border-bottom: 1px solid #ddd; 
     padding: 8px;
+    margin-bottom: 16px
 }
 
 .tab-pane {
@@ -80,6 +81,10 @@
 }
 
 @media screen and (max-width: 499px){
+.nav-tabs > li > a {
+    padding: 5px;
+}
+
 .tab-content {
     padding: 4px;
 }

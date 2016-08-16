@@ -44,9 +44,11 @@
 	#prepareResource();
 	$items = getGroupResources($_SESSION["s_team"]);
 	if(!empty($items))
-	
-			echo $items[1];
-		
+	{
+		foreach($items as $item)
+		{
+			echo $item[2];
+		}
 	}
 ?>
 			</div>

@@ -9,10 +9,10 @@ var main = function(){
   	$.ajax({
     type: 'POST',
     url: 'composeResource.php',
-    data: { component: $(this).parent().closest('.modal').attr('id') }
+    data: { component: $(this).parent().closest('.modal').attr('id') },
     success: function(data){
        alert(data);
-    },
+    }
   });
     });
 };

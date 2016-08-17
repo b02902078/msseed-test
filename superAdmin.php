@@ -61,7 +61,7 @@
   ?>
 
   <div class="container">
-    <div class="panel-group" id="accordion">
+    <div class="panel-group">
       <div class="panel panel-success">
         <div class="panel-heading" data-toggle="collapse" href="#collapse1">
           <h4 class="panel-title">Account</h4>

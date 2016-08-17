@@ -269,7 +269,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger" data-dismiss="">確定合成？</button>
             </div>
           </div>
         </div>

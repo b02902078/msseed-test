@@ -1,5 +1,5 @@
 var main = function(){
-    $('.ok-btn').click(function(){
+    $('.modal .btn-danger').click(function(){
         alert("Are you sure?");
     });
 };

@@ -1,6 +1,7 @@
 var main = function(){
     $('.modal .btn-danger').click(function(){
-        alert("Are you sure?");
+        var data = {'component': $(this).parent().closest('.modal').attr('id')};
+        $.post('composeResource.php', data);
     });
 };
 

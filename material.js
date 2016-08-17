@@ -1,6 +1,6 @@
 var main = function(){
     $('.modal .btn-danger').click(function(){
-        var data = {'component': $(this).parent().closest('.modal').attr('id')};
+        var data = { component: $(this).parent().closest('.modal').attr('id') };
         alert( "Data Loaded: " + data );
         /*$.post("composeResource.php", data)
         .done(function( result ) {

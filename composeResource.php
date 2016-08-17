@@ -1,3 +1,4 @@
 <? php
-   return 'Your ajax post data was '. $_POST['component'];
+	$result = $_POST['component'];
+   echo $result;
 ?>

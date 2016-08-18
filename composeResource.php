@@ -11,30 +11,30 @@ $team = 'A';
 
 $conn = connect();
 if ($conn->beginTransaction())
-	echo "success start\n\n";
+	echo "success start\n\n"; //
 else
-	echo "fail start\n\n";
+	echo "fail start\n\n"; //
 try 
 	{
 		$compose_function = getComposeFunction($conn, $component);
-		echo $compose_function[0][1];
+		echo $compose_function[0][1]; //
 		if(!empty($compose_function)) 
 		{
 			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
 			{
 				$material = $compose_function[0][$i];
-				echo "<p>".$material."</p>";
+				echo "<p>".$material."</p>"; //
 				$i++;
 				$amount = $compose_function[0][$i];
-				echo "<p>".$amount."</p>";
+				echo "<p>".$amount."</p>"; //
 				$current_amount = getGroupOneResource($conn, $team, $material);
-				if(!empty($current_amount)) 
-					echo "<p>".$current_amount[0][0]."</p>";
-				else
-					echo "<p>Empty!!</p>";}}
-				/*if ($current_amount < $amount) 
+				if(!empty($current_amount))  //
+					echo "<p>".$current_amount[0][0]."</p>"; //
+				else //
+					echo "<p>Empty!!</p>"; //
+				if ($current_amount < $amount) 
 				{ 
-					$conn->rollBack();
+					//$conn->rollBack();
 					echo false;
 				}
 				else {
@@ -43,7 +43,7 @@ try
 				}
 			}
 		}
-		$current_component = getGroupOneResource($conn, $team, $component);
+		/*$current_component = getGroupOneResource($conn, $team, $component);
 		$value = $current_component + 1;
 		updateGroupResource($conn, $team, $value, $component);
 		$conn->commit();

@@ -31,7 +31,7 @@ try
 				if(!empty($current_amount)) 
 					echo "<p>".$current_amount[0][0]."</p>";
 				else
-					echo "<p>Empty!!</p>"}}
+					echo "<p>Empty!!</p>";}}
 				/*if ($current_amount < $amount) 
 				{ 
 					$conn->rollBack();

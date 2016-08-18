@@ -43,6 +43,8 @@ try
 					echo "<p>".$value."</p>";
 					if (!updateGroupResource($conn, $team, $value, $material))
 						echo "fail update";
+					else
+						echo "sucees update";
 
 				}
 			}

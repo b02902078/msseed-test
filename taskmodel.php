@@ -152,14 +152,6 @@ function makeComponent($team, $component)
 		print "Query Failed!\n\n";
 		print "DBA FAIL:" . $e->getMessage();
 	};
-	// Start transaction
-	// Read from component function
-	// Check amount of material
-	// Enough -> update Resource table
-	// Commit transaction
-	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
-	$stmt = $conn->prepare($sql);
-	$stmt->execute();
 }
 */
 function addAccount($account, $password)

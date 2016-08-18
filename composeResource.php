@@ -35,13 +35,13 @@ try
 				if ($current_amount[0][0] < $amount) 
 				{ 
 					//$conn->rollBack();
-					echo false;
+					echo "false";
 				}
 				else 
 				{
 					$value = $current_amount[0][0] - $amount;
 					echo "<p>".$value."</p>";
-					//updateGroupResource($conn, $team, $value, $material);
+					updateGroupResource($conn, $team, $value, $material);
 				}
 			}
 		}

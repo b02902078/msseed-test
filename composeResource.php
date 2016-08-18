@@ -28,7 +28,10 @@ try
 				$amount = $compose_function[0][$i];
 				echo "<p>".$amount."</p>";
 				$current_amount = getGroupOneResource($conn, $team, $material);
-				echo "<p>".$current_amount[0][0]."</p>";}}
+				if(!empty($current_amount)) 
+					echo "<p>".$current_amount[0][0]."</p>";
+				else
+					echo "<p>Empty!!</p>"}}
 				/*if ($current_amount < $amount) 
 				{ 
 					$conn->rollBack();

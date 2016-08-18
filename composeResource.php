@@ -32,14 +32,14 @@ try
 					echo "<p>".$current_amount[0][0]."</p>"; //
 				else //
 					echo "<p>Empty!!</p>"; //
-				if ($current_amount < $amount) 
+				if ($current_amount[0][0] < $amount) 
 				{ 
 					//$conn->rollBack();
 					echo false;
 				}
 				else 
 				{
-					$value = $current_amount - $amount;
+					$value = $current_amount[0][0] - $amount;
 					echo "<p>".$value."</p>";
 					//updateGroupResource($conn, $team, $value, $material);
 				}

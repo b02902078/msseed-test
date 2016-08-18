@@ -50,7 +50,8 @@ try
 			}
 		}
 		$current_component[0][0] = getGroupOneResource($conn, $team, $component);
-		$value = $current_component + 1;
+		$value = $current_component[0][0] + 1;
+		echo "<p>".$value."</p>";
 		if (!updateGroupResource($conn, $team, $value, $component))
 			echo "Fail";
 		else

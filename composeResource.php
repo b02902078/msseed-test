@@ -12,6 +12,8 @@ $team = 'A';
 $conn = connect();
 if ($conn->beginTransaction())
 	echo "success start";
+else
+	echo "fail start";
 /*	try 
 	{
 		$compose_function = getComposeFunction($conn, $component);

@@ -29,7 +29,7 @@ try
 				echo "<p>".$amount."</p>";
 				$current_amount = getGroupOneResource($conn, $team, $material);
 				if(!empty($current_amount)) 
-					echo "<p>".$current_amount[1][0]."</p>";
+					echo "<p>".$current_amount[0][1]."</p>";
 				else
 					echo "<p>Empty!!</p>";}}
 				/*if ($current_amount < $amount) 

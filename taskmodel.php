@@ -114,7 +114,7 @@ function updateGroupResource($conn, $team, $value, $resource)
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
-
+/*
 function makeComponent($team, $component)
 {
 	$conn = connect();
@@ -161,7 +161,7 @@ function makeComponent($team, $component)
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
-
+*/
 function addAccount($account, $password)
 {
 	$conn = connect();

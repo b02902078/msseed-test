@@ -6,7 +6,7 @@ var main = function(){
 		// Update team resource
 		$.post("composeResource.php", data)
 		.done(function( result ) {
-			if (result == "TRUE") { 
+			if (result == "SUCCESS") { 
 				alert("合成成功！");
 			}
 			else {

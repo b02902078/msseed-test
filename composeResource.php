@@ -10,62 +10,50 @@ $component = 'magic_stone';
 $team = 'A';
 
 $conn = connect();
-if ($conn->beginTransaction())
-	echo "success start\n\n"; //
-else
-	echo "fail start\n\n"; //
+if (!$conn->beginTransaction()) { return "FAIL"; }
 try 
+{
+	$compose_function = getComposeFunction($conn, $component);
+	if(!empty($compose_function)) 
 	{
-		$compose_function = getComposeFunction($conn, $component);
-		echo $compose_function[0][1]; //
-		if(!empty($compose_function)) 
+		for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
 		{
-			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
-			{
-				$material = $compose_function[0][$i];
-				echo "<p>".$material."</p>"; //
-				$i++;
-				$amount = $compose_function[0][$i];
-				echo "<p>".$amount."</p>"; //
-				$current_amount = getGroupOneResource($conn, $team, $material);
-				if(!empty($current_amount))  //
-					echo "<p>".$current_amount[0][0]."</p>"; //
-				else //
-					echo "<p>Empty!!</p>"; //
-				if ($current_amount[0][0] < $amount) 
-				{ 
-					$conn->rollBack();
-					return "false";
-				}
-				else 
-				{
-					$value = $current_amount[0][0] - $amount;
-					echo "<p>".$value."</p>";
-					if (!updateGroupResource($conn, $team, $value, $material))
-						echo "fail update";
-					else
-						echo "sucess update";
+			$material = $compose_function[0][$i];
+			$i++;
+			$amount = $compose_function[0][$i];
+			$current_amount = getGroupOneResource($conn, $team, $material);
+			if(empty($current_amount)) { return "FAIL"; }
 
-				}
+			// Check amount
+			if ($current_amount[0][0] < $amount) 
+			{ 
+				$conn->rollBack();
+				return "FAIL";
+			}
+			else 
+			{
+				$value = $current_amount[0][0] - $amount;
+				if (!updateGroupResource($conn, $team, $value, $material)) { return "FAIL"; }
 			}
 		}
-		$current_component = getGroupOneResource($conn, $team, $component);
-		echo "<p>".$current_amount[0][0]."</p>";
-		$value = $current_component[0][0] + 1;
-		echo "<p>".$value."</p>";
-		if (!updateGroupResource($conn, $team, $value, $component))
-			echo "Fail";
-		else
-			echo "true";
-		$conn->commit();
-		echo "true";
 	}
-	catch (PDOException $e)
-	{
-		$conn->rollBack();
-		echo "Query Failed!\n\n";
-		echo "DBA FAIL:" . $e->getMessage();
-	};
+	else { return "FAIL"; }
+
+	// Update Component
+	$current_component = getGroupOneResource($conn, $team, $component);
+	if(empty($current_component)) { return "FAIL"; }
+	$value = $current_component[0][0] + 1;
+	if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL"; }
+	$conn->commit();
+	return "TRUE";
+}
+catch (PDOException $e)
+{
+	$conn->rollBack();
+	echo "Query Failed!\n\n";
+	echo "DBA FAIL:" . $e->getMessage();
+	return "FAIL";
+};
 
 // Try to update team resources
 ////$result = makeComponent($team, $component);

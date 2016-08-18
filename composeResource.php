@@ -49,7 +49,8 @@ try
 				}
 			}
 		}
-		$current_component[0][0] = getGroupOneResource($conn, $team, $component);
+		$current_component = getGroupOneResource($conn, $team, $component);
+		echo "<p>".$current_amount[0][0]."</p>";
 		$value = $current_component[0][0] + 1;
 		echo "<p>".$value."</p>";
 		if (!updateGroupResource($conn, $team, $value, $component))

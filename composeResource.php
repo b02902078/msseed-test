@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 include_once 'taskmodel.php';
 
@@ -42,8 +41,8 @@ $conn = connect();
 	}
 	catch (PDOException $e)
 	{
-		print "Query Failed!\n\n";
-		print "DBA FAIL:" . $e->getMessage();
+		echo "Query Failed!\n\n";
+		echo "DBA FAIL:" . $e->getMessage();
 	};
 
 // Try to update team resources

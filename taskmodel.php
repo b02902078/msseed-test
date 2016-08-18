@@ -53,7 +53,7 @@ function getGroupAllResources($team)
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
-/*
+
 function getGroupOneResource($conn, $team, $material)
 {
 	$sql = "SELECT '".$material."' FROM resource WHERE team='".$team."'";
@@ -67,7 +67,7 @@ function getComposeFunction($conn, $component)
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
-*/
+
 function getAllStrongholds()
 {
 	$conn = connect();

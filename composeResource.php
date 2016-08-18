@@ -44,16 +44,19 @@ try
 					if (!updateGroupResource($conn, $team, $value, $material))
 						echo "fail update";
 					else
-						echo "sucees update";
+						echo "sucess update";
 
 				}
 			}
 		}
-		/*$current_component = getGroupOneResource($conn, $team, $component);
+		$current_component[0][0] = getGroupOneResource($conn, $team, $component);
 		$value = $current_component + 1;
-		updateGroupResource($conn, $team, $value, $component);
-		$conn->commit();
-		echo true;*/
+		if (!updateGroupResource($conn, $team, $value, $component))
+			echo "Fail";
+		else
+			echo "true";
+		//$conn->commit();
+		echo "true";
 	}
 	catch (PDOException $e)
 	{

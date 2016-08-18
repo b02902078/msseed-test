@@ -20,14 +20,14 @@ try
 		echo $compose_function[0][1];
 		if(!empty($compose_function)) 
 		{
-			for ($i = 1; $compose_function[0][i] != '0'; $i++) 
-			{
-				$material = $compose_function[0][i];
+			for ($i = 1; $compose_function[0][i] !== '0'; $i++) 
+			{}}
+				/*$material = $compose_function[0][i];
 				echo $material;
 				i++;
 				$amount = $compose_function[0][i];
-				echo $amount;}}
-				/*$current_amount = getGroupOneResource($conn, $team, $material);
+				echo $amount;
+				$current_amount = getGroupOneResource($conn, $team, $material);
 				if ($current_amount < $amount) 
 				{ 
 					$conn->rollBack();

@@ -34,7 +34,7 @@ try
 					echo "<p>Empty!!</p>"; //
 				if ($current_amount[0][0] < $amount) 
 				{ 
-					//$conn->rollBack();
+					$conn->rollBack();
 					echo "false";
 				}
 				else 
@@ -57,7 +57,7 @@ try
 			echo "Fail";
 		else
 			echo "true";
-		//$conn->commit();
+		$conn->commit();
 		echo "true";
 	}
 	catch (PDOException $e)

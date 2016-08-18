@@ -20,7 +20,7 @@ try
 		echo $compose_function[0][1];
 		if(!empty($compose_function)) 
 		{
-			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
+			for ($i = 1; $i < 3; $i++) 
 			{
 				$material = $compose_function[0][$i];
 				echo $material;

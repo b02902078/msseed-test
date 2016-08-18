@@ -57,6 +57,8 @@ function getGroupAllResources($team)
 function getGroupOneResource($conn, $team, $material)
 {
 	$sql = "SELECT '".$material."' FROM resource WHERE team='".$team."'";
+	echo $material;
+	echo $team;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }

@@ -17,7 +17,7 @@ else
 try 
 	{
 		$compose_function = getComposeFunction($conn, $component);
-		echo $compose_function;
+		echo $compose_function[0][1];
 		/*if(!empty($compose_function)) 
 		{
 			for ($i = 1; $compose_function[0][i] != '0'; $i++) 

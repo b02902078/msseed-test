@@ -8,6 +8,7 @@ var main = function(){
 		.done(function( result ) {
 			if (result == "SUCCESS") { 
 				alert("合成成功！");
+				location.reload(true);
 			}
 			else {
 				alert("請確認原料數量後再試一次！");

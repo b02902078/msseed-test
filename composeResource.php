@@ -24,7 +24,7 @@ try
 			{
 				$material = $compose_function[0][$i];
 				echo $material;
-				i++;
+				$i++;
 				$amount = $compose_function[0][$i];
 				echo $amount;}}
 				/*$current_amount = getGroupOneResource($conn, $team, $material);

@@ -53,7 +53,7 @@ function getGroupAllResources($team)
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
-
+/*
 function getGroupOneResource($conn, $team, $material)
 {
 	$sql = "SELECT '".$material."' FROM resource WHERE team='".$team."'";
@@ -67,7 +67,7 @@ function getComposeFunction($conn, $component)
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
-
+*/
 function getAllStrongholds()
 {
 	$conn = connect();
@@ -107,8 +107,8 @@ function getAllMessages()
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
-
-private function updateGroupResource($conn, $team, $value, $resource)
+/*
+function updateGroupResource($conn, $team, $value, $resource)
 {
 	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->prepare($sql);
@@ -156,7 +156,7 @@ function makeComponent($team, $component)
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
-
+*/
 function addAccount($account, $password)
 {
 	$conn = connect();

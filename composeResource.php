@@ -41,7 +41,9 @@ try
 				{
 					$value = $current_amount[0][0] - $amount;
 					echo "<p>".$value."</p>";
-					updateGroupResource($conn, $team, $value, $material);
+					if (!updateGroupResource($conn, $team, $value, $material))
+						echo "fail update";
+
 				}
 			}
 		}

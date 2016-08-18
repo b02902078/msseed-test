@@ -111,6 +111,7 @@ function getAllMessages()
 function updateGroupResource($conn, $team, $value, $resource)
 {
 	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
+	echo $sql;
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }

@@ -153,7 +153,7 @@ function makeComponent($team, $component)
 		$value = $current_component[0][0] + 1;
 		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL"; }
 		$conn->commit();
-		return "TRUE";
+		return "SUCCESS";
 	}
 	catch (PDOException $e)
 	{

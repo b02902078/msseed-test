@@ -6,11 +6,11 @@ var main = function(){
 		// Update team resource
 		$.post("composeResource.php", data)
 		.done(function( result ) {
-			if (result) { 
-				// alert success 
+			if (result == "TRUE") { 
+				alert("合成成功！");
 			}
 			else {
-				// alert failure
+				alert("請確認原料數量後再試一次！");
 			}
 		});
 	});

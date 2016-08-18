@@ -4,10 +4,9 @@
 include_once 'taskmodel.php';
 
 // Get component name
-////$component = $_POST['component'];
-////$team = $_SESSION['s_team'];
-$component = 'magic_stone';
-$team = 'A';
+$component = $_POST['component'];
+$team = $_SESSION['s_team'];
+
 
 
 

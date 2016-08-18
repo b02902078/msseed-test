@@ -8,10 +8,11 @@ include_once 'taskmodel.php';
 ////$team = $_SESSION['s_team'];
 $component = 'magic_stone';
 $team = 'A';
-/*
+
 $conn = connect();
-	$conn->beginTransaction();
-	try 
+if ($conn->beginTransaction())
+	echo "success start";
+/*	try 
 	{
 		$compose_function = getComposeFunction($conn, $component);
 		if(!empty($compose_function)) 

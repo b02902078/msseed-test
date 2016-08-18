@@ -54,6 +54,20 @@ function getGroupAllResources($team)
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+private function getGroupOneResource($conn, $team, $material)
+{
+	$sql = "SELECT '".$material."' FROM resource WHERE team='".$team."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+private function getComposeFunction($conn, $component)
+{
+	$sql = "SELECT * FROM component_function WHERE component='".$component."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllStrongholds()
 {
 	$conn = connect();
@@ -94,9 +108,50 @@ function getAllMessages()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-function updateGroupResource($team, $value, $resource)
+private function updateGroupResource($conn, $team, $value, $resource)
+{
+	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+}
+
+function makeComponent($team, $component)
 {
 	$conn = connect();
+	$conn->beginTransaction();
+	try 
+	{
+		$compose_function = getComposeFunction($conn, $component);
+		if(!empty($compose_function)) 
+		{
+			for ($i = 1; $compose_function[0][i] != '0'; $i++) 
+			{
+				$material = $compose_function[0][i];
+				i++;
+				$amount = $compose_function[0][i];
+				$current_amount = getGroupOneResource($conn, $team, $material);
+				if ($current_amount < $amount) { $conn->rollBack(); }
+				else {
+					$value = $current_amount - $amount;
+					updateGroupResource($conn, $team, $value, $material);
+				}
+			}
+		}
+		$current_component = getGroupOneResource($conn, $team, $component);
+		$value = $current_component + 1;
+		updateGroupResource($conn, $team, $value, $component);
+		$conn->commit();
+	}
+	catch (PDOException $e)
+	{
+		print "Query Failed!\n\n";
+		print "DBA FAIL:" . $e->getMessage();
+	};
+	// Start transaction
+	// Read from component function
+	// Check amount of material
+	// Enough -> update Resource table
+	// Commit transaction
 	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();

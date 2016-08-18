@@ -23,7 +23,6 @@
   include "nav.php";
   ?>
 
-  <div id="result"></div>
 
   <!-- Tab Bar -->
   <div class="container">

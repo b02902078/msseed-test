@@ -8,7 +8,7 @@ include_once 'taskmodel.php';
 ////$team = $_SESSION['s_team'];
 $component = 'magic_stone';
 $team = 'A';
-
+/*
 $conn = connect();
 	$conn->beginTransaction();
 	try 
@@ -44,7 +44,7 @@ $conn = connect();
 		echo "Query Failed!\n\n";
 		echo "DBA FAIL:" . $e->getMessage();
 	};
-
+*/
 // Try to update team resources
 ////$result = makeComponent($team, $component);
 

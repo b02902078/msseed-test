@@ -107,7 +107,7 @@ function getAllMessages()
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
-/*
+
 function updateGroupResource($conn, $team, $value, $resource)
 {
 	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
@@ -130,7 +130,11 @@ function makeComponent($team, $component)
 				i++;
 				$amount = $compose_function[0][i];
 				$current_amount = getGroupOneResource($conn, $team, $material);
-				if ($current_amount < $amount) { $conn->rollBack(); }
+				if ($current_amount < $amount) 
+				{ 
+					$conn->rollBack();
+					return false;
+				}
 				else {
 					$value = $current_amount - $amount;
 					updateGroupResource($conn, $team, $value, $material);
@@ -141,6 +145,7 @@ function makeComponent($team, $component)
 		$value = $current_component + 1;
 		updateGroupResource($conn, $team, $value, $component);
 		$conn->commit();
+		return true;
 	}
 	catch (PDOException $e)
 	{
@@ -156,7 +161,7 @@ function makeComponent($team, $component)
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
-*/
+
 function addAccount($account, $password)
 {
 	$conn = connect();

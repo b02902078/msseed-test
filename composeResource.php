@@ -11,13 +11,14 @@ $team = 'A';
 
 $conn = connect();
 if ($conn->beginTransaction())
-	echo "success start";
+	echo "success start\n\n";
 else
-	echo "fail start";
-/*	try 
+	echo "fail start\n\n";
+try 
 	{
 		$compose_function = getComposeFunction($conn, $component);
-		if(!empty($compose_function)) 
+		echo $compose_function;
+		/*if(!empty($compose_function)) 
 		{
 			for ($i = 1; $compose_function[0][i] != '0'; $i++) 
 			{
@@ -40,14 +41,15 @@ else
 		$value = $current_component + 1;
 		updateGroupResource($conn, $team, $value, $component);
 		$conn->commit();
-		echo true;
+		echo true;*/
 	}
 	catch (PDOException $e)
 	{
+		$conn->rollBack();
 		echo "Query Failed!\n\n";
 		echo "DBA FAIL:" . $e->getMessage();
 	};
-*/
+
 // Try to update team resources
 ////$result = makeComponent($team, $component);
 

@@ -37,9 +37,11 @@ try
 					//$conn->rollBack();
 					echo false;
 				}
-				else {
+				else 
+				{
 					$value = $current_amount - $amount;
-					updateGroupResource($conn, $team, $value, $material);
+					echo "<p>".$value."</p>";
+					//updateGroupResource($conn, $team, $value, $material);
 				}
 			}
 		}

@@ -35,7 +35,7 @@ try
 				if ($current_amount[0][0] < $amount) 
 				{ 
 					$conn->rollBack();
-					echo "false";
+					return "false";
 				}
 				else 
 				{

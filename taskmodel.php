@@ -114,46 +114,56 @@ function updateGroupResource($conn, $team, $value, $resource)
 	$stmt = $conn->prepare($sql);
 	return $stmt->execute();
 }
-/*
+
 function makeComponent($team, $component)
 {
 	$conn = connect();
-	$conn->beginTransaction();
+	if (!$conn->beginTransaction()) { return "FAIL"; }
 	try 
 	{
 		$compose_function = getComposeFunction($conn, $component);
 		if(!empty($compose_function)) 
 		{
-			for ($i = 1; $compose_function[0][i] != '0'; $i++) 
+			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
 			{
-				$material = $compose_function[0][i];
-				i++;
-				$amount = $compose_function[0][i];
+				$material = $compose_function[0][$i];
+				$i++;
+				$amount = $compose_function[0][$i];
 				$current_amount = getGroupOneResource($conn, $team, $material);
-				if ($current_amount < $amount) 
+				if(empty($current_amount)) { return "FAIL"; }
+
+				// Check amount
+				if ($current_amount[0][0] < $amount) 
 				{ 
 					$conn->rollBack();
-					return false;
+					return "FAIL";
 				}
-				else {
-					$value = $current_amount - $amount;
-					updateGroupResource($conn, $team, $value, $material);
+				else 
+				{
+					$value = $current_amount[0][0] - $amount;
+					if (!updateGroupResource($conn, $team, $value, $material)) { return "FAIL"; }
 				}
 			}
 		}
+		else { return "FAIL"; }
+
+		// Update Component
 		$current_component = getGroupOneResource($conn, $team, $component);
-		$value = $current_component + 1;
-		updateGroupResource($conn, $team, $value, $component);
+		if(empty($current_component)) { return "FAIL"; }
+		$value = $current_component[0][0] + 1;
+		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL"; }
 		$conn->commit();
-		return true;
+		return "TRUE";
 	}
 	catch (PDOException $e)
 	{
-		print "Query Failed!\n\n";
-		print "DBA FAIL:" . $e->getMessage();
-	};
+		$conn->rollBack();
+		echo "Query Failed!\n\n";
+		echo "DBA FAIL:" . $e->getMessage();
+		return "FAIL";
+	}
 }
-*/
+
 function addAccount($account, $password)
 {
 	$conn = connect();

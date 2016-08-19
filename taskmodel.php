@@ -178,6 +178,7 @@ function makeComponent($team, $component, $isTrans)
 		else
 		{
 			$value = $component;
+			$component = "transportation";
 		}
 		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL6"; }
 		$conn->commit();

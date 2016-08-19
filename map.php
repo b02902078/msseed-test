@@ -42,10 +42,11 @@ else { $_SESSION["day"] = 1; }
     <a class="stronghold" id="icon1" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="天使的眼淚" data-content="佔領陣營：美國<br />
       生產材料：生命之水（9個／2mins）<br />
       佔領條件：8人，需包含：<br />
-      1. 170公分以上x3 + 155公分以下x2<br />
-      2. 捲髮女生x3 + 直髮女生x2<br />
-      3. 戴手鍊x2 + 戴手錶x4<br />
-      4. 單眼皮x3 + 雙眼皮x3<br />
+      <?php 
+      require_once "taskmodel.php";
+      $condition = getMissionCondition('y997V', $_SESSION['day']);
+      if (!empty($condition)) { echo $condition[0][0]; }
+      ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>

@@ -54,7 +54,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：神聖光芒（18個／3mins）<br />
       佔領條件：4人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('X02aw', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -65,7 +65,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：魔法粉末（9個／1min）<br />
       佔領條件：6人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('YEyKd', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -76,7 +76,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：布（18個／3mins）<br />
       佔領條件：3人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('DWVw4', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -87,7 +87,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：紅寶石（6個／5mins）<br />
       佔領條件：6人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('soDJ3', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -98,7 +98,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：轉軸（6個／3mins）<br />
       佔領條件：一隊5人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('GJPzb', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -109,7 +109,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：熊熊烈火（12個／1min）<br />
       佔領條件：一隊12人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('lJAfD', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -120,7 +120,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：種子（3個／2mins）<br />
       佔領條件：4人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('SZ1yG', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -131,7 +131,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：麻（12個／2mins）<br />
       佔領條件：12人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('Glsx3', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -142,7 +142,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：螺絲（12個／1min）<br />
       佔領條件：一隊4人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('YNbMr', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -153,7 +153,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：塑料（18個／3mins）<br />
       佔領條件：6人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('KeQW2', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -164,7 +164,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：十萬伏特（6個／1min）<br />
       佔領條件：4人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('vNUEM', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -175,7 +175,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：人體工學（9個／5mins）<br />
       佔領條件：6人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('5swuv', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -186,7 +186,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：想像力（12個／1min）<br />
       佔領條件：8人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('Ao2pa', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -197,7 +197,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：金屬（9個／1min）<br />
       佔領條件：一隊5人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('uIBpt', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
@@ -208,7 +208,7 @@ else { $_SESSION["day"] = 1; }
       生產材料：大地氧氣（9個／2mins）<br />
       佔領條件：6人，需包含：<br />
       <?php 
-      $condition = getMissionCondition('', $_SESSION['day']);
+      $condition = getMissionCondition('Ow3vC', $_SESSION['day']);
       if (!empty($condition)) { echo $condition[0][0]; }
       ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">

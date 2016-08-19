@@ -17,8 +17,8 @@ include_once 'taskmodel.php';
 
 // Assumes database already exists.
 $conn = connect();
-
-$sql = "SELECT * FROM resource WHERE team='A'";
+$team = 'A';
+$sql = "SELECT * FROM resource WHERE team='".$team."'";
 
 try{
 	$stmt = $conn->query($sql);

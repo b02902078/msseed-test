@@ -9,7 +9,7 @@ $team = $_SESSION['s_team'];
 $trans_type = $_POST['transtype'];*/
 $isTrans = true;
 $team = 'A';
-$component = "aladdin_carpet";
+$component = "space_shuttle";
 
 
 

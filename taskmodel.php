@@ -146,8 +146,10 @@ function makeComponent($team, $component, $isTrans)
 			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
 			{
 				$material = $compose_function[0][$i];
+				echo $material; //
 				$i++;
 				$amount = $compose_function[0][$i];
+				echo $amount;
 				$current_amount = getGroupOneResource($conn, $team, $material);
 				if(empty($current_amount)) { return "FAIL1"; }
 
@@ -155,7 +157,6 @@ function makeComponent($team, $component, $isTrans)
 				if ($current_amount[0][0] < $amount) 
 				{ 
 					$conn->rollBack();
-					echo $current_amount[0][0]; //
 					return "FAIL2";
 				}
 				else 

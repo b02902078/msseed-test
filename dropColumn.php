@@ -24,7 +24,7 @@ try{
 	$stmt = $conn->query($sql);
 	if ($stmt)
 		echo "Success";
-	echo $stmt[0][0];
+	echo $stmt[0][1];
 }
 catch(Exception $e){
 	print_r($e);

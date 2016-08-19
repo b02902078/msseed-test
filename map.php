@@ -7,8 +7,8 @@
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- CSS Style -->
-  <!--<link rel="stylesheet" type="text/css" href="css/map.css">-->
-  <link rel="stylesheet" type="text/css" href="css/rain_map.css">
+  <link rel="stylesheet" type="text/css" href="css/map.css">
+  <!--<link rel="stylesheet" type="text/css" href="css/rain_map.css">-->
 </head>
 
 <body>
@@ -26,10 +26,22 @@
     $day = getAllDay();
     if (!empty($day)) 
     { 
-      if ($day[0][0] == 1 || $day[0][0] == 1) echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>'; 
-      else echo '<img src="png/s_map/map_night.gif" class="img-responsive" id="map-picture"/>';
+      if ($day[0][0] == 1 || $day[0][0] == 1)
+      {
+        echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>
+              <style>body {background-color: #e3b029;}</style>'; 
+      }
+      else 
+      {
+        echo '<img src="png/s_map/map_night.gif" class="img-responsive" id="map-picture"/>
+              <style>body {background-color: #572105;}</style>';
+      }
     }
-    else echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>';
+    else
+    {
+      echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>
+            <style>body {background-color: #e3b029;}</style>';
+    }
     ?>
     
     <!-- 天使的眼淚/巧拼渡河 -->

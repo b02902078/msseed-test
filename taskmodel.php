@@ -169,7 +169,7 @@ function makeComponent($team, $component, $isTrans)
 		else { return "FAIL4"; }
 
 		// Update Component
-		if ($isTrans)
+		if (!$isTrans)
 		{
 			$current_component = getGroupOneResource($conn, $team, $component);
 			if(empty($current_component)) { return "FAIL5"; }

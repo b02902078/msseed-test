@@ -166,7 +166,7 @@
           </div>
           <div class="col-md-2 col-xs-3 wrapper special-wrapper">
             <div class="count special-count"><?php if(!empty($items)) { echo $items[0][32]; } ?></div>
-            <img src="png/s_special/miss_air.jpg" class="img-responsive icon-special" alt="空姐">
+            <img src="png/s_special/miss_air.png" class="img-responsive icon-special" alt="空姐">
             <p class="name special-name text-center">空姐</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper special-wrapper">
@@ -610,6 +610,20 @@
 
       <!-- Transportation -->
       <div id="transport" class="tab-pane fade">
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper transport-wrapper" data-toggle="modal" data-target="#aladdin_carpet">
+            <p class="name transport-name text-center">阿拉丁的飛毯</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper transport-wrapper" data-toggle="modal" data-target="#space_shuttle">
+            <p class="name transport-name text-center">太空梭</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper transport-wrapper" data-toggle="modal" data-target="#nimbus_2000">
+            <p class="name transport-name text-center">光輪2000</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper transport-wrapper" data-toggle="modal" data-target="#bamboo_dragonfly">
+            <p class="name transport-name text-center">竹蜻蜓</p>
+          </div>
+        </div>
       </div>
 
     </div>

@@ -69,7 +69,7 @@ else { $_SESSION["day"] = 1; }
     <a class="stronghold" id="icon4" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="布布恰恰" data-content="佔領陣營：美國<br />
       生產材料：布（18個／3mins）<br />
       佔領條件：3人，需包含：<br />
-      <?php $if (!empty($condition)) { echo $condition[1][0]; } ?><br />
+      <?php if (!empty($condition)) { echo $condition[1][0]; } ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
@@ -77,7 +77,7 @@ else { $_SESSION["day"] = 1; }
     <a class="stronghold" id="icon5" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="精靈的礦坑" data-content="佔領陣營：美國<br />
       生產材料：紅寶石（6個／5mins）<br />
       佔領條件：6人，需包含：<br />
-      <?php $if (!empty($condition)) { echo $condition[2][0]; } ?><br />
+      <?php if (!empty($condition)) { echo $condition[2][0]; } ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>

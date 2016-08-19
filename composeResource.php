@@ -7,6 +7,7 @@ include_once 'taskmodel.php';
 $component = $_POST['component'];
 $team = $_SESSION['s_team'];
 $isTrans = $_POST['isTrans'];
+print_r($isTrans);
 /*$isTrans = false;
 $team = 'A';
 $component = "magic_stone";*/

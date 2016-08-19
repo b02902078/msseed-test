@@ -64,7 +64,6 @@ function getGroupOneResource($conn, $team, $material)
 function getComposeFunction($conn, $component, $table)
 {
 	$sql = "SELECT * FROM ".$table." WHERE component='".$component."'";
-	print_r($sql);
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }

@@ -7,9 +7,9 @@ include_once 'taskmodel.php';
 /*$component = $_POST['component'];
 $team = $_SESSION['s_team'];
 $trans_type = $_POST['transtype'];*/
-$isTrans = true;
+$isTrans = false;
 $team = 'A';
-$component = "aladdin_carpet";
+$component = "magic_stone";
 
 
 

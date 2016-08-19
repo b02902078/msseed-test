@@ -954,7 +954,7 @@ header('Pragma: no-cache');
                     <p class="name raw-name text-center">金屬</p>
                   </div>
                   <div class="col-xs-3 wrapper raw-wrapper">
-                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>20</div>
+                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/20</div>
                     <img src="png/s_raw/screw.png" class="img-responsive icon-materials" alt="螺絲">
                     <p class="name raw-name text-center">螺絲</p>
                   </div>
@@ -1207,10 +1207,10 @@ header('Pragma: no-cache');
                     <img src="png/s_component/rope.png" class="img-responsive icon-components" alt="繩子">
                     <p class="name component-name text-center">繩子</p>
                   </div>
-                  <div class="col-xs-3 wrapper special-wrapper">
-                    <div class="count special-count"><?php if(!empty($items)) { echo $items[0][32]; } ?>/45</div>
-                    <img src="png/s_special/miss_air.png" class="img-responsive icon-special" alt="空姐">
-                    <p class="name special-name text-center">空姐</p>
+                  <div class="col-xs-3 wrapper raw-wrapper">
+                    <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/45</div>
+                    <img src="png/s_raw/air.png" class="img-responsive icon-materials" alt="大地氧氣">
+                    <p class="name raw-name text-center">大地氧氣</p>
                   </div>
                   <div class="col-xs-3 wrapper raw-wrapper">
                     <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][3]; } ?>/12</div>

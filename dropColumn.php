@@ -21,7 +21,7 @@ $conn = connect();
 $sql = "SELECT * FROM resource WHERE team='A'";
 
 try{
-	$stmt = $conn->query($sql)
+	$stmt = $conn->query($sql);
 	if ($stmt)
 		echo "Success";
 	echo $stmt[0][0];

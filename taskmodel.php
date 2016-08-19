@@ -64,6 +64,7 @@ function getGroupOneResource($conn, $team, $material)
 function getComposeFunction($conn, $component, $table)
 {
 	$sql = "SELECT * FROM ".$table." WHERE component='".$component."'";
+	echo $sql;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -138,7 +139,7 @@ function makeComponent($team, $component, $trans_type)
 	if (!$conn->beginTransaction()) { return "FAIL"; }
 	try 
 	{
-		if ($component == "transportation") { $table = "transport_function"; echo "in trans";}
+		if ($component == "transportation") { $table = "transport_function"; }
 		else { $table = "component_function"; }
 		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 

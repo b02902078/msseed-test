@@ -611,8 +611,8 @@ header('Pragma: no-cache');
         <!-- Transportation -->
         <div id="transport" class="tab-pane fade">
           <?php 
-          if(empty($items) || ($items[0][34] == '0')) { include "transportation.php"; } 
-          else { echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">';echo($items[0][34]); }
+          if((!empty($items)) && ($items[0][34] != '0')) { echo($items[0][34]);echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">'; } 
+          else { include "transportation.php"; }
           ?>
         </div>
 

@@ -53,7 +53,7 @@ else { $_SESSION["day"] = 1; }
     <a class="stronghold" id="icon2" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="神仙山莊" data-content="佔領陣營：美國<br />
       生產材料：神聖光芒（18個／3mins）<br />
       佔領條件：4人，需包含：<br />
-      <?php $if (!empty($condition)) { echo $condition[7][0]; } ?><br />
+      <?php if (!empty($condition)) { echo $condition[7][0]; } ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
@@ -61,7 +61,7 @@ else { $_SESSION["day"] = 1; }
     <a class="stronghold" id="icon3" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="霍格華茲學院" data-content="佔領陣營：美國<br />
       生產材料：魔法粉末（9個／1min）<br />
       佔領條件：6人，需包含：<br />
-      <?php $if (!empty($condition)) { echo $condition[0][0]; } ?><br />
+      <?php if (!empty($condition)) { echo $condition[0][0]; } ?><br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>

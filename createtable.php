@@ -19,7 +19,7 @@ include_once 'taskmodel.php';
 $conn = connect();
 
 $sql = "CREATE TABLE component_function(
-			component VARCHAR(20)
+			component VARCHAR(20),
 			PRIMARY KEY(component),
 			material1 VARCHAR(20),
 			number1 INT,

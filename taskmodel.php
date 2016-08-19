@@ -152,6 +152,7 @@ function makeComponent($team, $component, $isTrans)
 				$amount = $compose_function[0][$i];
 				echo $amount;
 				$current_amount = getGroupOneResource($conn, $team, $material);
+				echo $current_amount[0][0];
 				if(empty($current_amount)) { return "FAIL1"; }
 
 				// Check amount

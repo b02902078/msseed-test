@@ -17,14 +17,14 @@ include_once 'taskmodel.php';
 
 // Assumes database already exists.
 $conn = connect();
-$team = 'A';
-$sql = "SELECT * FROM resource WHERE team='".$team."'";
+$code = "YEyKd";
+$day = 1;
 
 try{
-	$stmt = $conn->query($sql);
+	$stmt = getMissionCondition($code, $day);
 	if ($stmt)
 		echo "Success";
-	echo $stmt[0][1];
+	echo $stmt[0][0];
 }
 catch(Exception $e){
 	print_r($e);

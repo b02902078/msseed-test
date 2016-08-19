@@ -84,6 +84,15 @@ function getAllMissions()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getMissionCondition($code, $day)
+{
+	$conn = connect();
+	$day_condition = "day".$day."_condition";
+	$sql = "SELECT ".$day_condition." FROM mission WHERE code='".$code."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllTimes()
 {
 	$conn = connect();

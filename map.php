@@ -19,8 +19,18 @@
 
   <!-- Map -->
   <div class="container map">
-    <!-- Map picture -->
-    <img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>
+    <!-- Map picture (According to Day) -->
+    <?php  
+    require_once "taskmodel.php";
+    $day = getAllDay();
+    if (!empty($day)) 
+    { 
+      if ($day[0][0] == 1 || $day[0][0] == 1) echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>'; 
+      else echo '<img src="png/s_map/map_night.gif" class="img-responsive" id="map-picture"/>';
+    }
+    else echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>';
+    ?>
+    
     <!-- 天使的眼淚/巧拼渡河 -->
     <a class="stronghold" id="icon1" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="天使的眼淚" data-content="佔領陣營：美國<br />
       生產材料：生命之水（9個／2mins）<br />

@@ -42,7 +42,8 @@
 }
 .transport-wrapper {
     border: 8px solid white;
-    background: #CC2EFA;
+    background: #DA81F5;
+    padding-bottom: 16px;
 }
 
 /* Image */
@@ -84,6 +85,9 @@
     font-weight: bold;
     font-size: 16px;
 }
+.transport-name {
+    font-size: 17px;
+}
 
 .hint {
     padding: 8px;
@@ -122,6 +126,7 @@
 }
 .transport-wrapper {
     border: 4px solid white;
+    padding-bottom: 8px;
 }
 
 /* Number Count */
@@ -136,6 +141,9 @@
 .name {
     padding-top: 6px;
     font-weight: bold;
+    font-size: 10px;
+}
+.transport-name {
     font-size: 10px;
 }
 
@@ -173,6 +181,7 @@
 }
 .transport-wrapper {
     border: 6px solid white;
+    padding-bottom: 12px;
 }
 
 /* Number Count */
@@ -188,6 +197,9 @@
     padding-top: 6px;
     font-weight: bold;
     font-size: 14px;
+}
+.transport-name {
+    font-size: 16px;
 }
 
 .hint {

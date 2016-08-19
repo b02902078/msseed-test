@@ -10,7 +10,7 @@ var main = function(){
 				location.reload(true);
 			}
 			else {
-				alert("請確認原料數量後再試一次！ (" + result + ")");
+				alert("合成失敗，請確認原料數量後再試一次！ (" + result + ")");
 			}
 		});
 	});
@@ -27,7 +27,7 @@ var main = function(){
 				location.reload(true);
 			}
 			else {
-				alert("請確認原料數量後再試一次！ (" + result + ")");
+				alert("合成失敗，請確認原料數量後再試一次！ (" + result + ")");
 			}
 		});
 	});

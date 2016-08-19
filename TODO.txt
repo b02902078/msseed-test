@@ -14,8 +14,7 @@
 
 材料表
 	- 交通工具合成
-	- 特殊材料
-	- css在最下面
+	- css在最下面?
 	- updateResource: Admin無法connect
 
 遊戲規則

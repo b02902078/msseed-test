@@ -155,7 +155,7 @@ function makeComponent($team, $component, $isTrans)
 				if ($current_amount[0][0] < $amount) 
 				{ 
 					$conn->rollBack();
-					$current_amount[0][0]; //
+					echo $current_amount[0][0]; //
 					return "FAIL2";
 				}
 				else 

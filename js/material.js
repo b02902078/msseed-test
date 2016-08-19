@@ -2,7 +2,6 @@ var main = function(){
 	$('.modal .btn-components').click(function(){
 		// Get resource name
 		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: false };
-		console.log(data.component + "/" + data.isTrans);
 		// Update team resource
 		$.post("composeResource.php", data)
 		.done(function( result ) {

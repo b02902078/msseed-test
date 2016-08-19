@@ -57,7 +57,6 @@ function getGroupAllResources($team)
 function getGroupOneResource($conn, $team, $material)
 {
 	$sql = "SELECT ".$material." FROM resource WHERE team='".$team."'";
-	echo $sql;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -136,7 +135,7 @@ function updateGroupResource($conn, $team, $value, $resource) // private functio
 function makeComponent($team, $component, $isTrans)
 {
 	$conn = connect();
-	if (!$conn->beginTransaction()) { return "FAIL"; }
+	if (!$conn->beginTransaction()) { return "FAIL0"; }
 	try 
 	{
 		if ($isTrans) { $table = "transport_function"; }
@@ -150,7 +149,6 @@ function makeComponent($team, $component, $isTrans)
 				$i++;
 				$amount = $compose_function[0][$i];
 				$current_amount = getGroupOneResource($conn, $team, $material);
-				echo $current_amount[0][0];
 				if(empty($current_amount)) { return "FAIL1"; }
 
 				// Check amount

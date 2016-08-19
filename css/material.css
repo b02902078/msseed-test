@@ -81,6 +81,9 @@
     font-size: 16px;
 }
 
+.hint {
+    font-size: 16px;
+}
 
 @media screen and (max-width: 499px){
 .nav-tabs > li > a {
@@ -127,6 +130,10 @@
     font-weight: bold;
     font-size: 10px;
 }
+
+.hint {
+    font-size: 10px;
+}
 }
 
 @media screen and (min-width: 500px) and (max-width: 800){
@@ -168,6 +175,10 @@
 .name {
     padding-top: 6px;
     font-weight: bold;
+    font-size: 14px;
+}
+
+.hint {
     font-size: 14px;
 }
 }

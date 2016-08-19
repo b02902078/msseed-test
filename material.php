@@ -237,6 +237,9 @@
             <p class="name component-name text-center">機艙</p>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0"><p class="hint">※合成請點選零件圖示</p></div>
+        </div>
       </div>
 
 

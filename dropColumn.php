@@ -21,10 +21,11 @@ $code = "YEyKd";
 $day = 1;
 
 try{
-	$stmt = getMissionCondition($code, $day);
+	$stmt = getMissionCondition($day);
 	if ($stmt)
 		echo "Success";
 	echo $stmt[0][0];
+	echo $stmt[0][1];
 }
 catch(Exception $e){
 	print_r($e);

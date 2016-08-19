@@ -1639,7 +1639,7 @@ header('Pragma: no-cache');
         </div>
 
         <!-- 飛行者一號 -->
-        <div id="wright_flyer " class="modal fade" role="dialog">
+        <div id="wright_flyer" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">

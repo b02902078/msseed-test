@@ -18,11 +18,19 @@ include_once 'taskmodel.php';
 // Assumes database already exists.
 $conn = connect();
 
-$sql = "CREATE TABLE account(
-			id INT NOT NULL AUTO_INCREMENT, 
-			PRIMARY KEY(id),
-			account VARCHAR(30),
-			password VARCHAR(30)
+$sql = "CREATE TABLE component_function(
+			component VARCHAR(20)
+			PRIMARY KEY(component),
+			material1 VARCHAR(20),
+			number1 INT,
+			material2 VARCHAR(20),
+			number2 INT,
+			material3 VARCHAR(20),
+			number3 INT,
+			material4 VARCHAR(20),
+			number4 INT,
+			material5 VARCHAR(20),
+			number5 INT
 			)";
 
 try{

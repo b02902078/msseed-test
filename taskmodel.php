@@ -138,7 +138,7 @@ function makeComponent($team, $component, $trans_type)
 	if (!$conn->beginTransaction()) { return "FAIL"; }
 	try 
 	{
-		if ($component == "transportation") { $table = "transport_function"; }
+		if ($component == "transportation") { $table = "transport_function"; echo "in trans";}
 		else { $table = "component_function"; }
 		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 
@@ -149,35 +149,35 @@ function makeComponent($team, $component, $trans_type)
 				$i++;
 				$amount = $compose_function[0][$i];
 				$current_amount = getGroupOneResource($conn, $team, $material);
-				if(empty($current_amount)) { return "FAIL"; }
+				if(empty($current_amount)) { return "FAIL1"; }
 
 				// Check amount
 				if ($current_amount[0][0] < $amount) 
 				{ 
 					$conn->rollBack();
-					return "FAIL";
+					return "FAIL2";
 				}
 				else 
 				{
 					$value = $current_amount[0][0] - $amount;
-					if (!updateGroupResource($conn, $team, $value, $material)) { return "FAIL"; }
+					if (!updateGroupResource($conn, $team, $value, $material)) { return "FAIL3"; }
 				}
 			}
 		}
-		else { return "FAIL"; }
+		else { return "FAIL4"; }
 
 		// Update Component
 		if ($component != "transportation")
 		{
 			$current_component = getGroupOneResource($conn, $team, $component);
-			if(empty($current_component)) { return "FAIL"; }
+			if(empty($current_component)) { return "FAIL5"; }
 			$value = $current_component[0][0] + 1;
 		}
 		else
 		{
 			$value = $trans_type;
 		}
-		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL"; }
+		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL6"; }
 		$conn->commit();
 		return "SUCCESS";
 	}
@@ -186,7 +186,7 @@ function makeComponent($team, $component, $trans_type)
 		$conn->rollBack();
 		echo "Query Failed!\n\n";
 		echo "DBA FAIL:" . $e->getMessage();
-		return "FAIL";
+		return "FAIL7";
 	}
 }
 

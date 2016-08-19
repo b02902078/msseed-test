@@ -17,9 +17,9 @@ function connect()
 {
 	// DB connection info
 	$host = "ap-cdbr-azure-east-c.cloudapp.net";
-	$user = "b37f8ddf38d21d";
-	$pwd = "1e72c81e";
-	$db = "stronghold";
+	$user = "bc082d9a91de5b";	
+	$pwd = "8acf1055";
+	$db = "acsm_5e80ee07b9a555e";
 	try{
 		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -61,9 +61,9 @@ function getGroupOneResource($conn, $team, $material)
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-function getComposeFunction($conn, $component)
+function getComposeFunction($conn, $component, $table)
 {
-	$sql = "SELECT * FROM component_function WHERE component='".$component."'";
+	$sql = "SELECT * FROM ".$table." WHERE component='".$component."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -132,13 +132,15 @@ function updateGroupResource($conn, $team, $value, $resource) // private functio
 	return $stmt->execute();
 }
 
-function makeComponent($team, $component)
+function makeComponent($team, $component, $trans_type)
 {
 	$conn = connect();
 	if (!$conn->beginTransaction()) { return "FAIL"; }
 	try 
 	{
-		$compose_function = getComposeFunction($conn, $component);
+		if ($component == "transportation") { $table = "transport_function"; }
+		else { $table = "component_function"; }
+		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 
 		{
 			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
@@ -165,9 +167,16 @@ function makeComponent($team, $component)
 		else { return "FAIL"; }
 
 		// Update Component
-		$current_component = getGroupOneResource($conn, $team, $component);
-		if(empty($current_component)) { return "FAIL"; }
-		$value = $current_component[0][0] + 1;
+		if ($component != "transportation")
+		{
+			$current_component = getGroupOneResource($conn, $team, $component);
+			if(empty($current_component)) { return "FAIL"; }
+			$value = $current_component[0][0] + 1;
+		}
+		else
+		{
+			$value = $trans_type;
+		}
 		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL"; }
 		$conn->commit();
 		return "SUCCESS";

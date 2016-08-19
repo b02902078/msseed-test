@@ -272,7 +272,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -305,7 +305,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -338,7 +338,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -371,7 +371,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -404,7 +404,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -442,7 +442,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -480,7 +480,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -518,7 +518,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -556,7 +556,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -601,7 +601,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
@@ -716,12 +716,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 太空梭 -->
         <div id="space_shuttle" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -765,12 +764,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 光輪2000 -->
         <div id="nimbus_2000" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -814,12 +812,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 竹蜻蜓 -->
         <div id="bamboo_dragonfly" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -848,12 +845,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 聖誕雪橇 -->
         <div id="santa_sled" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -897,12 +893,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 霍爾的移動城堡 -->
         <div id="moving_castle" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -961,12 +956,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 超人披風 -->
         <div id="superman_cape" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1005,12 +999,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 筋斗雲 -->
         <div id="somersault_cloud" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1054,12 +1047,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 蝙蝠車 -->
         <div id="batmobile" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1103,12 +1095,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 氣球 -->
         <div id="balloon" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1137,12 +1128,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 滑翔翼 -->
         <div id="hang_gliding" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1181,12 +1171,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 熱氣球 -->
         <div id="hot_air_balloon" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1225,12 +1214,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 杯麵 -->
         <div id="baymax" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1289,12 +1277,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 直升機 -->
         <div id="helicopter" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1338,12 +1325,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 戰鬥機 -->
         <div id="fighter_plane" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1392,12 +1378,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 飛艇 -->
         <div id="airship" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1441,12 +1426,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 客機 -->
         <div id="airliner" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1500,12 +1484,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 飛碟 -->
         <div id="ufo" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1559,12 +1542,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 荷米斯的鞋子 -->
         <div id="hermes_shoes" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1598,12 +1580,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 飛行傘 -->
         <div id="paragliding" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1632,12 +1613,11 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 飛行者一號 -->
         <div id="wright_flyer" class="modal fade" role="dialog">
           <div class="modal-dialog modal-lg">
@@ -1676,7 +1656,7 @@ header('Pragma: no-cache');
                 </div>
               </div>
               <div class="modal-footer">※確定後無法更改
-                <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+                <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ try{
 	if ($stmt)
 		echo "Success";
 	echo $stmt[0][0];
-	echo $stmt[0][1];
+	echo $stmt[1][0];
 }
 catch(Exception $e){
 	print_r($e);

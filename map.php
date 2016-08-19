@@ -1,3 +1,11 @@
+<?php  
+session_start();
+require_once "taskmodel.php";
+$day = getAllDay();
+if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
+else { $_SESSION["day"] = 1; }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +17,10 @@
   <!-- CSS Style -->
   <link rel="stylesheet" type="text/css" href="css/map.css">
   <!--<link rel="stylesheet" type="text/css" href="css/rain_map.css">-->
+  <?php 
+  if ($_SESSION["day"] == 1 || $_SESSION["day"] == 3) { echo '<style>body {background-color: #e3b029;}</style>'; }
+  else { echo '<style>body {background-color: #572105;}</style>'; }
+  ?>
 </head>
 
 <body>
@@ -22,26 +34,8 @@
   <div class="container map">
     <!-- Map picture (According to Day) -->
     <?php  
-    require_once "taskmodel.php";
-    $day = getAllDay();
-    if (!empty($day)) 
-    { 
-      if ($day[0][0] == 1 || $day[0][0] == 1)
-      {
-        echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>
-              <style>body {background-color: #e3b029;}</style>'; 
-      }
-      else 
-      {
-        echo '<img src="png/s_map/map_night.gif" class="img-responsive" id="map-picture"/>
-              <style>body {background-color: #572105;}</style>';
-      }
-    }
-    else
-    {
-      echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>
-            <style>body {background-color: #e3b029;}</style>';
-    }
+    if ($_SESSION["day"] == 1 || $_SESSION["day"] == 3) { echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>'; }
+    else { echo '<img src="png/s_map/map_night.gif" class="img-responsive" id="map-picture"/>'; }
     ?>
     
     <!-- 天使的眼淚/巧拼渡河 -->

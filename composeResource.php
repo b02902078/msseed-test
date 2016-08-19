@@ -4,12 +4,12 @@ session_start();
 include_once 'taskmodel.php';
 
 // Get component name
-/*$component = $_POST['component'];
+$component = $_POST['component'];
 $team = $_SESSION['s_team'];
-$trans_type = $_POST['transtype'];*/
-$isTrans = false;
+$isTrans = $_POST['isTrans'];
+/*$isTrans = false;
 $team = 'A';
-$component = "magic_stone";
+$component = "magic_stone";*/
 
 
 

@@ -17,7 +17,10 @@ else { $_SESSION["day"] = 1; }
   <!-- CSS Style -->
   <link rel="stylesheet" type="text/css" href="css/map.css">
   <!--<link rel="stylesheet" type="text/css" href="css/rain_map.css">-->
-  
+  <?php 
+  if ($_SESSION["day"] == 1 || $_SESSION["day"] == 3) { echo '<style>body {background-color: #e3b029;}</style>'; }
+  else { echo '<style>body {background-color: #572105;}</style>'; }
+  ?>
 </head>
 
 <body>

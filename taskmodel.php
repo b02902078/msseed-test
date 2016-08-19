@@ -138,9 +138,8 @@ function makeComponent($team, $component, $isTrans)
 	if (!$conn->beginTransaction()) { return "FAIL0"; }
 	try 
 	{
-		print_r($isTrans);
-		if ($isTrans) { $table = "transport_function"; print_r("trans");}
-		else { $table = "component_function"; print_r("component");}
+		if ($isTrans == "true") { $table = "transport_function"; }
+		else { $table = "component_function"; }
 		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 
 		{
@@ -168,7 +167,7 @@ function makeComponent($team, $component, $isTrans)
 		else { return "FAIL4"; }
 
 		// Update Component
-		if (!$isTrans)
+		if ($isTrans == "false")
 		{
 			$current_component = getGroupOneResource($conn, $team, $component);
 			if(empty($current_component)) { return "FAIL5"; }

@@ -40,7 +40,7 @@
       3. 戴手鍊x2 + 戴手錶x4<br />
       4. 單眼皮x3 + 雙眼皮x3<br />
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 神仙山莊/撲克牌好手-->
     <a class="stronghold" id="icon2" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="神仙山莊" data-content="佔領陣營：美國<br />
@@ -51,7 +51,7 @@
       3. 戴眼鏡x4<br />
       4. 頭髮過肩x4
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 霍格華茲學院/灌籃高手-->
     <a class="stronghold" id="icon3" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="霍格華茲學院" data-content="佔領陣營：美國<br />
@@ -62,7 +62,7 @@
       3. 拿IPHONEx5<br />
       4. 反手可摸到肚臍x2
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 布布恰恰/乒乓傳情 -->
     <a class="stronghold" id="icon4" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="布布恰恰" data-content="佔領陣營：美國<br />
@@ -73,7 +73,7 @@
       3. RDAAx2<br />
       4. 紮衣服x3
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 精靈的礦坑/Flip-Flop -->
     <a class="stronghold" id="icon5" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="精靈的礦坑" data-content="佔領陣營：美國<br />
@@ -84,7 +84,7 @@
       3. 穿黑襪x2<br />
       4. 鞋子有藍色x3
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- Brandon工坊/呼啦抓小雞 -->
     <a class="stronghold" id="icon6" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Brandon工坊" data-content="佔領陣營：美國<br />
@@ -95,7 +95,7 @@
       3. 175以上x1<br />
       4. 有白頭髮x2
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_green.png" class="img-responsive map-marker-green">
+      <img src="png/s_map/mark/mark_orange.png" class="img-responsive map-marker-orange">
     </a>
     <!-- 烈焰火山/頭好撞撞 -->
     <a class="stronghold" id="icon7" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="烈焰火山" data-content="佔領陣營：美國<br />
@@ -106,7 +106,7 @@
       3. 單眼皮x4<br />
       4. 用安卓的x8
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_green.png" class="img-responsive map-marker-green">
+      <img src="png/s_map/mark/mark_orange.png" class="img-responsive map-marker-orange">
     </a>
     <!-- 迷幻森林/打水漂 -->
     <a class="stronghold" id="icon8" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="迷幻森林" data-content="佔領陣營：美國<br />
@@ -117,7 +117,7 @@
       3. 穿全白素Tx2<br />
       4. 拳頭可放進嘴巴裡x1
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 陽光田園/斷開魂結 -->
     <a class="stronghold" id="icon9" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="陽光田園" data-content="佔領陣營：美國<br />
@@ -128,7 +128,7 @@
       3. 染頭髮x6<br />
       4. 單眼皮x5
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- Steven加工廠/拍拍羽毛球 -->
     <a class="stronghold" id="icon10" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Steven加工廠" data-content="佔領陣營：美國<br />
@@ -139,7 +139,7 @@
       3. 穿長襪x3<br />
       4. 染頭髮x2
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_green.png" class="img-responsive map-marker-green">
+      <img src="png/s_map/mark/mark_orange.png" class="img-responsive map-marker-orange">
     </a>
     <!-- 統一二山/比手畫腳 -->
     <a class="stronghold" id="icon11" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="統一二山" data-content="佔領陣營：美國<br />
@@ -150,7 +150,7 @@
       3. 穿NIKE鞋x2 + 穿ADIDASx2<br />
       4. 165公分以下x3
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 皮卡丘發電廠/翻轉地面-->
     <a class="stronghold" id="icon12" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="皮卡丘發電廠" data-content="佔領陣營：美國<br />
@@ -161,7 +161,7 @@
       3. 1女2男<br />
       4. 2女2男
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 德克斯特的實驗室/平衡感王-->
     <a class="stronghold" id="icon13" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="德克斯特的實驗室" data-content="佔領陣營：美國<br />
@@ -172,7 +172,7 @@
       3. 臉上有痘痘x3<br />
       4. 長頭髮x1+短頭髮x4
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 彩虹獅動物園/一路橡吸-->
     <a class="stronghold" id="icon14" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="彩虹獅動物園" data-content="佔領陣營：美國<br />
@@ -183,7 +183,7 @@
       3. 有畫眉毛x3<br />
       4. 臉上有2顆痣x2 + 有戴手錶x2
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 鍊金小木屋/金雞獨立-->
     <a class="stronghold" id="icon15" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="鍊金小木屋" data-content="佔領陣營：美國<br />
@@ -194,7 +194,7 @@
       3. 有玩POKEMON GOx4<br />
       4. 中分x4
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
-      <img src="png/s_map/mark/mark_green.png" class="img-responsive map-marker-green">
+      <img src="png/s_map/mark/mark_orange.png" class="img-responsive map-marker-orange">
     </a>
     <!-- 千年神木/甩便利貼-->
     <a class="stronghold" id="icon16" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="千年神木" data-content="佔領陣營：美國<br />
@@ -205,6 +205,12 @@
       3. 瀏海在眉毛上x2<br />
       4. 鞋子有紅色x2
       <div class='text-right'><button type='button' class='btn btn-warning btn-xs'>我要佔領</button><div>">
+      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
+      </a>
+    </div>
+
+    <!-- 監獄-->
+    <a class="stronghold" id="icon17" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="監獄" data-content="快來拯救被苦力怕抓走的隊友吧！">
       <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
       </a>
     </div>

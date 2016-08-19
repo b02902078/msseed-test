@@ -109,6 +109,10 @@ body {
 	top: 54%;
 	left: 29%;
 }
+#icon17 {  /* 監獄 */
+	top: 29%;
+	left: 32%;
+}
 
 /* Stronghold icon */
 .map-marker-red {
@@ -122,5 +126,19 @@ body {
 	-moz-filter: drop-shadow(5px 5px 5px #556B2F);
 	-webkit-filter: drop-shadow(5px 5px 5px #556B2F);
 	filter: drop-shadow(5px 5px 5px #556B2F);
+}
+
+.map-marker-orange {
+	width: 4vw;
+	-moz-filter: drop-shadow(5px 5px 5px #B58C20);
+	-webkit-filter: drop-shadow(5px 5px 5px #B58C20);
+	filter: drop-shadow(5px 5px 5px #B58C20);
+}
+
+.map-marker-brown {
+	width: 4vw;
+	-moz-filter: drop-shadow(5px 5px 5px #0e272a);
+	-webkit-filter: drop-shadow(5px 5px 5px #0e272a);
+	filter: drop-shadow(5px 5px 5px #0e272a);
 }
 

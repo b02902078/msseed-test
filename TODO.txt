@@ -1,4 +1,5 @@
 整體
+	- connection close?
 
 首頁
 	- 機票：房間資訊
@@ -27,5 +28,10 @@ $host = "ap-cdbr-azure-east-c.cloudapp.net";
 $user = "bc082d9a91de5b";
 $pwd = "8acf1055";
 $db = "acsm_5e80ee07b9a555e";
+
+
+1 交通工具合成
+2 佔領隊伍
+3 暫時的login 
 
 

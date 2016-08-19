@@ -154,7 +154,7 @@
           </div>
           <div class="col-md-2 col-xs-3 wrapper special-wrapper">
             <div class="count special-count"><?php if(!empty($items)) { echo $items[0][30]; } ?></div>
-            <img src="png/s_special/sd_carad.png" class="img-responsive icon-special" alt="SD卡">
+            <img src="png/s_special/sd_card.png" class="img-responsive icon-special" alt="SD卡">
             <p class="name special-name text-center">SD卡</p>
           </div>
         </div>
@@ -166,7 +166,7 @@
           </div>
           <div class="col-md-2 col-xs-3 wrapper special-wrapper">
             <div class="count special-count"><?php if(!empty($items)) { echo $items[0][32]; } ?></div>
-            <img src="png/s_special/miss_air.png" class="img-responsive icon-special" alt="空姐">
+            <img src="png/s_special/miss_air.jpg" class="img-responsive icon-special" alt="空姐">
             <p class="name special-name text-center">空姐</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper special-wrapper">

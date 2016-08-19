@@ -709,10 +709,439 @@
                   <p class="name raw-name text-center">紅寶石</p>
                 </div>
                 <div class="col-xs-3 wrapper component-wrapper">
-                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][17]; } ?></div>
+                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][17]; } ?>/6</div>
                   <img src="png/s_component/magic_stone.png" class="img-responsive icon-components" alt="魔法石">
                   <p class="name component-name text-center">魔法石</p>
                 </div>
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 太空梭 -->
+      <div id="space_shuttle" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">太空梭 x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                <div class="col-xs-3 wrapper component-wrapper">
+                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][24]; } ?>/1</div>
+                  <img src="png/s_component/door.png" class="img-responsive icon-components" alt="門">
+                  <p class="name component-name text-center">門</p>
+                </div>
+                <div class="col-xs-3 wrapper component-wrapper">
+                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][25]; } ?>/1</div>
+                  <img src="png/s_component/jet.png" class="img-responsive icon-components" alt="噴射器">
+                  <p class="name component-name text-center">噴射器</p>
+                </div>
+                <div class="col-xs-3 wrapper component-wrapper">
+                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][20]; } ?>/1</div>
+                  <img src="png/s_component/wheel.png" class="img-responsive icon-components" alt="方向盤">
+                  <p class="name component-name text-center">方向盤</p>
+                </div>
+                <div class="col-xs-3 wrapper component-wrapper">
+                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][18]; } ?>/1</div>
+                  <img src="png/s_component/control_panel.png" class="img-responsive icon-components" alt="控制面板">
+                  <p class="name component-name text-center">控制面板</p>
+                </div>
+                <div class="col-xs-3 wrapper component-wrapper">
+                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][19]; } ?>/1</div>
+                  <img src="png/s_component/seat.png" class="img-responsive icon-components" alt="座位">
+                  <p class="name component-name text-center">座位</p>
+                </div>
+                <div class="col-xs-3 wrapper component-wrapper">
+                  <div class="count component-count"><?php if(!empty($items)) { echo $items[0][26]; } ?>/1</div>
+                  <img src="png/s_component/gun.png" class="img-responsive icon-components" alt="機艙">
+                  <p class="name component-name text-center">機艙</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
+              </div>
+            </div>
+            <div class="modal-footer">※確定後無法更改
+              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"> x 1 合成</h4>
+            </div>
+            <div class="modal-body container-fluid">
+              <div class="row-fluid">
+                
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改

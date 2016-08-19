@@ -64,7 +64,6 @@ function getGroupOneResource($conn, $team, $material)
 function getComposeFunction($conn, $component, $table)
 {
 	$sql = "SELECT * FROM ".$table." WHERE component='".$component."'";
-	echo $sql;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -156,6 +155,7 @@ function makeComponent($team, $component, $isTrans)
 				if ($current_amount[0][0] < $amount) 
 				{ 
 					$conn->rollBack();
+					$current_amount[0][0]; //
 					return "FAIL2";
 				}
 				else 

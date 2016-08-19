@@ -2,8 +2,6 @@
 <?php
 include "findActiveClass.php";
 ?>
-<!-- My Scripts -->
-<script src="js/nav.js"></script>
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-default navbar-static-top">

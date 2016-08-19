@@ -138,8 +138,8 @@ function makeComponent($team, $component, $isTrans)
 	if (!$conn->beginTransaction()) { return "FAIL0"; }
 	try 
 	{
-		if ($isTrans) { $table = "transport_function"; }
-		else { $table = "component_function"; }
+		if ($isTrans) { $table = "transport_function"; print_r("trans");}
+		else { $table = "component_function"; print_r("component");}
 		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 
 		{

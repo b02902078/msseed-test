@@ -19,7 +19,7 @@ include_once 'taskmodel.php';
 $conn = connect();
 
 $sql = "ALTER TABLE component_function
-		DROP COLUMN p_id";
+		DROP COLUMN pid";
 
 try{
 	if ($conn->query($sql))

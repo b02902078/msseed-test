@@ -34,7 +34,8 @@ $sql = "CREATE TABLE component_function(
 			)";
 
 try{
-	$conn->query($sql);
+	if ($conn->query($sql))
+		echo "Success";
 }
 catch(Exception $e){
 	print_r($e);

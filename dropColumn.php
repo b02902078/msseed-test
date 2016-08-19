@@ -18,12 +18,13 @@ include_once 'taskmodel.php';
 // Assumes database already exists.
 $conn = connect();
 
-$sql = "ALTER TABLE component_function
-		DROP COLUMN pid";
+$sql = "SELECT * FROM resource WHERE team='A'";
 
 try{
-	if ($conn->query($sql))
+	$stmt = $conn->query($sql)
+	if ($stmt)
 		echo "Success";
+	echo $stmt[0][0];
 }
 catch(Exception $e){
 	print_r($e);

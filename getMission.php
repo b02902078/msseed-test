@@ -50,6 +50,11 @@
 	td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 	
 	tr:nth-child(even){background-color: #f2f2f2}
+	
+	body {
+		text-align: center;
+		word-spacing: 10px;
+	}
 
 	</style>
 </head>
@@ -80,34 +85,26 @@ include_once 'taskmodel.php';
 	$code = $_POST['code'];
 	$items = searchMission($code);
 
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$time = getDay();
+	if(!empty($time))
+	{
+		echo "Day: ".$time[0][0];
+	}
+
 	if(!empty($items))
 	{
-		echo "<table border='1'>
-				<tr>
-					<th>Code:	</th>
-					<th>主題:	</th>
-					<th>內容:									</th>
-					<th>任務人數:	</th>
-					<th>Day1條件:	</th>
-					<th>Day2條件:	</th>
-					<th>Day3條件:	</th>
-					<th>Day4條件:	</th>
-				</tr>";
-		foreach($items as $item)
+		echo "<br>Code: ".$items[0][1]."<br>主題: ".$items[0][2]."<br>內容: ".$items[0][3]."<br>任務人數: ".$items[0][4];
+		switch($time[0][0])
 		{
-			echo 	"<tr>
-						<td>".$item[1 ]."</td>
-						<td>".$item[2 ]."</td>
-						<td>".$item[3 ]."</td>
-						<td>".$item[4 ]."</td>
-						<td>".$item[5 ]."</td>
-						<td>".$item[6 ]."</td>
-						<td>".$item[7 ]."</td>
-						<td>".$item[8 ]."</td>";
-			echo "</tr>";
+			case "1": echo "<br>Day1條件: ".$items[0][5]; break;
+			case "2": echo "<br>Day2條件: ".$items[0][6]; break;
+			case "3": echo "<br>Day3條件: ".$items[0][7]; break;
+			case "4": echo "<br>Day4條件: ".$items[0][8]; break;
+			default: echo "Error";
 		}
-		
-		echo "</table>";
 	} 
 	else 
 	{

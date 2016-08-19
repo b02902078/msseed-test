@@ -1,6 +1,4 @@
 整體
-	- Dropdown在ios bug
-
 
 首頁
 	- 機票：房間資訊
@@ -8,16 +6,16 @@
 		- email大小寫沒差
 
 據點地圖
-
 	- scalable: yes
 	- bug: 手機上位置跑掉
 	- 自動產生元素
 	- 佔領隊伍
 
 材料表
-
 	- 交通工具合成
 	- 特殊材料
+	- css在最下面
+	- updateResource: Admin無法connect
 
 遊戲規則
 	- 排版
@@ -26,8 +24,8 @@
 - 問漢威登入
 
 $host = "ap-cdbr-azure-east-c.cloudapp.net";
-	$user = "bc082d9a91de5b";
-	$pwd = "8acf1055";
-	$db = "acsm_5e80ee07b9a555e";
+$user = "bc082d9a91de5b";
+$pwd = "8acf1055";
+$db = "acsm_5e80ee07b9a555e";
 
 

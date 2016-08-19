@@ -133,13 +133,13 @@ function updateGroupResource($conn, $team, $value, $resource) // private functio
 	return $stmt->execute();
 }
 
-function makeComponent($team, $component, $trans_type)
+function makeComponent($team, $component, $isTrans)
 {
 	$conn = connect();
 	if (!$conn->beginTransaction()) { return "FAIL"; }
 	try 
 	{
-		if ($component == "transportation") { $table = "transport_function"; }
+		if ($isTrans) { $table = "transport_function"; }
 		else { $table = "component_function"; }
 		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 
@@ -168,7 +168,7 @@ function makeComponent($team, $component, $trans_type)
 		else { return "FAIL4"; }
 
 		// Update Component
-		if ($component != "transportation")
+		if ($isTrans)
 		{
 			$current_component = getGroupOneResource($conn, $team, $component);
 			if(empty($current_component)) { return "FAIL5"; }
@@ -176,7 +176,7 @@ function makeComponent($team, $component, $trans_type)
 		}
 		else
 		{
-			$value = $trans_type;
+			$value = $component;
 		}
 		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL6"; }
 		$conn->commit();

@@ -7,14 +7,14 @@ include_once 'taskmodel.php';
 /*$component = $_POST['component'];
 $team = $_SESSION['s_team'];
 $trans_type = $_POST['transtype'];*/
-$component = "transportation";
+$isTrans = true;
 $team = 'A';
-$trans_type = "aladdin_carpet";
+$component = "aladdin_carpet";
 
 
 
 // Try to update team resources
-$result = makeComponent($team, $component, $trans_type);
+$result = makeComponent($team, $component, $isTrans);
 
 // Return TRUE or FALSE
 echo $result;

@@ -1,7 +1,7 @@
 var main = function(){
 	$('.modal .btn-components').click(function(){
 		// Get resource name
-		var data = { component: $(this).parent().closest('.modal').attr('id'), trans_type: 'none' };
+		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: false };
 
 		// Update team resource
 		$.post("composeResource.php", data)
@@ -18,7 +18,7 @@ var main = function(){
 
 	$('.modal .btn-transport').click(function(){
 		// Get resource name
-		var data = { component: 'transportation', trans_type: $(this).parent().closest('.modal').attr('id') };
+		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: true };
 
 		// Update team resource
 		$.post("composeResource.php", data)

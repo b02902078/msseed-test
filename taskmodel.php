@@ -16,10 +16,10 @@
 function connect()
 {
 	// DB connection info
-	$host = "ap-cdbr-azure-east-c.cloudapp.net";
-	$user = "b37f8ddf38d21d";
-	$pwd = "1e72c81e";
-	$db = "stronghold";
+$host = "ap-cdbr-azure-east-c.cloudapp.net";
+$user = "bc082d9a91de5b";
+$pwd = "8acf1055";
+$db = "acsm_5e80ee07b9a555e";
 
 	try{
 		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);

@@ -1,5 +1,5 @@
 <?php  
 require_once "getitems.php";
-$team = getOccupyTeam('y997V');
-if(!empty($team)) { echo $team; }
+$team = getOccupyTeam();
+if(!empty($team)) { echo $team[0][0]; }
 ?>

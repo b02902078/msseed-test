@@ -57,7 +57,6 @@ function getGroupAllResources($team)
 
 function getGroupOneResource($conn, $team, $material)
 {
-	$conn = connect();
 	$sql = "SELECT ".$material." FROM resource WHERE team='".$team."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
@@ -65,7 +64,6 @@ function getGroupOneResource($conn, $team, $material)
 
 function getComposeFunction($conn, $component, $table)
 {
-	$conn = connect();
 	$sql = "SELECT * FROM ".$table." WHERE component='".$component."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
@@ -130,7 +128,6 @@ function getAllMessages()
 
 function updateGroupResource($conn, $team, $value, $resource) // private function
 {
-	$conn = connect();
 	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->prepare($sql);
 	return $stmt->execute();

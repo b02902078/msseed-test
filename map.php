@@ -55,11 +55,7 @@ else { $_SESSION["day"] = 1; }
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 神仙山莊/撲克牌好手-->
-    <a class="stronghold" id="icon2" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="神仙山莊" data-content="佔領陣營：
-      <?php  
-      $team = getOccupyTeam();
-      if(!empty($team)) { echo $team; }
-      ?><br />
+    <a class="stronghold" id="icon2" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="神仙山莊" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[6][0]; } ?><br />
       生產材料：神聖光芒（18個／3mins）<br />
       佔領條件：4人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[7][0]; } ?><br />

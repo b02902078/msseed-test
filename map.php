@@ -40,10 +40,10 @@ else { $_SESSION["day"] = 1; }
     
     <!-- 天使的眼淚/巧拼渡河 -->
     <a class="stronghold" id="icon1" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="天使的眼淚" data-content="佔領陣營：
-      <?php 
+      <?php  
       require_once "getitems.php";
       $team = getOccupyTeam('y997V');
-      echo $team; 
+      if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：生命之水（9個／2mins）<br />
       佔領條件：8人，需包含：<br />

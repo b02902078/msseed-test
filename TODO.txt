@@ -12,17 +12,21 @@
 	- scalable: yes
 	- bug: 手機上位置跑掉
 	- 自動產生元素
+	- 據點顏色？？？？？？？？？？咖啡色？？
 
 材料表
 	- css在最下面?
 	- updateResource: Admin無法connect
-	- 交通工具第四天才顯示
 
 遊戲規則
 	- 排版
 
+公告
+	- 公告推播提醒
+
 - 拿掉超級管理員
 - 問漢威登入
+
 
 $host = "ap-cdbr-azure-east-c.cloudapp.net";
 $user = "bc082d9a91de5b";

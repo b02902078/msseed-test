@@ -77,7 +77,6 @@
 <div class="row">
   <div class="col-md-offset-2 col-xs-offset-0"><p class="hint">※ 合成請點選零件圖示，只有一次機會喔！</p></div>
 </div>
-</div>
 
 <!-- Transportation Modal -->
 <!-- 阿拉丁的飛毯 -->

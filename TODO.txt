@@ -13,7 +13,6 @@
 	- 佔領隊伍
 
 材料表
-	- 交通工具合成
 	- css在最下面?
 	- updateResource: Admin無法connect
 
@@ -29,7 +28,7 @@ $pwd = "8acf1055";
 $db = "acsm_5e80ee07b9a555e";
 
 
-1 交通工具合成後顯示大圖
+
 2 佔領隊伍
 3 暫時的login 
 

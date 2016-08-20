@@ -10,11 +10,12 @@
 	- scalable: yes
 	- bug: 手機上位置跑掉
 	- 自動產生元素
-	- 佔領隊伍
+	- 佔領隊伍：performance
 
 材料表
 	- css在最下面?
 	- updateResource: Admin無法connect
+	- 交通工具第四天才顯示
 
 遊戲規則
 	- 排版

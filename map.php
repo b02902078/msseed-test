@@ -42,8 +42,8 @@ else { $_SESSION["day"] = 1; }
     <a class="stronghold" id="icon1" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="天使的眼淚" data-content="佔領陣營：
       <?php  
       require_once "getitems.php";
-      $team = getOccupyTeam('y997V');
-      if(!empty($team)) { echo $team; }
+      $team = getOccupyTeam();
+      if(!empty($team)) { echo $team[6][0]; }
       ?><br />
       生產材料：生命之水（9個／2mins）<br />
       佔領條件：8人，需包含：<br />
@@ -57,7 +57,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 神仙山莊/撲克牌好手-->
     <a class="stronghold" id="icon2" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="神仙山莊" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('X02aw');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：神聖光芒（18個／3mins）<br />
@@ -69,7 +69,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 霍格華茲學院/灌籃高手-->
     <a class="stronghold" id="icon3" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="霍格華茲學院" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('YEyKd');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：魔法粉末（9個／1min）<br />
@@ -89,7 +89,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 布布恰恰/乒乓傳情 -->
     <a class="stronghold" id="icon4" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="布布恰恰" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('DWVw4');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：布（18個／3mins）<br />
@@ -101,7 +101,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 精靈的礦坑/Flip-Flop -->
     <a class="stronghold" id="icon5" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="精靈的礦坑" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('soDJ3');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：紅寶石（6個／5mins）<br />
@@ -113,7 +113,7 @@ else { $_SESSION["day"] = 1; }
     <!-- Brandon工坊/呼啦抓小雞 -->
     <a class="stronghold" id="icon6" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Brandon工坊" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('GJPzb');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：轉軸（6個／3mins）<br />
@@ -125,7 +125,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 烈焰火山/頭好撞撞 -->
     <a class="stronghold" id="icon7" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="烈焰火山" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('lJAfD');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：熊熊烈火（12個／1min）<br />
@@ -137,7 +137,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 迷幻森林/打水漂 -->
     <a class="stronghold" id="icon8" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="迷幻森林" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('SZ1yG');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：種子（3個／2mins）<br />
@@ -157,7 +157,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 陽光田園/斷開魂結 -->
     <a class="stronghold" id="icon9" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="陽光田園" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('Glsx3');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：麻（12個／2mins）<br />
@@ -169,7 +169,7 @@ else { $_SESSION["day"] = 1; }
     <!-- Steven加工廠/拍拍羽毛球 -->
     <a class="stronghold" id="icon10" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Steven加工廠" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('YNbMr');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：螺絲（12個／1min）<br />
@@ -181,7 +181,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 統一二山/比手畫腳 -->
     <a class="stronghold" id="icon11" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="統一二山" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('KeQW2');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：塑料（18個／3mins）<br />
@@ -193,7 +193,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 皮卡丘發電廠/翻轉地面-->
     <a class="stronghold" id="icon12" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="皮卡丘發電廠" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('vNUEM');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：十萬伏特（6個／1min）<br />
@@ -205,7 +205,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 德克斯特的實驗室/平衡感王-->
     <a class="stronghold" id="icon13" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="德克斯特的實驗室" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('5swuv');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：人體工學（9個／5mins）<br />
@@ -217,7 +217,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 彩虹獅動物園/一路橡吸-->
     <a class="stronghold" id="icon14" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="彩虹獅動物園" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('Ao2pa');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：想像力（12個／1min）<br />
@@ -229,7 +229,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 鍊金小木屋/金雞獨立-->
     <a class="stronghold" id="icon15" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="鍊金小木屋" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('uIBpt');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：金屬（9個／1min）<br />
@@ -241,7 +241,7 @@ else { $_SESSION["day"] = 1; }
     <!-- 千年神木/甩便利貼-->
     <a class="stronghold" id="icon16" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="千年神木" data-content="佔領陣營：
       <?php  
-      $team = getOccupyTeam('Ow3vC');
+      $team = getOccupyTeam();
       if(!empty($team)) { echo $team; }
       ?><br />
       生產材料：大地氧氣（9個／2mins）<br />

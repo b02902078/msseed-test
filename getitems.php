@@ -45,6 +45,19 @@ function getStrongholds()
   return $items;
 }
 
+function getOccupyTeam($code)
+{
+// Get occupying team
+$team = getOneOccupyTeam($code);
+
+// Return Chinese team name
+if ($team == 'A') { return "美洲"; }
+else if ($team == 'B') { return "歐洲"; }
+else if ($team == 'C') { return "亞洲"; }
+else if ($team == 'D') { return "非洲"; }
+else { return "無" }
+}
+
 function getMissions()
 {
   $items = getAllMissions();

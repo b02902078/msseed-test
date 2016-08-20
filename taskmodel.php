@@ -339,7 +339,7 @@ function occupyStronghold($team, $code)
 	$stmt->execute();
 }
 
-function getOccupyTeam($code)
+function getOneOccupyTeam($code)
 {
 	$conn = connect();
 	$sql = "SELECT team FROM stronghold WHERE code='".$code."'";

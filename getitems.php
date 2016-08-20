@@ -48,6 +48,7 @@ function getStrongholds()
 function getOccupyTeam($code)
 {
 // Get occupying team
+  echo "in getitems";
   $team = getOneOccupyTeam('y997V');
   echo $team[0][0];
 

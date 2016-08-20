@@ -51,10 +51,10 @@ function getOccupyTeam($code)
 $team = getOneOccupyTeam($code);
 
 // Return Chinese team name
-if ($team == 'A') { return "美洲"; }
-else if ($team == 'B') { return "歐洲"; }
-else if ($team == 'C') { return "亞洲"; }
-else if ($team == 'D') { return "非洲"; }
+if ($team[0][0] == 'A') { return "美洲"; }
+else if ($team[0][0] == 'B') { return "歐洲"; }
+else if ($team[0][0] == 'C') { return "亞洲"; }
+else if ($team[0][0] == 'D') { return "非洲"; }
 else { return "無" }
 }
 

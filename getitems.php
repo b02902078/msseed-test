@@ -53,7 +53,7 @@ function getOccupyTeam()
   // Return Chinese team name
   for ($i = 0; $i < 16; $i++) 
   {
-  if ($team[$i][0] == 'A') { $team[$i][0] = "美洲"; }
+  if ($team[$i][0] == 'A') { echo $team[$i][0];$team[$i][0] = "美洲"; }
   else if ($team[$i][0] == 'B') { $team[$i][0] = "歐洲"; }
   else if ($team[$i][0] == 'C') { $team[$i][0] = "亞洲"; }
   else if ($team[$i][0] == 'D') { $team[$i][0] = "非洲"; }

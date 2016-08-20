@@ -48,7 +48,7 @@ function getStrongholds()
 function getOccupyTeam($code)
 {
 // Get occupying team
-  $team = getOneOccupyTeam($code);
+  $team = getOneOccupyTeam('y997V');
   echo $team[0][0];
 
 // Return Chinese team name

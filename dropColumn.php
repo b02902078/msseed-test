@@ -1,6 +1,6 @@
-<?php 
-      require_once "getitems.php";
-      echo "hi";
-      //$team = getOccupyTeam('y997V');
-      echo $team; 
+<?php  
+                //require_once "getitems.php";
+              #prepareResource();
+                //$team = getGroupResources('y997V');
+                if(!empty($team)) { echo $team[0][0]; }
 ?>

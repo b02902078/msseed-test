@@ -49,7 +49,7 @@ function getOccupyTeam($code)
 {
 // Get occupying team
   echo "in getitems";
-  $team = getOneOccupyTeam('y997V');
+  $team = getOneOccupyTeam($code);
   echo $team[0][0];
 
 // Return Chinese team name

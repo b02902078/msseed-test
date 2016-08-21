@@ -611,8 +611,8 @@ $_SESSION["s_team"] = 'B'; //testing
       <!-- Transportation Tab -->
       <div id="transport" class="tab-pane fade">
         <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper transport-wrapper" data-toggle="modal" data-target="#aladdin_carpet">
-            <p class="name transport-name text-center">阿拉丁的飛毯</p>
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#aladdin_carpet">
+            <p class="name component-name text-center">魔法石</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#control_panel">
             <div class="count component-count"><?php if(!empty($items)) { echo $items[0][18]; } ?></div>

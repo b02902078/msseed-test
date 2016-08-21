@@ -66,3 +66,22 @@ $db = "acsm_5e80ee07b9a555e";
 - 新規則：等欣容給
 *******
 
+
+
+<!-- Transportation -->
+      <div id="transport" class="tab-pane fade">
+        <?php 
+        if((!empty($items)) && ($items[0][34] != '0') && ($items[0][34] != NULL)) { echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">'; } 
+        else { require_once "transportation.php"; }
+        ?>
+      </div>
+      <!-- Transportation Modal -->
+      <?php
+      require_once "taskmodel.php";
+      $day = getAllDay();
+      if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
+      else { $_SESSION["day"] = 1; }
+
+      if ($_SESSION["day"] == 4) { require_once "transportation_modal.php"; }
+      ?>
+

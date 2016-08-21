@@ -616,14 +616,7 @@ $_SESSION["s_team"] = 'B'; //testing
       </div>
 
       <!-- Transportation Modal -->
-      <!--<?php
-      require_once "taskmodel.php";
-      $day = getAllDay();
-      if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
-      else { $_SESSION["day"] = 1; }
-
-      if ($_SESSION["day"] == 4) { include_once "transportation_modal.php"; }
-      ?>-->
+      
       <!-- Transportation Modal -->
 <!-- 阿拉丁的飛毯 -->
 <div id="aladdin_carpet" class="modal fade" role="dialog">

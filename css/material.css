@@ -44,6 +44,7 @@
     border: 8px solid white;
     background: #F5A9A9;
     padding-bottom: 16px;
+    cursor: pointer;
 }
 
 /* Image */
@@ -94,9 +95,6 @@
     font-size: 16px;
 }
 
-.clickable {
-    cursor: pointer;
-}
 
 @media screen and (max-width: 499px){
 .nav-tabs > li > a {

@@ -625,11 +625,6 @@ $_SESSION["s_team"] = 'B'; //testing
 
       if ($_SESSION["day"] == 4) { require_once "transportation_modal.php"; }
       ?>
-
-
-      
-
-
       
 
     </div>

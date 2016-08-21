@@ -55,10 +55,10 @@ $db = "acsm_5e80ee07b9a555e";
 - 據點顏色：根據陣營
 - 開放縮放
 材料
-- 合成後要跳回原本頁面
+- when will local storage disappear?
 - 合成交通工具改成只有最後10分鐘可以
 - Bug
-	- iOS 交通工具無法顯示modal
+	- iOS 交通工具無法顯示modal ******
 規則
 - 新規則：等欣容給
 *******

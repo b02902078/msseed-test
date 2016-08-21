@@ -973,17 +973,3 @@
   </div>
 </div>
 
-<!--<?php
-      require_once "taskmodel.php";
-      $day = getAllDay();
-      if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
-      else { $_SESSION["day"] = 1; }
-
-      if ($_SESSION["day"] == 4) { include_once "transportation_modal.php"; }
-      ?>-->
-
-
-      <?php 
-        if((!empty($items)) && ($items[0][34] != '0') && ($items[0][34] != NULL)) { echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">'; } 
-        else { include "transportation.php"; }
-        ?>

@@ -611,7 +611,7 @@ $_SESSION["s_team"] = 'B'; //testing
       <!-- Transportation Tab -->
       <div id="transport" class="tab-pane fade">
         <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#magic_stone">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#aladdin_carpet">
             <div class="count component-count"><?php if(!empty($items)) { echo $items[0][17]; } ?></div>
             <img src="png/s_component/magic_stone.png" class="img-responsive icon-components" alt="魔法石">
             <p class="name component-name text-center">魔法石</p>
@@ -671,7 +671,40 @@ $_SESSION["s_team"] = 'B'; //testing
         </div>
       </div>
 
-      
+      <!-- Transportation Modal -->
+<!-- 阿拉丁的飛毯 -->
+<div id="aladdin_carpet" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">阿拉丁的飛毯 x 1 合成</h4>
+      </div>
+      <div class="modal-body container-fluid">
+        <div class="row-fluid">
+          <div class="col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][2]; } ?>/70</div>
+            <img src="png/s_raw/cloth.png" class="img-responsive icon-materials" alt="布">
+            <p class="name raw-name text-center">布</p>
+          </div>
+          <div class="col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][3]; } ?>/15</div>
+            <img src="png/s_raw/ruby.png" class="img-responsive icon-materials" alt="紅寶石">
+            <p class="name raw-name text-center">紅寶石</p>
+          </div>
+          <div class="col-xs-3 wrapper component-wrapper">
+            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][17]; } ?>/6</div>
+            <img src="png/s_component/magic_stone.png" class="img-responsive icon-components" alt="魔法石">
+            <p class="name component-name text-center">魔法石</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">※確定後無法更改
+        <button type="button" class="btn btn-danger btn-transport" data-dismiss="modal">確定合成？</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
       

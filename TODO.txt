@@ -60,7 +60,6 @@ $db = "acsm_5e80ee07b9a555e";
 - Bug
 	- iOS 交通工具無法顯示modal
 	- 機艙：fail7
-	- 光輪2000：empty items
 	- 霍爾
 	- 杯面 fail7
 規則

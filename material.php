@@ -615,6 +615,16 @@ header('Pragma: no-cache');
           else { include "transportation.php"; }
           ?>
         </div>
+        
+        <!-- Transportation Modal -->
+        <?php
+        require_once "taskmodel.php";
+        $day = getAllDay();
+        if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
+        else { $_SESSION["day"] = 1; }
+
+        if ($_SESSION["day"] == 4) { include_once "transportation_modal.php"; }
+        ?>
 
       </div>
     </div>

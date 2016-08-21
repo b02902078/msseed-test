@@ -77,12 +77,3 @@
 <div class="row">
   <div class="col-md-offset-2 col-xs-offset-0"><p class="hint">※ 第四天才可點選交通工具合成，只有一次機會喔！</p></div>
 </div>
-
-<?php
-require_once "taskmodel.php";
-$day = getAllDay();
-if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
-else { $_SESSION["day"] = 1; }
-
-if ($_SESSION["day"] == 4) { include_once "transportation_modal.php"; }
-?>

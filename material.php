@@ -610,63 +610,10 @@ $_SESSION["s_team"] = 'B'; //testing
 
       <!-- Transportation Tab -->
       <div id="transport" class="tab-pane fade">
-        <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper transport-wrapper" data-toggle="modal" data-target="#aladdin_carpet">
-            <p class="name transport-name text-center">魔法石</p>
-          </div>
-          <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#control_panel">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][18]; } ?></div>
-            <img src="png/s_component/control_panel.png" class="img-responsive icon-components" alt="控制面板">
-            <p class="name component-name text-center">控制面板</p>
-          </div>
-          <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#seat">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][19]; } ?></div>
-            <img src="png/s_component/seat.png" class="img-responsive icon-components" alt="座位">
-            <p class="name component-name text-center">座位</p>
-          </div>
-          <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#wheel">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][20]; } ?></div>
-            <img src="png/s_component/wheel.png" class="img-responsive icon-components" alt="方向盤">
-            <p class="name component-name text-center">方向盤</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#space_shuttle">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][21]; } ?></div>
-            <img src="png/s_component/rope.png" class="img-responsive icon-components" alt="繩子">
-            <p class="name component-name text-center">繩子</p>
-          </div>
-          <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#cypress">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][22]; } ?></div>
-            <img src="png/s_component/cypress.png" class="img-responsive icon-components" alt="檜木">
-            <p class="name component-name text-center">檜木</p>
-          </div>
-          <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#propeller">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][23]; } ?></div>
-            <img src="png/s_component/propeller.png" class="img-responsive icon-components" alt="螺旋槳">
-            <p class="name component-name text-center">螺旋槳</p>
-          </div>
-          <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#door">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][24]; } ?></div>
-            <img src="png/s_component/door.png" class="img-responsive icon-components" alt="門">
-            <p class="name component-name text-center">門</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#jet">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][25]; } ?></div>
-            <img src="png/s_component/jet.png" class="img-responsive icon-components" alt="噴射器">
-            <p class="name component-name text-center">噴射器</p>
-          </div>
-          <div class="col-md-2 col-xs-3 wrapper component-wrapper" data-toggle="modal" data-target="#gun">
-            <div class="count component-count"><?php if(!empty($items)) { echo $items[0][26]; } ?></div>
-            <img src="png/s_component/gun.png" class="img-responsive icon-components" alt="機艙">
-            <p class="name component-name text-center">機艙</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0"><p class="hint">※ 合成請點選零件圖示</p></div>
-        </div>
+        <?php 
+        if((!empty($items)) && ($items[0][34] != '0') && ($items[0][34] != NULL)) { echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">'; } 
+        else { require_once "transportation.php"; }
+        ?>
       </div>
 
       <!-- Transportation Modal -->

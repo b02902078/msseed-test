@@ -66,33 +66,43 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse1">
           <h4 class="panel-title">Account</h4>
         </div>
-        <div id="collapse1" class="panel-collapse collapse in">
+        <div id="collapse1" class="panel-collapse collapse">
           <div class="panel-body">
 
+		  
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
+
 	$items = getItems();
 	if(!empty($items))
 	{
 		echo "<table border='1'>
 				<tr>
+					<th>pid</th>
 					<th>Account</th>
 					<th>Password</td>
+					<th>Authority</td>
 					<th>Delete?</th>
 				</tr>";
 		foreach($items as $item)
 		{
 			echo 	"<tr>
+						<td>".$item[0]."</td>
 						<td>".$item[1]."</td>
-						<td>".$item[2]."</td>";
+						<td>".$item[2]."</td>
+						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deleteitem.php?id=".$item[0]."'>Delete</a></td>";
 			echo "</tr>";
 		}
 		
 		echo "</table>";
+	}
+	else
+	{
+		prepareAccount();
 	}
 ?>
 
@@ -415,7 +425,7 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse4">
           <h4 class="panel-title">Stronghold</h4>
         </div>
-        <div id="collapse4" class="panel-collapse collapse in">
+        <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">
 
 	<form action="createStronghold.php" method="post">
@@ -521,7 +531,7 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse6">
           <h4 class="panel-title">Time Table</h4>
         </div>
-        <div id="collapse6" class="panel-collapse collapse in">
+        <div id="collapse6" class="panel-collapse collapse">
           <div class="panel-body">
 
 <?php

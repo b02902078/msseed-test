@@ -1,66 +1,48 @@
 <?php
-session_start();
-require_once 'dbconfig.php';
-$conn = connect();
-
-if (isset($_POST['email']) && isset($_POST['password'])) {
-
-    // Receive POST params
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-
-    // Verify user by email and password
-	$user = $this->getUserByEmailAndPassword($email, $password);
-
-	// user is found
-	if ($user != false) {
-
-		$stmt = $this->conn->prepare("SELECT * FROM user WHERE p_id = ?");
-		$stmt->bind_param("i", $user["p_id"]);
-		if ($stmt->execute())
-			$stmt->bind_result($_SESSION["p_id"], $_SESSION["name"], $_SESSION["nationality"], $_SESSION["room"], $_SESSION["team"]);
-		$_SESSION['login'] = true;
-		echo $_SESSION;
-		$stmt->close();
-	} else {
-        // user is not found with the credentials
-		echo "Login credentials are wrong. Please try again!";
-	}
-} else {
-    // required post params is missing
-	echo "Required parameters email or password is missing!";
-
-
-
-	/******** FUNCTIONS ***********/
-
-	/** Verify user by email and password **/
-	public function getUserByEmailAndPassword($email, $password) { 
-		$stmt = $this->conn->prepare("SELECT * FROM account WHERE email = ?"); 
-		$stmt->bind_param("s", $email);
-
-		$user = array();
-		if ($stmt->execute()) {
-			$stmt->bind_result($user["p_id"], $user["email"], $user["password"]);
-
-			while($stmt->fetch()) {
-
-                // check for password equality
-				if ($user["password"] == $password) {
-					return $user;
-				}
-			}
-			if ($stmt->fetch == NULL) {  return NULL;  }
-			$stmt->close();
-		} else {
-			return NULL;
-		}
-	}
-
+    session_start(); 
+    
+    require_once("taskmodel.php");
+    $conn = connect();
+    
+    $id = isset($_POST['email']) ? $_POST['email'] : null;
+    $pw = isset($_POST['password']) ? $_POST['password'] : null;
+    $sql = "SELECT * FROM account where email = '$id'";
+    $stmt = $conn->query($sql);
+	$row = $stmt->fetchAll(PDO::FETCH_NUM);
+    
+	echo "id: ".$id."<br>";
+	echo "pw: ".$pw."<br>";
+	echo "row[0][0]: ".$row[0][0]."<br>";
+	echo "row[0][1]: ".$row[0][1]."<br>";
+	echo "row[0][2]: ".$row[0][2]."<br>";
+	echo "row[0][3]: ".$row[0][3]."<br>";
 	
-
-
-}
-
-
+    if($id !== null && $pw !== null && $row[0][1] == $id && $row[0][2] == $pw)
+    {
+        if($row[0][3] == '1')
+        {
+			echo "normal uesr<br>";
+            $_SESSION['ID'] = $id;
+            $_SESSION['authority'] = 1;
+            #header('Location: Student_login.php');
+        }
+        elseif($row[0][3] == '2')
+        {
+            $_SESSION['ID'] = $id;
+            $_SESSION['authority'] = 2;
+			echo "隨輔<br>";
+            #header('Location: Prof_login.php');
+        }
+        elseif($row[0][3] == '3')
+        {
+            $_SESSION['ID'] = $id;
+            $_SESSION['authority'] = 3;
+			echo "Admin<br>";
+            #header('Location: admin.php');
+        }
+    }
+    else
+    {
+        echo "wrong password!!";
+    }
 ?>

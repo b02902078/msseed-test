@@ -95,7 +95,7 @@ else { $_SESSION["day"] = 1; }
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- Brandon工坊/呼啦抓小雞 -->
-    <a class="stronghold" id="icon6" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Brandon工坊" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[3][0]; } ?><br />
+    <a class="stronghold" id="icon6" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Brandon工坊（PK）" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[3][0]; } ?><br />
       生產材料：轉軸（6個／3mins）<br />
       佔領條件：一隊5人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[3][0]; } ?><br />
@@ -103,7 +103,7 @@ else { $_SESSION["day"] = 1; }
       <img src="png/s_map/mark/mark_orange.png" class="img-responsive map-marker-orange">
     </a>
     <!-- 烈焰火山/頭好撞撞 -->
-    <a class="stronghold" id="icon7" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="烈焰火山" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[4][0]; } ?><br />
+    <a class="stronghold" id="icon7" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="烈焰火山（PK）" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[4][0]; } ?><br />
       生產材料：熊熊烈火（12個／1min）<br />
       佔領條件：一隊12人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[4][0]; } ?><br />
@@ -135,7 +135,7 @@ else { $_SESSION["day"] = 1; }
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- Steven加工廠/拍拍羽毛球 -->
-    <a class="stronghold" id="icon10" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Steven加工廠" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[9][0]; } ?><br />
+    <a class="stronghold" id="icon10" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="Steven加工廠（PK）" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[9][0]; } ?><br />
       生產材料：螺絲（12個／1min）<br />
       佔領條件：一隊4人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[9][0]; } ?><br />
@@ -175,7 +175,7 @@ else { $_SESSION["day"] = 1; }
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
     <!-- 鍊金小木屋/金雞獨立-->
-    <a class="stronghold" id="icon15" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="鍊金小木屋" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[14][0]; } ?><br />
+    <a class="stronghold" id="icon15" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="鍊金小木屋（PK）" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[14][0]; } ?><br />
       生產材料：金屬（9個／1min）<br />
       佔領條件：一隊5人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[14][0]; } ?><br />

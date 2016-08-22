@@ -4,8 +4,6 @@
   <title>微軟13屆領袖營 - 據點戰 - 遊戲規則</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  <!-- My Scripts -->
-  <script src="#"></script>
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- CSS Style -->
@@ -113,7 +111,7 @@
           <h4 class="panel-title">緊急任務</h4>
         </div>
         <div id="collapse6" class="panel-collapse collapse">
-        <div class="panel-body">在「消息公告」中會不定時發布緊急任務，只要完成緊急任務，就有機會得到材料、特殊零件、線索……等等的獎勵</div>
+          <div class="panel-body">在「消息公告」中會不定時發布緊急任務，只要完成緊急任務，就有機會得到材料、特殊零件、線索……等等的獎勵</div>
         </div>
       </div>
     </div>

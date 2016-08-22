@@ -92,13 +92,14 @@ function prepareStronghold()
   prepareStrongholds();
 }
 
-function getStrongholdColor($team) {
+function getStrongholdColor($team) 
+{
   if ($team == 'A') { $color = 'red'; }
   else if ($team == 'B') { $color = 'orange'; }
   else if ($team == 'C') { $color = 'blue'; }
   else if ($team == 'D') { $color = 'green'; }
   else { $color = 'brown'; }
-  echo '<img src="png/s_map/mark/mark_'.$color.'.png" class="img-responsive map-marker-'.$color.'">'
+  echo '<img src="png/s_map/mark/mark_'.$color.'.png" class="img-responsive map-marker-'.$color.'">';
 
 }
 

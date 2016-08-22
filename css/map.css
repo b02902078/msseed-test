@@ -138,8 +138,8 @@
 }
 .map-marker-brown {
 	width: 4vw;
-	-moz-filter: drop-shadow(5px 5px 5px #0e272a);
-	-webkit-filter: drop-shadow(5px 5px 5px #0e272a);
-	filter: drop-shadow(5px 5px 5px #0e272a);
+	-moz-filter: drop-shadow(5px 5px 5px #FFBF00);
+	-webkit-filter: drop-shadow(5px 5px 5px #FFBF00);
+	filter: drop-shadow(5px 5px 5px #FFBF00);
 }
 

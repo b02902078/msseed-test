@@ -26,7 +26,7 @@ $_SESSION["ID"] = 2101;
   <?php
   if ($_SESSION['ID'] != null) { include 'planeTicket.php' }
   else 
-  { echo'  
+  { echo '  
 
     <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
       <!-- Banner -->
@@ -47,7 +47,7 @@ $_SESSION["ID"] = 2101;
         </div>
         <button type="submit" class="btn btn-default">Login</button>
       </form>
-    </div>'
+    </div>';
   }
 ?>
 

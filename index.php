@@ -24,7 +24,7 @@ $_SESSION["ID"] = 2101;
   ?>
 
   <?php
-  if ($_SESSION['ID'] != null) { include 'planeTicket.php' }
+  if ($_SESSION['ID'] != null) { include 'planeTicket.php'; }
   else 
   { echo '  
 

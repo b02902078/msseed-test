@@ -1,6 +1,6 @@
 整體
 	- connection close?
-	- 重新整理
+	- 拿掉超級管理員
 
 首頁
 	- 機票：房間資訊
@@ -13,6 +13,7 @@
 據點地圖
 	- bug: 手機上位置跑掉
 	- 自動產生元素
+	- 一天是45分鐘，前20白天，後25黑夜
 
 
 材料表
@@ -26,8 +27,9 @@
 
 公告
 	- 公告推播提醒
+	- 新增Grace Ma小叮嚀視窗
 
-- 拿掉超級管理員
+
 
 
 $host = "ap-cdbr-azure-east-c.cloudapp.net";
@@ -37,26 +39,9 @@ $db = "acsm_5e80ee07b9a555e";
 
 
 
-關卡頁面
-- 不用寫day
-- 關卡內容凸顯（文字顏色）
-- 字大一點（手機版字太小）
-- navbar dropdown bug（Chelsea負責） 
-回報頁面
-- 不要顯示ABCD，要用美洲(A)、歐洲(B)、亞洲(C)、非洲(D)
-- 顯示序號和關卡名稱 ex. 灌籃高手 - YEyKd
-公告
-- 發公告：可以指定文字顏色嗎？
-- 越新的公告放在越前面
-- 新增Grace Ma小叮嚀視窗
-
-地圖
-- 據點顏色：根據陣營
-- 開放縮放
 材料
-- when will local storage disappear?
+- when will local storage disappear? -> need to clean
 - 合成交通工具改成只有最後10分鐘可以
-- Bug
 - 交通工具的wrapper大小統一
 規則
 - 新規則：等欣容給

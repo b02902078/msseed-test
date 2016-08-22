@@ -11,7 +11,7 @@ else { $_SESSION["day"] = 1; }
 <head>
   <title>微軟13屆領袖營 - 據點戰 - 據點地圖</title>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=2.0" />
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- CSS Style -->
@@ -52,7 +52,7 @@ else { $_SESSION["day"] = 1; }
       if (!empty($condition)) { echo $condition[6][0]; }
       ?><br />
       <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
-      <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
+      <?php getStrongholdColor($team[6][0]); ?>
     </a>
     <!-- 神仙山莊/撲克牌好手-->
     <a class="stronghold" id="icon2" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="神仙山莊" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[7][0]; } ?><br />

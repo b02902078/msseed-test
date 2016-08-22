@@ -8,18 +8,18 @@
 		- email大小寫沒差
 		- 數字:t_team
 	- set "day" for global
+	- tmp login *****
 
 據點地圖
-	- scalable: yes
 	- bug: 手機上位置跑掉
 	- 自動產生元素
-	- 據點顏色？？？？？？？？？？咖啡色？？
 
 
 材料表
 	- css在最下面?
 	- updateResource: Admin無法connect
 	- 緊急任務緊急發材料
+	- 無法個別updateResource
 
 遊戲規則
 	- 排版
@@ -28,7 +28,6 @@
 	- 公告推播提醒
 
 - 拿掉超級管理員
-- 問漢威登入
 
 
 $host = "ap-cdbr-azure-east-c.cloudapp.net";
@@ -58,28 +57,8 @@ $db = "acsm_5e80ee07b9a555e";
 - when will local storage disappear?
 - 合成交通工具改成只有最後10分鐘可以
 - Bug
-	- iOS 交通工具無法顯示modal ******
+- 交通工具的wrapper大小統一
 規則
 - 新規則：等欣容給
 *******
-
-
-
-	<!-- Transportation -->
-      <div id="transport" class="tab-pane fade">
-        <?php 
-        if((!empty($items)) && ($items[0][34] != '0') && ($items[0][34] != NULL)) { echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">'; } 
-        else { require_once "transportation.php"; }
-        ?>
-      </div>
-
-      <!-- Transportation Modal -->
-      <?php
-      require_once "taskmodel.php";
-      $day = getAllDay();
-      if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
-      else { $_SESSION["day"] = 1; }
-
-      if ($_SESSION["day"] == 4) { require_once "transportation_modal.php"; }
-      ?>
 

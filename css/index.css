@@ -33,11 +33,11 @@ body {
 /* Large Info */
 .large-info {
 	position: absolute;
-	font-size: 20px;
+	font-size: 25px;
 }
 #ID-lg {
-	top: 90%;
-	left: 15%;
+	top: 87%;
+	left: 17%;
 }
 #ch-name-lg {
 	top: ;
@@ -60,10 +60,10 @@ body {
 /* Small Info */
 .small-info {
 	position: absolute;
-	font-size: 16px;
+	font-size: 20px;
 }
 #ID-sm {
-	top: 80%;
+	top: 87%;
 	left: 78%;
 }
 #ch-name-sm {

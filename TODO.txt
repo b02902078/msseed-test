@@ -9,6 +9,7 @@
 		- 數字:t_team
 	- country: America *****
 	- set "day" for global
+	- 測試最長名字
 
 據點地圖
 	- bug: 手機上位置跑掉

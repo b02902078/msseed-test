@@ -24,7 +24,7 @@
 
 	<!-- Plane Ticket-->
 	<div class="plane-ticket">
-
+		<?php echo '<img src="../../png/plain_ticket'.$_SESSION['country'].'.png" class="img-responsive">'; ?>
 	</div>
 </div>
 

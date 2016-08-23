@@ -32,6 +32,7 @@ body {
 
 /* Large Info */
 .large-info {
+	position: absolute;
 	font-size: 20px;
 }
 #ID-lg {
@@ -58,6 +59,7 @@ body {
 
 /* Small Info */
 .small-info {
+	position: absolute;
 	font-size: 16px;
 }
 #ID-sm {

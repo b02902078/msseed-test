@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 
-<div class="container col-xs-4 col-xs-offset-4">
+<div class="container">
 	<!-- Banner -->
-	<div class="banner">
+	<div class="banner col-xs-4 col-xs-offset-4">
 		<img src="png/ms_airline.png" class="img-responsive"/>
 	</div>
 

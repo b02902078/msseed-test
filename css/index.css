@@ -33,6 +33,7 @@ body {
 /* Large Info */
 .large-info {
 	position: absolute;
+	letter-spacing: 10px;
 	font-size: 27px;
 }
 #ch-name-lg {
@@ -60,6 +61,7 @@ body {
 /* Small Info */
 .small-info {
 	position: absolute;
+	letter-spacing: 8px;
 	font-size: 20px;
 }
 #ch-name-sm {

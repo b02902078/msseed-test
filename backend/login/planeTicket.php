@@ -9,7 +9,12 @@
 	<!-- Get User Info -->
 	<?php
 	echo $_SESSION['ID'];
+	try {
 	require_once("../taskmodel.php");
+	}
+	catch(Exception $e){
+		die(print_r($e));
+	}
 	echo $_SESSION['ID'];
 	$user = getUserInfo($_SESSION['ID']);
 	echo $_SESSION['ID'];

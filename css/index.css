@@ -21,3 +21,22 @@ body {
 .banner {
 	margin-bottom: 1em;
 }
+
+
+/*
+ * Plane Ticket 
+ */
+.plane-ticket {
+	position: relative;
+}
+
+/* Large Info */
+.large-info {
+	font-size: 20px;
+}
+
+/* Small Info */
+.small-info {
+	font-size: 16px;
+}
+

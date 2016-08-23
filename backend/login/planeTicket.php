@@ -92,8 +92,6 @@
 
 
 <?php
-echo "Hello ".$_SESSION['ID']."<br>";
-echo "Your authority is  ".$_SESSION['authority']."<br>";
 echo '  
 <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
 	<!-- Logout form-->

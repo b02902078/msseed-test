@@ -85,3 +85,26 @@ body {
 	left: 78%;
 }
 
+
+@media screen and (max-width: 499px){
+.large-info {
+	letter-spacing: 0px;
+	font-size: 12px;
+}
+.small-info {
+	letter-spacing: 0px;
+	font-size: 10px;
+}
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 800){
+.large-info {
+	letter-spacing: 4px;
+	font-size: 18px;
+}
+.small-info {
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+}

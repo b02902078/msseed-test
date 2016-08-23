@@ -3,13 +3,11 @@
 	- move to 望真DB
 
 首頁
-	- 機票：房間資訊
-	- 登入功能：FB api?
-		- email大小寫沒差
-		- 數字:t_team
 	- country: America *****
-	- set "day" for global
-	- 測試最長名字
+	- 測試最長名字，機票顯示的下？
+	- wrong password alert
+	- 更改密碼, 查詢密碼
+	- 小天使任務 ********
 
 據點地圖
 	- bug: 手機上位置跑掉
@@ -32,7 +30,7 @@
 	- 公告推播提醒
 	- 新增Grace Ma小叮嚀視窗
 
-
+1. sync
 
 
 $host = "ap-cdbr-azure-east-c.cloudapp.net";

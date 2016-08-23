@@ -8,9 +8,9 @@
 
 	<!-- Get User Info -->
 	<?php
-	echo "hi";
-	
-	echo "hi";
+	echo $_SESSION['ID'];
+	require_once('/backend/taskmodel.php');
+	echo $_SESSION['ID'];
 	$user = getUserInfo($_SESSION['ID']);
 	echo $_SESSION['ID'];
 	if (!empty($user)) 

@@ -8,9 +8,25 @@
 
 	<!-- Get User Info -->
 	<?php
+	echo $_SESSION['ID'];
 	require_once("../taskmodel.php");
 	$user = getUserInfo($_SESSION['ID']);
-	
+	if (!empty($user)) 
+	{
+		$_SESSION['ch_name'] = $user[0][1];
+		$_SESSION['en_name'] = $user[0][2];
+		$_SESSION['country'] = $user[0][3];
+		$_SESSION['room'] = $user[0][4];
+		$_SESSION['master'] = $user[0][5];
+		$_SESSION['mission'] = $user[0][6];
+
+		/* Decide teams for Taipei & Stronghold */
+		$_SESSION['t_team'] = $user[0][1];
+		$_SESSION['s_team'] = $user[0][1];
+
+		echo $_SESSION['en_name'] . $_SESSION['country'];
+	}
+	else { echo 'empty'; }
 	?>
 
 	<!-- Plane Ticket-->

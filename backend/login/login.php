@@ -19,7 +19,7 @@
 	
     if($id !== null && $pw !== null && $row[0][1] == $id && $row[0][2] == $pw)
     {
-        $_SESSION['ID'] = (string)$row[0][0];
+        $_SESSION['ID'] = $row[0][0];
         if($row[0][3] == '1')
         {
 			echo "normal uesr<br>";

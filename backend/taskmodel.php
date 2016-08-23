@@ -672,6 +672,7 @@ function getUserInfo($id)
 {
 	$conn = connect();
 	$sql = "SELECT * FROM users WHERE p_id='".$id."'";
+	echo $sql;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }

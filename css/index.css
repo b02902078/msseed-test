@@ -34,9 +34,50 @@ body {
 .large-info {
 	font-size: 20px;
 }
+#ID-lg {
+	top: 70%;
+	left: 20%;
+}
+#ch-name-lg {
+	top: ;
+	left: ;
+}
+#en-name-lg {
+	top: ;
+	left: ;
+}
+#country-lg {
+	top: ;
+	left: ;
+}
+#room-lg {
+	top: ;
+	left: ;
+}
+
 
 /* Small Info */
 .small-info {
 	font-size: 16px;
+}
+#ID-sm {
+	top: 50%;
+	left: 78%;
+}
+#ch-name-sm {
+	top: ;
+	left: ;
+}
+#en-name-sm {
+	top: ;
+	left: ;
+}
+#country-sm {
+	top: ;
+	left: ;
+}
+#room-sm {
+	top: ;
+	left: ;
 }
 

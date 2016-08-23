@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <div class="container col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
 	<!-- Banner -->
 	<div class="banner">

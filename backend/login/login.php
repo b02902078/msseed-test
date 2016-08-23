@@ -17,7 +17,7 @@
 	echo "row[0][2]: ".$row[0][2]."<br>";
 	echo "row[0][3]: ".$row[0][3]."<br>";*/
 	
-    if($id !== null && $pw !== null && $row[0][1] == $id && $row[0][2] == $pw)
+    if($id !== null && $pw !== null && strtolower($row[0][1]) == strtolower($id) && $row[0][2] == $pw)
     {
         $_SESSION['ID'] = $row[0][0];
         if($row[0][3] == '1')

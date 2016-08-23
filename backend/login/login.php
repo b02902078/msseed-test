@@ -1,7 +1,7 @@
 <?php
     session_start(); 
     
-    require_once("../backend/taskmodel.php");
+    require_once("../taskmodel.php");
     $conn = connect();
     
     $id = isset($_POST['email']) ? $_POST['email'] : null;

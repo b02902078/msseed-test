@@ -19,27 +19,23 @@
 	
     if($id !== null && $pw !== null && $row[0][1] == $id && $row[0][2] == $pw)
     {
+        $_SESSION['ID'] = $row[0][0];
         if($row[0][3] == '1')
         {
 			echo "normal uesr<br>";
-            $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 1;
-            header('Location: ../../index.php');
         }
         elseif($row[0][3] == '2')
         {
-            $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 2;
 			echo "隨輔<br>";
-            header('Location: ../../index.php');
         }
         elseif($row[0][3] == '3')
         {
-            $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 3;
 			echo "Admin<br>";
-            header('Location: ../../index.php');
         }
+        header('Location: ../../index.php');
     }
     else
     {

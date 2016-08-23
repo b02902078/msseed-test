@@ -1,6 +1,5 @@
 <?php 
 session_start();
-$_SESSION['ID'] = 2101;
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,13 +17,22 @@ $_SESSION['ID'] = 2101;
 
 <body>
 
-  <!-- Navigation Bar -->
   <?php
-  include "nav.php";
-  ?>
-
-  <?php
-  if ($_SESSION['ID'] != null) { include 'planeTicket.php'; }
+  #<!-- Navigation Bar -->
+  include "backend/navbar/nav.php";
+  if($_SESSION['ID'] != null){ 
+	include 'backend/login/planeTicket.php'; 
+	echo "Hello ".$_SESSION['ID']."<br>";
+	echo "Your authority is  ".$_SESSION['authority']."<br>";
+	echo '  
+    <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
+      <!-- Logout form-->
+      <form role="form" action="backend/login/logout.php" method="post" accept-charset="UTF-8" autocomplete="on">
+        <button type="submit" class="btn btn-default">Logout</button>
+      </form>
+    </div>';
+	
+  }
   else 
   { 
     echo '  
@@ -34,7 +42,7 @@ $_SESSION['ID'] = 2101;
         <img src="png/banner.png" class="img-responsive"/>
       </div>    
       <!-- Login form-->
-      <form role="form" action="login.php" method="post" accept-charset="UTF-8" autocomplete="on">
+      <form role="form" action="backend/login/login.php" method="post" accept-charset="UTF-8" autocomplete="on">
         <!-- Email -->
         <div class="form-group">
           <label for="email">MSSeed Email</label>

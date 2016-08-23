@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <html>
 <!--
 /** * Copyright 2013 Microsoft Corporation 
@@ -65,7 +68,7 @@
 
 <body>
 <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 	<h1>Mission</h1>
 
@@ -84,7 +87,7 @@
 	* limitations under the License. 
 	*/
 	
-include_once 'taskmodel.php';
+include_once 'backend/taskmodel.php';
 
 	$code = $_POST['code'];
 	$items = searchMission($code);
@@ -105,7 +108,8 @@ include_once 'taskmodel.php';
 			case "4": echo "<br>Day4條件: ".$items[0][8]; break;
 			default: echo "Error";
 		}
-		echo "<br>目前最高紀錄: ".$items[0][9]."</p>";
+		$Stronghold = searchStronghold($code);
+		echo "<br>目前最高紀錄: ".$Stronghold[0][9]."</p>";
 	} 
 	else 
 	{

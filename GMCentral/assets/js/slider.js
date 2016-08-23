@@ -1,26 +1,33 @@
 
 renew = function(){
-	/* Test */
-	var mysql = require('mysql');
-	var connection = mysql.createConnection({
-    	host: 'ap-cdbr-azure-east-c.cloudapp.net',
-    	user: 'b37f8ddf38d21d',
-    	password: '1e72c81e',
-    	database: 'stronghold'
-	});
-	connection.connect();
-	connection.query('SELECT 12 + 34 AS result', function(err, rows, fields) {
-    if (err) throw err;
-    console.log('The result is: ', rows[0].result);
-	connection.end();
-  
-  //顯示撈取資料
-  		console.log(results[0]);
+	var resourcesObj = getAllResources();
+	setNewGraph(resourcesObj);
+	$("#Seconddiv").load(location.href + " #Seconddiv",function () {
+         $(this).unwrap();
+    });	
+}
+
+///  Ajax TODO  ///
+
+function getAllResources() {
+	$.ajax({
+  		type: "GET",
+  		url: "getitems.php",
+ 		datatype: "json",
+ 		data: {},
+  		success: function(response) {
+			console.log(response);
+			var obj = JSON.parse(response);
+    		return obj;
+    	}
 	});
 }
+
+var x2 = [10,10,10,10];
 /* Set json in each graph */
-
-
+setNewGraph = function(obj){
+	x2[0] = x2[0]+5;
+}
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
 
@@ -66,52 +73,21 @@ jssor_2_slider_init = function() {
                 "startDuration": 0,
                 "dataProvider": [{
                     "country": "1",
-                    "visits": 40205,
+                    "visits": x2[0],
                     "color": "#FF0F00"
                 }, {
                     "country": "2",
-                    "visits": 1882,
+                    "visits": x2[1],
                     "color": "#FF6600"
                 }, {
                     "country": "3",
-                    "visits": 1809,
+                    "visits": x2[2],
                     "color": "#FF9E01"
                 }, {
                     "country": "4",
-                    "visits": 1322,
+                    "visits": x2[3],
                     "color": "#FCD202"
-                }, {
-                    "country": "5",
-                    "visits": 1122,
-                    "color": "#F8FF01"
-                }, {
-                    "country": "6",
-                    "visits": 1114,
-                    "color": "#B0DE09"
-                }, {
-                    "country": "7",
-                    "visits": 984,
-                    "color": "#04D215"
-                }, {
-                    "country": "8",
-                    "visits": 711,
-                    "color": "#0D8ECF"
-                }, {
-                    "country": "9",
-                    "visits": 665,
-                    "color": "#0D52D1"
-                }, {
-                    "country": "10",
-                    "visits": 580,
-                    "color": "#2A0CD0"
-                }, {
-                    "country": "11",
-                    "visits": 443,
-                    "color": "#8A0CCF"
-                }, {
-                    "country": "12",
-                    "visits": 441,
-                    "color": "#CD0D74"
+
                 }],
                 "valueAxes": [{
                     "position": "left",
@@ -162,38 +138,7 @@ jssor_2_slider_init = function() {
                     "country": "4",
                     "visits": 1322,
                     "color": "#FCD202"
-                }, {
-                    "country": "5",
-                    "visits": 1122,
-                    "color": "#F8FF01"
-                }, {
-                    "country": "6",
-                    "visits": 1114,
-                    "color": "#B0DE09"
-                }, {
-                    "country": "7",
-                    "visits": 984,
-                    "color": "#04D215"
-                }, {
-                    "country": "8",
-                    "visits": 711,
-                    "color": "#0D8ECF"
-                }, {
-                    "country": "9",
-                    "visits": 665,
-                    "color": "#0D52D1"
-                }, {
-                    "country": "10",
-                    "visits": 580,
-                    "color": "#2A0CD0"
-                }, {
-                    "country": "11",
-                    "visits": 443,
-                    "color": "#8A0CCF"
-                }, {
-                    "country": "12",
-                    "visits": 441,
-                    "color": "#CD0D74"
+                
                 }],
                 "valueAxes": [{
                     "position": "left",
@@ -285,42 +230,7 @@ jssor_1_slider_init = function() {
 				"country": "4",
 				"visits": 1322,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 1122,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 1114,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 984,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 711,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 441,
-				"color": "#CD0D74"
-			}],
-			"valueAxes": [{
-				"position": "left",
-				"title": "Visitors"
+			
 			}],
 			"graphs": [{
 				"balloonText": "[[category]]: <b>[[value]]</b>",
@@ -368,38 +278,7 @@ jssor_1_slider_init = function() {
 				"country": "4",
 				"visits": 1322,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 1122,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 1114,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 984,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 711,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 441,
-				"color": "#CD0D74"
+			
 			}],
 			"valueAxes": [{
 				"position": "left",
@@ -489,42 +368,7 @@ jssor_0_slider_init = function() {
 				"country": "4",
 				"visits": 18022,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 12222,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 20055,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 31201,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 8879,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 5665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 4580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 4443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 78441,
-				"color": "#CD0D74"
-			}],
-			"valueAxes": [{
-				"position": "left",
-				"title": "Visitors"
+			
 			}],
 			"graphs": [{
 				"balloonText": "[[category]]: <b>[[value]]</b>",
@@ -572,38 +416,7 @@ jssor_0_slider_init = function() {
 				"country": "4",
 				"visits": 1322,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 1122,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 1114,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 984,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 711,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 441,
-				"color": "#CD0D74"
+			
 			}],
 			"valueAxes": [{
 				"position": "left",

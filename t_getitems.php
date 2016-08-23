@@ -1,6 +1,6 @@
 <?php
 
-include_once 'taskmodel.php';
+include_once 'backend/taskmodel.php';
  
 function getTaipeiRun()
 {
@@ -147,6 +147,20 @@ function getAllTradeRequest(){
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getTradeRequestBySender($sender){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest where sender=".$sender;
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function getTradeRequestByReceiver($receiver){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest where receiver=".$receiver;
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getTradeRequestById($id){
     $conn = connect();
 	$sql = "SELECT * FROM t_tradeRequest where id=".$id;
@@ -179,12 +193,20 @@ function isTradeRequest($team){
     }
 }
 
-function getLatestReport($num){
+/*function getLatestReport($num){
     $conn = connect();
-	$sql = "SELECT * FROM t_missionReport ORDER BY id DESC LIMIT ".$num;
+	$sql = "SELECT * FROM t_missionReport LIMIT ".$num." ORDER BY id DESC";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
+
+function getSingleLatestReport($num){
+    $conn = connect();
+	$sql = "SELECT * FROM t_missionReport LIMIT ".$num." ORDER BY id DESC";
+	$stmt = $conn->query($sql);
+	$items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return items[$num-1];
+}*/
 
 function getPosition($team){
     $conn = connect();
@@ -192,6 +214,14 @@ function getPosition($team){
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
 	return $items[0][0];
+}
+
+function getReportCount(){
+    $conn = connect();
+	$sql = "SELECT COUNT(id) FROM t_missionReport";
+	$stmt = $conn->query($sql);
+    $items = $stmt->fetchColumn();
+	return $items;
 }
 
 ?>

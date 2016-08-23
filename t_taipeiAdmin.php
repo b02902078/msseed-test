@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <html>
     <head>
     <!-- Title -->
@@ -32,7 +35,7 @@
     </head>
     <body>
     <?php
-        include "nav.php";
+        include "backend/navbar/nav.php";
     ?>
 
 <h1>taipeiRun</h1>

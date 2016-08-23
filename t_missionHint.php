@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +15,7 @@
     
       
     <?php
-      include_once 'taskmodel.php';
+      include_once 'backend/taskmodel.php';
     ?>
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
@@ -20,7 +23,7 @@
   </head>
   <body>
     <?php
-      include "nav.php";
+      include "backend/navbar/nav.php";
     ?>
 
     <div class="container">

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <html>
 <!--
 /** * Copyright 2013 Microsoft Corporation 
@@ -57,7 +60,7 @@
 
 <body>
 <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 
   <div class="container">

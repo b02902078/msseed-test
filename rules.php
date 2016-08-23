@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +17,7 @@
 
   <!-- Navigation Bar -->
   <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 
   <!-- Rules -->

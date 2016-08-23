@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +34,7 @@
 
 <body>
 <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
   
 <div style="text-align:center" align="center">

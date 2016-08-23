@@ -24,7 +24,7 @@ session_start();
   else 
   { 
     echo '  
-    <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
+    <div class="container col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">
       <!-- Banner -->
       <div class="banner">
         <img src="png/banner.png" class="img-responsive"/>

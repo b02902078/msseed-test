@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 
-<div class="container col-xs-6 col-xs-offset-3">
+<div class="container col-xs-4 col-xs-offset-4">
 	<!-- Banner -->
 	<div class="banner">
 		<img src="png/ms_airline.png" class="img-responsive"/>
@@ -82,7 +82,7 @@
 
 	<!-- Plane Ticket-->
 	<div class="plane-ticket">
-		<?php echo '<img src="/png/plain_ticket/'.$_SESSION['country'].'.png" class="img-responsive">'; ?>
+		<?php echo '<img src="/png/plane_ticket/'.$_SESSION['country'].'.png" class="img-responsive">'; ?>
 	</div>
 
 </div>

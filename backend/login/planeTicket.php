@@ -87,13 +87,11 @@
 		<?php echo '<img src="/png/plane_ticket/'.$_SESSION['country'].'.png" class="img-responsive">'; ?>
 		<!-- Larger Information -->
 		<div class="large-info" id="ID-lg"><?php echo $_SESSION['ID'] ?></div>
-		<div class="large-info" id="ch-name-lg"><?php echo $_SESSION['ch_name'] ?></div>
 		<div class="large-info" id="en-name-lg"><?php echo $_SESSION['en_name'] ?></div>
 		<div class="large-info" id="country-lg"><?php echo $_SESSION['country'] ?></div>
 		<div class="large-info" id="room-lg"><?php echo $_SESSION['room'] ?></div>
 		<!-- Smaller Information -->
 		<div class="small-info" id="ID-sm"><?php echo $_SESSION['ID'] ?></div>
-		<div class="small-info" id="ch-name-sm"><?php echo $_SESSION['ch_name'] ?></div>
 		<div class="small-info" id="en-name-sm"><?php echo $_SESSION['en_name'] ?></div>
 		<div class="small-info" id="country-sm"><?php echo $_SESSION['country'] ?></div>
 		<div class="small-info" id="room-sm"><?php echo $_SESSION['room'] ?></div>

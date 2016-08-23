@@ -35,25 +35,25 @@ body {
 	position: absolute;
 	font-size: 27px;
 }
-#ID-lg {
-	top: 87%;
-	left: 15.5%;
-}
 #ch-name-lg {
 	top: ;
 	left: ;
 }
 #en-name-lg {
-	top: 70%;
+	top: 74%;
+	left: 15.5%;
+}
+#ID-lg {
+	top: 87%;
 	left: 15.5%;
 }
 #country-lg {
-	top: 70%;
-	left: 50%;
+	top: 74%;
+	left: 54%;
 }
 #room-lg {
 	top: 87%;
-	left: 50%;
+	left: 54%;
 }
 
 
@@ -62,24 +62,24 @@ body {
 	position: absolute;
 	font-size: 20px;
 }
-#ID-sm {
-	top: 89%;
-	left: 78%;
-}
 #ch-name-sm {
 	top: ;
 	left: ;
 }
 #en-name-sm {
-	top: 45%;
+	top: 59%;
 	left: 78%;
 }
 #country-sm {
-	top: 60%;
+	top: 69%;
 	left: 78%;
 }
 #room-sm {
-	top: 75%;
+	top: 79%;
+	left: 78%;
+}
+#ID-sm {
+	top: 89%;
 	left: 78%;
 }
 

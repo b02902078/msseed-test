@@ -37,23 +37,23 @@ body {
 }
 #ID-lg {
 	top: 87%;
-	left: 15%;
+	left: 15.5%;
 }
 #ch-name-lg {
 	top: ;
 	left: ;
 }
 #en-name-lg {
-	top: ;
-	left: ;
+	top: 70%;
+	left: 15.5%;
 }
 #country-lg {
-	top: ;
-	left: ;
+	top: 70%;
+	left: 50%;
 }
 #room-lg {
-	top: ;
-	left: ;
+	top: 87%;
+	left: 50%;
 }
 
 
@@ -71,15 +71,15 @@ body {
 	left: ;
 }
 #en-name-sm {
-	top: ;
-	left: ;
+	top: 45%;
+	left: 78%;
 }
 #country-sm {
-	top: ;
-	left: ;
+	top: 60%;
+	left: 78%;
 }
 #room-sm {
-	top: ;
-	left: ;
+	top: 75%;
+	left: 78%;
 }
 

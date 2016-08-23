@@ -10,11 +10,7 @@
 	<?php
 	require_once("../taskmodel.php");
 	$user = getUserInfo($_SESSION['ID']);
-	if (!empty($user)) 
-	{
-		
-	}
-	else { echo 'empty'; }
+	
 	?>
 
 	<!-- Plane Ticket-->

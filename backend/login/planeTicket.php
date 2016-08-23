@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 
-<div class="container col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
+<div class="container col-xs-6 col-xs-offset-3">
 	<!-- Banner -->
 	<div class="banner">
 		<img src="png/ms_airline.png" class="img-responsive"/>
@@ -8,14 +8,9 @@
 
 	<!-- Get User Info -->
 	<?php
-	echo $_SESSION['ID'];
-	try {
-	require_once("../taskmodel.php");
-	}
-	catch(Exception $e){
-		die(print_r($e));
-	}
-	echo $_SESSION['ID'];
+	echo "hi";
+	
+	echo "hi";
 	$user = getUserInfo($_SESSION['ID']);
 	echo $_SESSION['ID'];
 	if (!empty($user)) 

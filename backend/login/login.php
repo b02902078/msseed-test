@@ -36,7 +36,7 @@
     }
     else
     {
-        echo "<script> alert('Wrong Password')</script>";
+        echo "Wrong Password!";
         header('Location: ../../index.php');
     }
 ?>

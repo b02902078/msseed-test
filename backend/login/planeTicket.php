@@ -10,7 +10,9 @@
 	<?php
 	echo $_SESSION['ID'];
 	require_once("../taskmodel.php");
+	echo $_SESSION['ID'];
 	$user = getUserInfo($_SESSION['ID']);
+	echo $_SESSION['ID'];
 	if (!empty($user)) 
 	{
 		$_SESSION['ch_name'] = $user[0][1];

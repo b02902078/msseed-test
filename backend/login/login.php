@@ -37,6 +37,5 @@
     else
     {
         echo "<script> alert('Wrong Password')</script>";
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
     }
 ?>

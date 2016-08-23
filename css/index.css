@@ -37,7 +37,7 @@ body {
 	font-size: 27px;
 }
 #en-name-lg {
-	top: 76%;
+	top: 75.5%;
 	left: 15.5%;
 }
 #ID-lg {
@@ -45,12 +45,12 @@ body {
 	left: 15.5%;
 }
 #country-lg {
-	top: 76%;
-	left: 53%;
+	top: 75.5%;
+	left: 53.5%;
 }
 #room-lg {
 	top: 87%;
-	left: 53%;
+	left: 53.5%;
 }
 
 
@@ -61,19 +61,19 @@ body {
 	font-size: 20px;
 }
 #en-name-sm {
-	top: 65%;
+	top: 64.5%;
 	left: 78%;
 }
 #country-sm {
-	top: 73%;
+	top: 72.5%;
 	left: 78%;
 }
 #room-sm {
-	top: 81%;
+	top: 80.5%;
 	left: 78%;
 }
 #ID-sm {
-	top: 89%;
+	top: 88.5%;
 	left: 78%;
 }
 

@@ -99,11 +99,11 @@
 
 </div>
 <!-- Mission -->
-	<div class="container mission">
+	<div class="container">
 		<div class="row">
-			<p class="mission-title">小天使小主人</p>
+			<img src="/png/target.svg" class="img-responsive" id="target"><div class="mission-title">小天使小主人</div>
 		</div>
-		<div class="row"><p class="mission-master">小主人：<?php echo $_SESSION['master'] ?></p></div>
-		<div class="row"><p class="mission-content">任務內容：<?php echo $_SESSION['mission'] ?></p></div>
+		<div class="row"><div class="mission-master">小主人：<?php echo $_SESSION['master'] ?></div></div>
+		<div class="row"><div class="mission-content">任務內容：<?php echo $_SESSION['mission'] ?></div></div>
 	</div>
 

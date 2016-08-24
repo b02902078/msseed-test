@@ -104,6 +104,13 @@ body {
 
 
 @media screen and (max-width: 599px){
+.form-group {
+	letter-spacing: 3px;
+}
+.form-control {
+	letter-spacing: 3px;
+}
+
 .large-info {
 	letter-spacing: 0.5px;
 	font-size: 10px;

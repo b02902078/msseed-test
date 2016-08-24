@@ -97,6 +97,8 @@
 		<div class="small-info" id="room-sm"><?php echo $_SESSION['room'] ?></div>
 	</div>
 
+	<div class="row"><p>in container</p>
+	</div>
 </div>
 <!-- Mission -->
 	<div class="container">

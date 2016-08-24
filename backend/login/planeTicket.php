@@ -100,15 +100,19 @@
 
 	<!-- Mission -->
 	<div class="mission col-xs-offset-1">
-		<div class="row" id="mission-title">
-		<img src="/png/target.svg" class="img-responsive" id="target">
-		機密任務
-		</div>
-		<div class="row mission-row">
-		小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>
-		</div>
-		<div class="row mission-row">
-		任務內容：<div id="mission-content"><?php echo $_SESSION['mission'] ?></div>
+		<div class="row">
+			<div class="col-xs-1">
+				<img src="/png/target.svg" class="img-responsive" id="target">
+			</div>
+			<div class="col-xs-10">
+				<div id="mission-title">機密任務</div>	
+				<div class="mission-row">
+					小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>
+				</div>
+				<div class="mission-row">
+					任務內容：<div id="mission-content"><?php echo $_SESSION['mission'] ?></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

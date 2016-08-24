@@ -99,15 +99,15 @@
 
 
 	<!-- Mission -->
-	<div class="mission">
-		<div class="row col-xs-offset-1" id="mission-title">
+	<div class="mission col-xs-offset-1">
+		<div class="row" id="mission-title">
 		<img src="/png/target.svg" class="img-responsive" id="target">
 		機密任務
 		</div>
-		<div class="row col-xs-offset-1">
+		<div class="row mission-row">
 		小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>
 		</div>
-		<div class="row col-xs-offset-1">
+		<div class="row mission-row">
 		任務內容：<div id="mission-content"><?php echo $_SESSION['mission'] ?></div>
 		</div>
 	</div>

@@ -92,15 +92,16 @@ body {
 	font-size: 27px;
 	margin-bottom: 0.5em;
 }
+.mission-row {
+	margin-left: 5%;
+}
 #mission-master {
 	color: #CDE09B;
 	display: inline;
-	margin-left: 5%;
 }
 #mission-content {
 	color: #c2d68e;
 	display: inline;
-	margin-left: 5%;
 }
 
 

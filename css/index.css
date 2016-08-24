@@ -95,10 +95,12 @@ body {
 #mission-master {
 	color: #CDE09B;
 	display: inline;
+	margin-left: 5%;
 }
 #mission-content {
-	color: #9aa973;
+	color: #c2d68e;
 	display: inline;
+	margin-left: 5%;
 }
 
 

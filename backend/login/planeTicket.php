@@ -102,7 +102,7 @@
 	<div class="mission">
 		<div class="row col-xs-offset-1" id="mission-title">
 		<img src="/png/target.svg" class="img-responsive" id="target">
-		小天使小主人
+		機密任務
 		</div>
 		<div class="row col-xs-offset-1">
 		小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>

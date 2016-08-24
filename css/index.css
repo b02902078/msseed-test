@@ -94,8 +94,11 @@ body {
 }
 #mission-master {
 	color: #CDE09B;
+	display: inline;
 }
 #mission-content {
+	color: #9aa973;
+	display: inline;
 }
 
 

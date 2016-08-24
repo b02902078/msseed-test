@@ -98,7 +98,7 @@ body {
 	display: inline;
 }
 #mission-content {
-	color: #c2d68e;
+	color: #CDE09B;
 	display: inline;
 }
 
@@ -115,10 +115,10 @@ body {
 
 /* Mission */
 .mission {
-	font-size: 8px;
+	font-size: 10px;
 }
 #mission-title {
-	font-size: 10px;
+	font-size: 12px;
 	margin-bottom: 4px;
 }
 .mission-row {
@@ -142,10 +142,10 @@ body {
 
 /* Mission */
 .mission {
-	font-size: 14px;
+	font-size: 18px;
 }
 #mission-title {
-	font-size: 16px;
+	font-size: 20px;
 	margin-bottom: 6px;
 }
 .mission-row {

@@ -79,11 +79,17 @@ body {
 }
 
 /* Mission */
+.mission {
+	font-color: white;
+	font-size: 25px;
+	margin: 0.5em;
+}
 #target {
 	width: 5%;
+	display: inline;
 }
 #mission-title {
-	display: inline;
+
 }
 
 @media screen and (max-width: 599px){

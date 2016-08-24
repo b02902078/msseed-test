@@ -124,6 +124,9 @@ body {
 .mission-row {
 	margin-bottom: 2px;
 }
+.mission-margin {
+	padding-left: 0px;
+}
 }
 
 

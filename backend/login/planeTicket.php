@@ -104,7 +104,7 @@
 			<div class="col-lg-1 col-xs-2">
 				<img src="/png/target.svg" class="img-responsive" id="target">
 			</div>
-			<div class="col-lg-9 col-xs-8">
+			<div class="col-lg-9 col-xs-8 mission-margin">
 				<div id="mission-title">機密任務</div>	
 				<div class="mission-row">
 					小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>

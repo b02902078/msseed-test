@@ -100,10 +100,16 @@
 
 	<!-- Mission -->
 	<div class="mission">
+		<div class="row col-xs-offset-1">
 		<img src="/png/target.svg" class="img-responsive" id="target">
 		<p id="mission-title">小天使小主人</p>
+		</div>
+		<div class="row col-xs-offset-1">
 		<p id="mission-master">小主人：<?php echo $_SESSION['master'] ?></p>
+		</div>
+		<div class="row col-xs-offset-1">
 		<p id="mission-content">任務內容：<?php echo $_SESSION['mission'] ?></p>
+		</div>
 	</div>
 </div>
 

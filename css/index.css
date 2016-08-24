@@ -85,16 +85,13 @@ body {
 	margin: 0.5em;
 }
 #target {
-	width: 5%;
-	display: inline;
+	height: 10%;
 }
 #mission-title {
 	font-size: 27px;
 	margin-bottom: 0.5em;
 }
-.mission-row {
-	margin-left: 5%;
-}
+.mission-row {}
 #mission-master {
 	color: #CDE09B;
 	display: inline;

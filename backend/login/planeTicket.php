@@ -100,7 +100,7 @@
 
 	<!-- Mission -->
 	<div class="mission">
-		<div class="row col-xs-offset-1">
+		<div class="row col-lg-offset-1 col-xs-offset-0">
 			<div class="col-lg-1 col-xs-2">
 				<img src="/png/target.svg" class="img-responsive" id="target">
 			</div>

@@ -104,11 +104,11 @@
 		<img src="/png/target.svg" class="img-responsive" id="target">
 		小天使小主人
 		</div>
-		<div class="row col-xs-offset-1" id="mission-master">
-		小主人：<?php echo $_SESSION['master'] ?>
+		<div class="row col-xs-offset-1">
+		小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>
 		</div>
-		<div class="row col-xs-offset-1" id="mission-content">
-		任務內容：<?php echo $_SESSION['mission'] ?>
+		<div class="row col-xs-offset-1">
+		任務內容：<div id="mission-content"><?php echo $_SESSION['mission'] ?></div>
 		</div>
 	</div>
 </div>

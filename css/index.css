@@ -89,8 +89,11 @@ body {
 	display: inline;
 }
 #mission-title {
+	font-size: 27px;
+	margin-bottom: 0.5em;
 }
 #mission-master {
+	color: #CDE09B;
 }
 #mission-content {
 }

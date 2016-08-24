@@ -98,13 +98,13 @@
 	</div>
 
 	<!-- Mission -->
-	
-		<div class="row mission-title">
-			<img src="/png/target.svg" class="img-responsive" id="target">小天使小主人
+	<div class="mission">
+		<div class="row">
+			<img src="/png/target.svg" class="img-responsive" id="target"><p class="mission-title">小天使小主人</p>
 		</div>
-		<div class="row mission-master">小主人：<?php echo $_SESSION['master'] ?></div>
-		<div class="row mission-content">任務內容：<?php echo $_SESSION['mission'] ?></div>
-	
+		<div class="row"><p class="mission-master">小主人：<?php echo $_SESSION['master'] ?></p></div>
+		<div class="row"><p class="mission-content">任務內容：<?php echo $_SESSION['mission'] ?></p></div>
+	</div>
 
 </div>
 

@@ -97,14 +97,13 @@
 		<div class="small-info" id="room-sm"><?php echo $_SESSION['room'] ?></div>
 	</div>
 
-	<!-- Mission -->
-	<div class="mission">
+</div>
+<!-- Mission -->
+	<div class="container mission">
 		<div class="row">
 			<img src="/png/target.svg" class="img-responsive" id="target"><p class="mission-title">小天使小主人</p>
 		</div>
 		<div class="row"><p class="mission-master">小主人：<?php echo $_SESSION['master'] ?></p></div>
 		<div class="row"><p class="mission-content">任務內容：<?php echo $_SESSION['mission'] ?></p></div>
 	</div>
-
-</div>
 

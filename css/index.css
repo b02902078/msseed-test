@@ -96,13 +96,13 @@ body {
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 800px){
+@media screen and (min-width: 600px) and (max-width: 1050px){
 .large-info {
 	letter-spacing: 1px;
-	font-size: 12px;
+	font-size: 14px;
 }
 .small-info {
 	letter-spacing: 1px;
-	font-size: 10px;
+	font-size: 12px;
 }
 }

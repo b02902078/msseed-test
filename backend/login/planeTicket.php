@@ -99,9 +99,12 @@
 
 
 	<!-- Mission -->
-	<p class="mission-title"><img src="/png/target.svg" class="img-responsive" id="target">小天使小主人</p>
-	<div class="mission-master">小主人：<?php echo $_SESSION['master'] ?></div>
-	<div class="mission-content">任務內容：<?php echo $_SESSION['mission'] ?></div>
+	<div class="mission">
+		<img src="/png/target.svg" class="img-responsive" id="target">
+		<p id="mission-title">小天使小主人</p>
+		<div id="mission-master">小主人：<?php echo $_SESSION['master'] ?></div>
+		<div id="mission-content">任務內容：<?php echo $_SESSION['mission'] ?></div>
+	</div>
 </div>
 
 	

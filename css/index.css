@@ -82,7 +82,9 @@ body {
 #target {
 	width: 5%;
 }
-
+#mission-title {
+	display: inline;
+}
 
 @media screen and (max-width: 599px){
 .large-info {

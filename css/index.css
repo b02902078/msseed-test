@@ -78,7 +78,7 @@ body {
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 599px){
 .large-info {
 	letter-spacing: 0.5px;
 	font-size: 10px;
@@ -92,7 +92,7 @@ body {
 
 @media screen and (min-width: 600px) and (max-width: 800){
 .large-info {
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-size: 12px;
 }
 .small-info {

@@ -84,13 +84,15 @@ body {
 	font-size: 25px;
 }
 #target {
-	height: 7%;
+	width: 100%;
 }
 #mission-title {
 	font-size: 27px;
 	margin-bottom: 10px;
 }
-.mission-row {}
+.mission-row {
+	margin-bottom: 5px;
+}
 #mission-master {
 	color: #CDE09B;
 	display: inline;
@@ -110,6 +112,18 @@ body {
 	letter-spacing: 1px;
 	font-size: 8px;
 }
+
+/* Mission */
+.mission {
+	font-size: 8px;
+}
+#mission-title {
+	font-size: 10px;
+	margin-bottom: 4px;
+}
+.mission-row {
+	margin-bottom: 2px;
+}
 }
 
 
@@ -121,5 +135,17 @@ body {
 .small-info {
 	letter-spacing: 1px;
 	font-size: 12px;
+}
+
+/* Mission */
+.mission {
+	font-size: 12px;
+}
+#mission-title {
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+.mission-row {
+	margin-bottom: 4px;
 }
 }

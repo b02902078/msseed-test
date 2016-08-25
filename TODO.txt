@@ -23,6 +23,7 @@
 	- when will local storage disappear? -> need to clean when logout
 	- 合成交通工具改成只有最後10分鐘可以
 	- 交通工具的wrapper大小統一
+	- 以小隊為單位 生成和合成
 
 
 公告

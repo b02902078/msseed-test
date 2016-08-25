@@ -247,7 +247,8 @@ if($_SESSION['authority']==3){
 					<th>SD卡:   </th>
 					<th>飛彈:    </th>
 					<th>空姐:    </th>
-					<th>LED燈:  </th>				
+					<th>LED燈:  </th>
+					<th>交通工具:  </th>				
 				</tr>";
 		foreach($items as $item)
 		{
@@ -268,7 +269,7 @@ if($_SESSION['authority']==3){
 	}
 ?>
 
-	<form action="updateresource.php" method="post">
+	<form action="backend/stronghold/updateResource.php" method="post">
 		<table border="1">
 			<tr>
 				<td>Group: </td>

@@ -65,7 +65,44 @@ session_start();
 	<div id="collapse1" class="panel-collapse collapse">
 		<div class="panel-body">
 
-			
+			<?php
+			if($_SESSION['authority']==3)
+			{
+				header('Cache-Control: no-cache');
+				header('Pragma: no-cache');
+				require_once "getitems.php";
+
+				$items = getItems();
+				if(!empty($items))
+				{
+					echo "<table border='1'>
+					<tr>
+						<th>pid</th>
+						<th>Account</th>
+						<th>Password</td>
+						<th>Authority</td>
+						<th>Delete?</th>
+					</tr>";
+					foreach($items as $item)
+					{
+						echo 	"<tr>
+						<td>".$item[0]."</td>
+						<td>".$item[1]."</td>
+						<td>".$item[2]."</td>
+						<td>".$item[3]."</td>";
+
+						echo "<td><a href='deleteitem.php?id=".$item[0]."'>Delete</a></td>";
+						echo "</tr>";
+					}
+
+					echo "</table>";
+				}
+				else
+				{
+					prepareAccount();
+				}
+			}
+			?>
 
 			<!-- Add Item -->
 			<form action="additem.php" method="post">
@@ -93,140 +130,7 @@ session_start();
 	<div id="collapse2" class="panel-collapse collapse">
 		<div class="panel-body">
 
-			<?php
-			header('Cache-Control: no-cache');
-			header('Pragma: no-cache');
-			require_once "getitems.php";
-#prepareResource();
-			$items = getResources();
-/*for(int i = 0; i < 4; i++)
-{
-switch($items[i][0])
-{
-	case "A": $items[i][0] = "美洲"; break;
-	case "B": $items[i][0] = "歐洲"; break;
-	case "C": $items[i][0] = "亞洲"; break;
-	case "D": $items[i][0] = "非洲"; break;
-	default: break;
-}
-}*/
-			if(!empty($items))
-			{
-				echo "原料<br>";
-				echo "<table border='1'>
-				<tr>
-					<th>Group:  </th>
-					<th>魔法粉末:</th>
-					<th>布:     </th>
-					<th>紅寶石:  </th>
-					<th>轉軸:    </th>
-					<th>熊熊烈火:</th>
-					<th>種子:    </th>
-					<th>生命之水:</th>
-					<th>神聖光芒:</th>
-					<th>麻:     </th>
-					<th>螺絲:    </th>
-					<th>塑料:    </th>
-					<th>十萬伏特:</th>
-					<th>人體工學:</th>
-					<th>想像力:  </th>
-					<th>金屬:    </th>
-					<th>大地氧氣:</th>
-				</tr>";
-				foreach($items as $item)
-				{
-					echo 	"<tr>
-					<td>".$item[0 ]."</td>
-					<td>".$item[1 ]."</td>
-					<td>".$item[2 ]."</td>
-					<td>".$item[3 ]."</td>
-					<td>".$item[4 ]."</td>
-					<td>".$item[5 ]."</td>
-					<td>".$item[6 ]."</td>
-					<td>".$item[7 ]."</td>
-					<td>".$item[8 ]."</td>
-					<td>".$item[9]."</td>
-					<td>".$item[10]."</td>
-					<td>".$item[11]."</td>
-					<td>".$item[12]."</td>
-					<td>".$item[13]."</td>
-					<td>".$item[14]."</td>
-					<td>".$item[15]."</td>
-					<td>".$item[16]."</td>";
-					echo "</tr>";
-				}
-
-				echo "</table>";
-			}
-			if(!empty($items))
-			{
-				echo "零件<br>";
-				echo "<table border='1'>
-				<tr>
-					<th>Group:  </th>
-					<th>魔法石:  </th>
-					<th>控制面板:</th>
-					<th>座位:    </th>
-					<th>方向盤:  </th>
-					<th>繩子:    </th>
-					<th>檜木:    </th>
-					<th>螺旋槳:  </th>
-					<th>門:     </th>
-					<th>噴射器:  </th>
-					<th>機艙:    </th>
-				</tr>";
-				foreach($items as $item)
-				{
-					echo 	"<tr>
-					<td>".$item[0 ]."</td>
-					<td>".$item[17]."</td>
-					<td>".$item[18]."</td>
-					<td>".$item[19]."</td>
-					<td>".$item[20]."</td>
-					<td>".$item[21]."</td>
-					<td>".$item[22]."</td>
-					<td>".$item[23]."</td>
-					<td>".$item[24]."</td>
-					<td>".$item[25]."</td>
-					<td>".$item[26]."</td>";
-					echo "</tr>";
-				}
-
-				echo "</table>";
-			}
-			if(!empty($items))
-			{
-				echo "特殊原料<br>";
-				echo "<table border='1'>
-				<tr>
-					<th>Group:  </th>
-					<th>麋鹿:    </th>
-					<th>S logo:  </th>
-					<th>叫聲:    </th>
-					<th>SD卡:   </th>
-					<th>飛彈:    </th>
-					<th>空姐:    </th>
-					<th>LED燈:  </th>
-					<th>交通工具:  </th>				
-				</tr>";
-				foreach($items as $item)
-				{
-					echo 	"<tr>
-					<td>".$item[0 ]."</td>
-					<td>".$item[27]."</td>
-					<td>".$item[28]."</td>
-					<td>".$item[29]."</td>
-					<td>".$item[30]."</td>
-					<td>".$item[31]."</td>
-					<td>".$item[32]."</td>
-					<td>".$item[33]."</td>
-					<td>".$item[34]."</td>";
-					echo "</tr>";
-				}
-
-				echo "</table>";
-			}
-			?>
+			
 
 			<form action="/backend/stronghold/updateResource.php" method="post">
 				<table border="1">

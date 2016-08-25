@@ -1,6 +1,6 @@
 var main = function(){
 	// Compose Transportation
-	$.post("/backend/stronghold/getTime.php")
+	$.post("../backend/stronghold/getTime.php")
 	.done(function( result ) {
 		var buttons = document.getElementByClassName("btn-transport");
 		if (result == "true") { 

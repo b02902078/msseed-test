@@ -3,7 +3,7 @@ var main = function(){
 	$.post("backend/stronghold/getTime.php")
 	.done(function( result ) {
 		alert(result);
-		var buttons = document.getElementByClassName("btn-transport");
+		var buttons = document.getElementsByClassName("btn-transport");
 		if (result == "true") { 
 			for (var i = 0; i < buttons.length; ++i) {
 				buttons[i].disabled = false;

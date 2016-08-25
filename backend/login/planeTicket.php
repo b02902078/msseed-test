@@ -136,20 +136,23 @@
 				<div class="modal-body container-fluid">
 					<form>
 						<div class="form-group">
-							<label for="pwd1">New Password</label>
+							<label for="pwd1">新密碼：</label>
 							<input type="password" class="form-control" 
 							id="pwd1" placeholder="Enter New Password"/>
 						</div>
 						<div class="form-group">
-							<label for="pwd2" >Enter Again Password</label>
+							<label for="pwd2" >請再輸入一次：</label>
 							<input type="password" class="form-control"
 							id="pwd2" placeholder="Enter Again"/>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-danger" data-dismiss="modal">確定更改？</button>
+							<button type="submit" class="btn btn-danger" id="btn-change-pwd" data-dismiss="modal">確定更改？</button>
 						</div>
 					</form>
 				</div>
+				<!--<div class="modal-footer">
+					<button type="button" class="btn btn-default" id="btn-change-pwd" data-dismiss="modal">Close</button>
+				</div>-->
 			</div>
 		</div>
 	</div>

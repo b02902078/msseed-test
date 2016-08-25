@@ -127,21 +127,32 @@
 	</div>
 	<!-- Modal -->
 	<div id="change-pwd" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">更改登入密碼</h4>
-            </div>
-            <div class="modal-body container-fluid">
-              hi
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" id="btn-change-pwd" data-dismiss="modal">確定更改？</button>
-            </div>
-          </div>
-        </div>
-      </div>
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">更改登入密碼</h4>
+				</div>
+				<div class="modal-body container-fluid">
+					<form>
+						<div class="form-group">
+							<label for="pwd1">New Password</label>
+							<input type="password" class="form-control" 
+							id="pwd1" placeholder="Enter New Password"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd2" >Enter Again Password</label>
+							<input type="password" class="form-control"
+							id="pwd2" placeholder="Enter Again"/>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-danger" data-dismiss="modal">確定更改？</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 	

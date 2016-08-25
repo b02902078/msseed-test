@@ -43,7 +43,7 @@ session_start();
 		background-color: #4CAF50;
 		color: white; }
 		td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
-		tr:nth-child(even){background-color: #f2f2f2}
+		tr:nth-child(even){ background-color: #f2f2f2; }
 	</style>
 
 	<link rel="stylesheet" type="text/css" href="rules.css">
@@ -257,7 +257,7 @@ switch($items[i][0])
 					<td>".$item[31]."</td>
 					<td>".$item[32]."</td>
 					<td>".$item[33]."</td>
-					<td>".$item[34]."</td>"
+					<td>".$item[34]."</td>";
 					echo "</tr>";
 				}
 

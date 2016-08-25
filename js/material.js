@@ -2,11 +2,16 @@ var main = function(){
 	// Compose Transportation
 	$.post("backend/stronghold/getTime.php")
 	.done(function( result ) {
+		var buttons = document.getElementByClassName("btn-transport")
 		if (result == "true") { 
-			var buttons = document.getElementByClassName("btn-transport").disabled = true;
+			for (var i = 0; i < buttons.length; ++i) {
+				buttons[i].disabled = false;
+			}
 		}
 		else {
-			var buttons = document.getElementByClassName("btn-transport").disabled = true;
+			for (var i = 0; i < buttons.length; ++i) {
+				buttons[i].disabled = true;
+			}
 		}
 	});
 

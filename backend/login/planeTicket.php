@@ -2,7 +2,7 @@
 
 <div class="container">
 	<!-- Banner -->
-	<div class="banner col-lg-2 col-lg-offset-5 col-xs-4 col-xs-offset-4">
+	<div class="banner col-xs-4 col-xs-offset-4">
 		<img src="png/ms_airline.png" class="img-responsive"/>
 	</div>
 

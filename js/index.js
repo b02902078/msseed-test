@@ -10,7 +10,7 @@ var main = function(){
 				alert("更改成功！");
 			}
 			else {
-				alert("更改失敗！請確認兩欄密碼相同");
+				alert("更改失敗！" + result);
 			}
 		});
 	});

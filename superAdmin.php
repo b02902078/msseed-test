@@ -20,7 +20,6 @@ session_start();
 <head>
 <!-- Title -->
 <title>超級管理員</title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 <meta name="description" content="">
@@ -30,116 +29,113 @@ session_start();
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- CSS Style -->
-	<style type="text/css">
+<style type="text/css">
 	body { background-color: #fff; border-top: solid 10px #000;
 		color: #333; font-size: .85em; margin: 20px; padding: 20px;
 		font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
 	}
-
 	h1, h2, h3 { color: #000; margin-bottom: 0; padding-bottom: 0; }
-
 	h1 { font-size: 2em; }
-
 	h2 { font-size: 1.75em; }
-
 	h3 { font-size: 1.2em; }
-
 	table { margin-top: 0.75em;}
-
 	th { font-size: 1.2em; text-align: center; border: none 0px; padding-right: 15px;
 		background-color: #4CAF50;
 		color: white; }
-
-	td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
-	
-	tr:nth-child(even){background-color: #f2f2f2}
+		td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
+		tr:nth-child(even){background-color: #f2f2f2}
 	</style>
-	
+
 	<link rel="stylesheet" type="text/css" href="rules.css">
 </head>
 
+
 <body>
-<?php
-  include "backend/navbar/nav.php";
-  ?>
 
-  <div class="container">
-    <div class="panel-group">
-      <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" href="#collapse1">
-          <h4 class="panel-title">Account</h4>
-        </div>
-        <div id="collapse1" class="panel-collapse collapse">
-          <div class="panel-body">
+<?php include "backend/navbar/nav.php"; ?>
 
-		  
-<?php
-if($_SESSION['authority']==3){
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
+<div class="container">
+	<div class="panel-group">
 
-	$items = getItems();
-	if(!empty($items))
-	{
-		echo "<table border='1'>
-				<tr>
-					<th>pid</th>
-					<th>Account</th>
-					<th>Password</td>
-					<th>Authority</td>
-					<th>Delete?</th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[0]."</td>
-						<td>".$item[1]."</td>
-						<td>".$item[2]."</td>
-						<td>".$item[3]."</td>";
-							
-			echo "<td><a href='deleteitem.php?id=".$item[0]."'>Delete</a></td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-	else
-	{
-		prepareAccount();
-	}
-?>
+		<!-- Account -->
+		<div class="panel panel-success">
+			<div class="panel-heading" data-toggle="collapse" href="#collapse1">
+				<h4 class="panel-title">Account</h4>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse">
+				<div class="panel-body">
 
-	<form action="additem.php" method="post">
-		<table border="1">
-			<tr>
-				<td>Account: </td>
-				<td><input name="account" type="text"/></td>
-			</tr>
-			<tr>
-				<td>Password: </td>
-				<td><input name="password" type="text"/></td>
-			</tr>
-		</table>
-		<input type="submit" value="Add item"/>
-	</form>
-			  
-		  </div>
-        </div>
-      </div>
-      <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" href="#collapse2">
-          <h4 class="panel-title">Resource</h4>
-        </div>
-        <div id="collapse2" class="panel-collapse collapse">
-          <div class="panel-body">
+					<?php
+					if($_SESSION['authority']==3)
+					{
+						header('Cache-Control: no-cache');
+						header('Pragma: no-cache');
+						require_once "getitems.php";
 
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
-	#prepareResource();
-	$items = getResources();
+						$items = getItems();
+						if(!empty($items))
+						{
+							echo "<table border='1'>
+							<tr>
+								<th>pid</th>
+								<th>Account</th>
+								<th>Password</td>
+								<th>Authority</td>
+								<th>Delete?</th>
+							</tr>";
+							foreach($items as $item)
+							{
+								echo 	"<tr>
+								<td>".$item[0]."</td>
+								<td>".$item[1]."</td>
+								<td>".$item[2]."</td>
+								<td>".$item[3]."</td>";
+
+								echo "<td><a href='deleteitem.php?id=".$item[0]."'>Delete</a></td>";
+								echo "</tr>";
+							}
+
+							echo "</table>";
+						}
+						else
+						{
+							prepareAccount();
+						}
+					}
+					?>
+
+					<!-- Add Item -->
+					<form action="additem.php" method="post">
+						<table border="1">
+							<tr>
+								<td>Account: </td>
+								<td><input name="account" type="text"/></td>
+							</tr>
+							<tr>
+								<td>Password: </td>
+								<td><input name="password" type="text"/></td>
+							</tr>
+						</table>
+						<input type="submit" value="Add item"/>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Resources -->
+		<div class="panel panel-info">
+			<div class="panel-heading" data-toggle="collapse" href="#collapse2">
+				<h4 class="panel-title">Resource</h4>
+			</div>
+			<div id="collapse2" class="panel-collapse collapse">
+				<div class="panel-body">
+
+					<?php
+					header('Cache-Control: no-cache');
+					header('Pragma: no-cache');
+					require_once "getitems.php";
+#prepareResource();
+					$items = getResources();
 	/*for(int i = 0; i < 4; i++)
 	{
 		switch($items[i][0])
@@ -151,156 +147,193 @@ if($_SESSION['authority']==3){
 			default: break;
 		}
 	}*/
-	if(!empty($items))
-	{
-		echo "原料<br>";
-		echo "<table border='1'>
-				<tr>
-					<th>Group:  </th>
-					<th>魔法粉末:</th>
-					<th>布:     </th>
-					<th>紅寶石:  </th>
-					<th>轉軸:    </th>
-					<th>熊熊烈火:</th>
-					<th>種子:    </th>
-					<th>生命之水:</th>
-					<th>神聖光芒:</th>
-					<th>麻:     </th>
-					<th>螺絲:    </th>
-					<th>塑料:    </th>
-					<th>十萬伏特:</th>
-					<th>人體工學:</th>
-					<th>想像力:  </th>
-					<th>金屬:    </th>
-					<th>大地氧氣:</th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[0 ]."</td>
-						<td>".$item[1 ]."</td>
-						<td>".$item[2 ]."</td>
-						<td>".$item[3 ]."</td>
-						<td>".$item[4 ]."</td>
-						<td>".$item[5 ]."</td>
-						<td>".$item[6 ]."</td>
-						<td>".$item[7 ]."</td>
-						<td>".$item[8 ]."</td>
-						<td>".$item[9]."</td>
-						<td>".$item[10]."</td>
-						<td>".$item[11]."</td>
-						<td>".$item[12]."</td>
-						<td>".$item[13]."</td>
-						<td>".$item[14]."</td>
-						<td>".$item[15]."</td>
-						<td>".$item[16]."</td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-	if(!empty($items))
-	{
-		echo "零件<br>";
-		echo "<table border='1'>
-				<tr>
-					<th>Group:  </th>
-					<th>魔法石:  </th>
-					<th>控制面板:</th>
-					<th>座位:    </th>
-					<th>方向盤:  </th>
-					<th>繩子:    </th>
-					<th>檜木:    </th>
-					<th>螺旋槳:  </th>
-					<th>門:     </th>
-					<th>噴射器:  </th>
-					<th>機艙:    </th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[0 ]."</td>
-						<td>".$item[17]."</td>
-						<td>".$item[18]."</td>
-						<td>".$item[19]."</td>
-						<td>".$item[20]."</td>
-						<td>".$item[21]."</td>
-						<td>".$item[22]."</td>
-						<td>".$item[23]."</td>
-						<td>".$item[24]."</td>
-						<td>".$item[25]."</td>
-						<td>".$item[26]."</td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-	if(!empty($items))
-	{
-		echo "特殊原料<br>";
-		echo "<table border='1'>
-				<tr>
-					<th>Group:  </th>
-					<th>麋鹿:    </th>
-					<th>S logo:  </th>
-					<th>叫聲:    </th>
-					<th>SD卡:   </th>
-					<th>飛彈:    </th>
-					<th>空姐:    </th>
-					<th>LED燈:  </th>				
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[0 ]."</td>
-						<td>".$item[27]."</td>
-						<td>".$item[28]."</td>
-						<td>".$item[29]."</td>
-						<td>".$item[30]."</td>
-						<td>".$item[31]."</td>
-						<td>".$item[32]."</td>
-						<td>".$item[33]."</td>
-						<td></td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-?>
+					if(!empty($items))
+					{
+						echo "原料<br>";
+						echo "<table border='1'>
+						<tr>
+							<th>Group:  </th>
+							<th>魔法粉末:</th>
+							<th>布:     </th>
+							<th>紅寶石:  </th>
+							<th>轉軸:    </th>
+							<th>熊熊烈火:</th>
+							<th>種子:    </th>
+							<th>生命之水:</th>
+							<th>神聖光芒:</th>
+							<th>麻:     </th>
+							<th>螺絲:    </th>
+							<th>塑料:    </th>
+							<th>十萬伏特:</th>
+							<th>人體工學:</th>
+							<th>想像力:  </th>
+							<th>金屬:    </th>
+							<th>大地氧氣:</th>
+						</tr>";
+						foreach($items as $item)
+						{
+							echo 	"<tr>
+							<td>".$item[0 ]."</td>
+							<td>".$item[1 ]."</td>
+							<td>".$item[2 ]."</td>
+							<td>".$item[3 ]."</td>
+							<td>".$item[4 ]."</td>
+							<td>".$item[5 ]."</td>
+							<td>".$item[6 ]."</td>
+							<td>".$item[7 ]."</td>
+							<td>".$item[8 ]."</td>
+							<td>".$item[9]."</td>
+							<td>".$item[10]."</td>
+							<td>".$item[11]."</td>
+							<td>".$item[12]."</td>
+							<td>".$item[13]."</td>
+							<td>".$item[14]."</td>
+							<td>".$item[15]."</td>
+							<td>".$item[16]."</td>";
+							echo "</tr>";
+						}
 
-	<form action="updateresource.php" method="post">
-		<table border="1">
-			<tr>
-				<td>Group: </td>
-				<td>
-					<select name="name"/>
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="C">C</option>
-						<option value="D">D</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Resource: </td>
-				<td>
-					<select name="source"/>
-						<option value="wood">Wood</option>
-						<option value="gold">Gold</option>
-						<option value="water">Water</option>
-						<option value="fire">Fire</option>
-						<option value="steel">Steel</option>
-						<option value="magic">Magic</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Value: </td>
-				<td><input name="value" type="number"/></td>
-			</tr>
-		</table>
-		<input type="submit" value="Change resource value"/>
-	</form>
+						echo "</table>";
+					}
+					if(!empty($items))
+					{
+						echo "零件<br>";
+						echo "<table border='1'>
+						<tr>
+							<th>Group:  </th>
+							<th>魔法石:  </th>
+							<th>控制面板:</th>
+							<th>座位:    </th>
+							<th>方向盤:  </th>
+							<th>繩子:    </th>
+							<th>檜木:    </th>
+							<th>螺旋槳:  </th>
+							<th>門:     </th>
+							<th>噴射器:  </th>
+							<th>機艙:    </th>
+						</tr>";
+						foreach($items as $item)
+						{
+							echo 	"<tr>
+							<td>".$item[0 ]."</td>
+							<td>".$item[17]."</td>
+							<td>".$item[18]."</td>
+							<td>".$item[19]."</td>
+							<td>".$item[20]."</td>
+							<td>".$item[21]."</td>
+							<td>".$item[22]."</td>
+							<td>".$item[23]."</td>
+							<td>".$item[24]."</td>
+							<td>".$item[25]."</td>
+							<td>".$item[26]."</td>";
+							echo "</tr>";
+						}
+
+						echo "</table>";
+					}
+					if(!empty($items))
+					{
+						echo "特殊原料<br>";
+						echo "<table border='1'>
+						<tr>
+							<th>Group:  </th>
+							<th>麋鹿:    </th>
+							<th>S logo:  </th>
+							<th>叫聲:    </th>
+							<th>SD卡:   </th>
+							<th>飛彈:    </th>
+							<th>空姐:    </th>
+							<th>LED燈:  </th>
+							<th>交通工具:  </th>				
+						</tr>";
+						foreach($items as $item)
+						{
+							echo 	"<tr>
+							<td>".$item[0 ]."</td>
+							<td>".$item[27]."</td>
+							<td>".$item[28]."</td>
+							<td>".$item[29]."</td>
+							<td>".$item[30]."</td>
+							<td>".$item[31]."</td>
+							<td>".$item[32]."</td>
+							<td>".$item[33]."</td>
+							<td>".$item[34]."</td>";
+							echo "</tr>";
+						}
+
+						echo "</table>";
+					}
+					?>
+
+					<form action="/backend/stronghold/updateResource.php" method="post">
+						<table border="1">
+							<tr>
+								<td>Group: </td>
+								<td>
+									<select name="team"/>
+										<option value="A">A</option>
+										<option value="B">B</option>
+										<option value="C">C</option>
+										<option value="D">D</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Resource: </td>
+								<td>
+									<select name="resource"/>
+										<optgroup label="原料">
+											<option value="magic_powder">魔法粉末</option>
+											<option value="cloth">布</option>
+											<option value="ruby">紅寶石</option>
+											<option value="shaft">轉軸</option>
+											<option value="fire">熊熊烈火</option>
+											<option value="seed">種子</option>
+											<option value="water">生命之水</option>
+											<option value="light">神聖光芒</option>
+											<option value="flax">麻</option>
+											<option value="screw">螺絲</option>
+											<option value="plastic">塑料</option>
+											<option value="electron">十萬伏特</option>
+											<option value="ergonomic">人體工學</option>
+											<option value="imagine">想像力</option>
+											<option value="metal">金屬</option>
+											<option value="air">大地氧氣</option>
+										</optgroup>
+										<optgroup label="零件">
+											<option value="magic_stone">魔法石</option>
+											<option value="control_panel">控制面板</option>
+											<option value="seat">座位</option>
+											<option value="wheel">方向盤</option>
+											<option value="rope">繩子</option>
+											<option value="cypress">檜木</option>
+											<option value="propeller">螺旋槳</option>
+											<option value="door">門</option>
+											<option value="jet">噴射器</option>
+											<option value="gun">機艙</option>
+										</optgroup>
+										<optgroup label="特殊材料">
+											<option value="elk">麋鹿</option>
+											<option value="s_logo">S Logo</option>
+											<option value="sound">叫聲</option>
+											<option value="sd_card">SD卡</option>
+											<option value="missile">飛彈</option>
+											<option value="miss_air">飛彈</option>
+											<option value="led_light">LED燈</option>
+										</optgroup>
+										<optgroup label="交通工具">
+											<option value="transportation">交通工具</option>
+										</optgroup>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Value: </td>
+								<td><input name="value" type="number"/></td>
+							</tr>
+						</table>
+					<input type="submit" value="Change resource value"/>
+				</form>
 
 <!--
 	<form action="addresource.php" method="post">
@@ -342,304 +375,335 @@ if($_SESSION['authority']==3){
 		<input type="submit" value="Add resource"/>
 	</form>
 -->
-		  
-          </div>
-        </div>
-      </div>
 
-      <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" href="#collapse3">
-          <h4 class="panel-title">Message</h4>
-        </div>
-        <div id="collapse3" class="panel-collapse collapse">
-          <div class="panel-body">	
+</div>
+</div>
+</div>
 
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
-	$items = getMessages();
-	if(!empty($items))
-	{
-		echo "<table border='1'>
+<div class="panel panel-success">
+	<div class="panel-heading" data-toggle="collapse" href="#collapse3">
+		<h4 class="panel-title">Message</h4>
+	</div>
+	<div id="collapse3" class="panel-collapse collapse">
+		<div class="panel-body">	
+
+			<?php
+			header('Cache-Control: no-cache');
+			header('Pragma: no-cache');
+			require_once "getitems.php";
+			$items = getMessages();
+			if(!empty($items))
+			{
+				echo "<table border='1'>
 				<tr>
 					<th>Time</th>
 					<th>Client</td>
-					<th>Color</td>
-					<th>Message</td>
-					<th>Delete?</th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[1]."</td>
-						<td>".$item[2]."</td>
-						<td>".$item[4]."</td>
-						<td>".$item[3]."</td>";
-							
-			echo "<td><a href='deletemessage.php?id=".$item[0]."'>Delete</a></td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-?>
-	
-	<form action="addmessage.php" method="post">
-		<table border="1">
-			<tr>
-				<td>Time: </td>
-				<td><input name="time" type="text"/></td>
-			</tr>
-			<tr>
-				<td>client: </td>
-				<td>
-					<select name="client"/>
-						<option value="A">美洲</option>
-						<option value="B">歐洲</option>
-						<option value="C">亞洲</option>
-						<option value="D">非洲</option>
-						<option value="All">All</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Message: </td>
-				<td><textarea name="content" rows="4" cols="40"></textarea></td>
-			</tr>
-			<tr>
-				<td>Color: </td>
-				<td>
-					<select name="color"/>
-						<option value="black">黑色</option>
-						<option value="blue">藍色</option>
-						<option value="red">紅色</option>
-					</select>
-				</td>
-			</tr>
-		</table>
-		<input type="submit" value="Add message"/>
-	</form>
-	
-          </div>
-        </div>
-      </div>
+						<th>Color</td>
+							<th>Message</td>
+								<th>Delete?</th>
+							</tr>";
+							foreach($items as $item)
+							{
+								echo 	"<tr>
+								<td>".$item[1]."</td>
+								<td>".$item[2]."</td>
+								<td>".$item[4]."</td>
+								<td>".$item[3]."</td>";
 
-      <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" href="#collapse4">
-          <h4 class="panel-title">Stronghold</h4>
-        </div>
-        <div id="collapse4" class="panel-collapse collapse">
-          <div class="panel-body">
+								echo "<td><a href='deletemessage.php?id=".$item[0]."'>Delete</a></td>";
+								echo "</tr>";
+							}
 
-	<form action="createStronghold.php" method="post">
-		<input type="submit" value="Create Stronghold Table"/>
-	</form>
-	
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
+							echo "</table>";
+						}
+						?>
+
+						<form action="addmessage.php" method="post">
+							<table border="1">
+								<tr>
+									<td>Time: </td>
+									<td><input name="time" type="text"/></td>
+								</tr>
+								<tr>
+									<td>client: </td>
+									<td>
+										<select name="client"/>
+										<option value="A">美洲</option>
+										<option value="B">歐洲</option>
+										<option value="C">亞洲</option>
+										<option value="D">非洲</option>
+										<option value="All">All</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Message: </td>
+								<td><textarea name="content" rows="4" cols="40"></textarea></td>
+							</tr>
+							<tr>
+								<td>Color: </td>
+								<td>
+									<select name="color"/>
+									<option value="black">黑色</option>
+									<option value="blue">藍色</option>
+									<option value="red">紅色</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<input type="submit" value="Add message"/>
+				</form>
+
+				<?php
+				header('Cache-Control: no-cache');
+				header('Pragma: no-cache');
+				require_once "getitems.php";
+				$items = getGMMessages();
+				if(!empty($items))
+				{
+					echo "<table border='1'>
+					<tr>
+						<th>Time</th>
+						<th>Client</td>
+							<th>Color</td>
+								<th>Message</td>
+									<th>Delete?</th>
+								</tr>";
+								foreach($items as $item)
+								{
+									echo 	"<tr>
+									<td>".$item[1]."</td>
+									<td>".$item[2]."</td>
+									<td>".$item[4]."</td>
+									<td>".$item[3]."</td>";
+
+									echo "<td><a href='deleteGMmessage.php?id=".$item[0]."'>Delete</a></td>";
+									echo "</tr>";
+								}
+
+								echo "</table>";
+							}
+							?>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-info">
+					<div class="panel-heading" data-toggle="collapse" href="#collapse4">
+						<h4 class="panel-title">Stronghold</h4>
+					</div>
+					<div id="collapse4" class="panel-collapse collapse">
+						<div class="panel-body">
+
+							<form action="createStronghold.php" method="post">
+								<input type="submit" value="Create Stronghold Table"/>
+							</form>
+
+							<?php
+							header('Cache-Control: no-cache');
+							header('Pragma: no-cache');
+							require_once "getitems.php";
 	#prepareStronghold();
-	$items = getStrongholds();
-	if(!empty($items))
-	{
-		echo "<table border='1'>
-				<tr>
-					<th>Nnumber:  </th>
-					<th>Name:  </th>
-					<th>產生:</th>
-					<th>產生量:     </th>
-					<th>產生物:  </th>
-					<th>產生時間:    </th>
-					<th>佔領隊伍:</th>
-					<th>Mission Code:    </th>
-					<th>最高紀錄:    </th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[1 ]."</td>
-						<td>".$item[2 ]."</td>
-						<td>".$item[3 ]."</td>
-						<td>".$item[4 ]."</td>
-						<td>".$item[5 ]."</td>
-						<td>".$item[6 ]."</td>
-						<td>".$item[7 ]."</td>
-						<td>".$item[8 ]."</td>
-						<td>".$item[9 ]."</td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-?>
+							$items = getStrongholds();
+							if(!empty($items))
+							{
+								echo "<table border='1'>
+								<tr>
+									<th>Nnumber:  </th>
+									<th>Name:  </th>
+									<th>產生:</th>
+									<th>產生量:     </th>
+									<th>產生物:  </th>
+									<th>產生時間:    </th>
+									<th>佔領隊伍:</th>
+									<th>Mission Code:    </th>
+									<th>最高紀錄:    </th>
+								</tr>";
+								foreach($items as $item)
+								{
+									echo 	"<tr>
+									<td>".$item[1 ]."</td>
+									<td>".$item[2 ]."</td>
+									<td>".$item[3 ]."</td>
+									<td>".$item[4 ]."</td>
+									<td>".$item[5 ]."</td>
+									<td>".$item[6 ]."</td>
+									<td>".$item[7 ]."</td>
+									<td>".$item[8 ]."</td>
+									<td>".$item[9 ]."</td>";
+									echo "</tr>";
+								}
 
-          </div>
-        </div>
-      </div>
+								echo "</table>";
+							}
+							?>
 
-	  <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" href="#collapse5">
-          <h4 class="panel-title">Mission</h4>
-        </div>
-        <div id="collapse5" class="panel-collapse collapse">
-          <div class="panel-body">	
-		  
-	<form action="createMission.php" method="post">
-		<input type="submit" value="Create Mission Table"/>
-	</form>
-	
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-success">
+					<div class="panel-heading" data-toggle="collapse" href="#collapse5">
+						<h4 class="panel-title">Mission</h4>
+					</div>
+					<div id="collapse5" class="panel-collapse collapse">
+						<div class="panel-body">	
+
+							<form action="createMission.php" method="post">
+								<input type="submit" value="Create Mission Table"/>
+							</form>
+
+							<?php
+							header('Cache-Control: no-cache');
+							header('Pragma: no-cache');
+							require_once "getitems.php";
 	#prepareStronghold();
-	$items = getMissions();
-	if(!empty($items))
-	{
-		echo "<table border='1'>
-				<tr>
-					<th>Code:	</th>
-					<th>主題:	</th>
-					<th>內容:									</th>
-					<th>任務人數:	</th>
-					<th>Day1條件:	</th>
-					<th>Day2條件:	</th>
-					<th>Day3條件:	</th>
-					<th>Day4條件:	</th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[1 ]."</td>
-						<td>".$item[2 ]."</td>
-						<td>".$item[3 ]."</td>
-						<td>".$item[4 ]."</td>
-						<td>".$item[5 ]."</td>
-						<td>".$item[6 ]."</td>
-						<td>".$item[7 ]."</td>
-						<td>".$item[8 ]."</td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-?>
-	
-          </div>
-        </div>
-      </div>
+							$items = getMissions();
+							if(!empty($items))
+							{
+								echo "<table border='1'>
+								<tr>
+									<th>Code:	</th>
+									<th>主題:	</th>
+									<th>內容:									</th>
+									<th>任務人數:	</th>
+									<th>Day1條件:	</th>
+									<th>Day2條件:	</th>
+									<th>Day3條件:	</th>
+									<th>Day4條件:	</th>
+								</tr>";
+								foreach($items as $item)
+								{
+									echo 	"<tr>
+									<td>".$item[1 ]."</td>
+									<td>".$item[2 ]."</td>
+									<td>".$item[3 ]."</td>
+									<td>".$item[4 ]."</td>
+									<td>".$item[5 ]."</td>
+									<td>".$item[6 ]."</td>
+									<td>".$item[7 ]."</td>
+									<td>".$item[8 ]."</td>";
+									echo "</tr>";
+								}
 
-      <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" href="#collapse6">
-          <h4 class="panel-title">Time Table</h4>
-        </div>
-        <div id="collapse6" class="panel-collapse collapse">
-          <div class="panel-body">
+								echo "</table>";
+							}
+							?>
 
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
-	$items = getTimes();
-	if(!empty($items))
-	{
-		echo "<table border='1'>
-				<tr>
-					<th>據點:  </th>
-					<th>需要的時間:  </th>
-					<th>現在的時間:  </th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo 	"<tr>
-						<td>".$item[1 ]."</td>
-						<td>".$item[2 ]."</td>
-						<td>".$item[3 ]."</td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-?>
+						</div>
+					</div>
+				</div>
 
-<script type="text/javascript">
-function GetTime(){
-	var d=new Date();
-	var nsec=d.getSeconds();
-	if(nsec==0){
+				<div class="panel panel-info">
+					<div class="panel-heading" data-toggle="collapse" href="#collapse6">
+						<h4 class="panel-title">Time Table</h4>
+					</div>
+					<div id="collapse6" class="panel-collapse collapse">
+						<div class="panel-body">
+
+							<?php
+							header('Cache-Control: no-cache');
+							header('Pragma: no-cache');
+							require_once "getitems.php";
+							$items = getTimes();
+							if(!empty($items))
+							{
+								echo "<table border='1'>
+								<tr>
+									<th>據點:  </th>
+									<th>需要的時間:  </th>
+									<th>現在的時間:  </th>
+								</tr>";
+								foreach($items as $item)
+								{
+									echo 	"<tr>
+									<td>".$item[1 ]."</td>
+									<td>".$item[2 ]."</td>
+									<td>".$item[3 ]."</td>";
+									echo "</tr>";
+								}
+
+								echo "</table>";
+							}
+							?>
+
+							<script type="text/javascript">
+								function GetTime(){
+									var d=new Date();
+									var nsec=d.getSeconds();
+									if(nsec==0){
 		// place to trigger php
+									}
+									document.getElementById('clockbox').innerHTML=nsec;
+								}
+								window.onload=function(){
+									GetTime();
+									setInterval(GetTime, 1000);
+								}
+							</script>
+							<div id="clockbox"></div>
+
+							<a href="auto_add.php" target=_new>自動加時頁面</a>
+							<a href="auto_reset.php" target=_new>Reset time</a>
+
+							<?php
+							header('Cache-Control: no-cache');
+							header('Pragma: no-cache');
+							require_once "getitems.php";
+							$items = getDay();
+							if(!empty($items))
+							{
+								echo "<table border='1'>
+								<tr>
+									<th>Day:</th>
+								</tr>";
+								foreach($items as $item)
+								{
+									echo "<tr>
+									<td>".$item[0 ]."</td>";
+									echo "</tr>";
+								}
+
+								echo "</table>";
+							}
+							?>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-success">
+					<div class="panel-heading" data-toggle="collapse" href="#collapse7">
+						<h4 class="panel-title">SQL</h4>
+					</div>
+					<div id="collapse7" class="panel-collapse collapse">
+						<div class="panel-body">	
+
+							<form action="usesqlcode.php" method="post">
+								<table border="1">
+									<tr>
+										<td>SQL: </td>
+										<td><textarea name="sql" rows="4" cols="40"></textarea></td>
+									</tr>
+								</table>
+								<input type="submit" value="Send SQL"/>
+							</form>
+							<br>reference:<br>
+							UPDATE resource SET magic_powder='0', cloth='0', ruby='0', shaft='0', fire='0', seed='0', water='0', light='0', flax='0', screw='0', plastic='0', electron='0', ergonomic='0', imagine='0', metal='0', air='0', magic_stone='0', control_panel='0', seat='0', wheel='0', rope='0', cypress='0', propeller='0', door='0', jet='0', gun='0', elk='0', sound='0', sd_card='0', missile='0', miss_air='0', led_light='0', s_logo='0'<br>
+							UPDATE stronghold SET team='0', highest_score='0'<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php
 	}
-	document.getElementById('clockbox').innerHTML=nsec;
-}
-window.onload=function(){
-	GetTime();
-	setInterval(GetTime, 1000);
-}
-</script>
-<div id="clockbox"></div>
-
-	<a href="auto_add.php" target=_new>自動加時頁面</a>
-	<a href="auto_reset.php" target=_new>Reset time</a>
-
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
-	$items = getDay();
-	if(!empty($items))
-	{
-		echo "<table border='1'>
-				<tr>
-					<th>Day:</th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo "<tr>
-						<td>".$item[0 ]."</td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
+	else{
+		echo "<script> alert('您無權觀看此頁面喔')</script>";
+		echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
 	}
-?>
-
-          </div>
-        </div>
-      </div>
-
-	  <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" href="#collapse7">
-          <h4 class="panel-title">SQL</h4>
-        </div>
-        <div id="collapse7" class="panel-collapse collapse">
-          <div class="panel-body">	
-		  
-	<form action="usesqlcode.php" method="post">
-		<table border="1">
-			<tr>
-				<td>SQL: </td>
-				<td><textarea name="sql" rows="4" cols="40"></textarea></td>
-			</tr>
-		</table>
-		<input type="submit" value="Send SQL"/>
-	</form>
-	<br>reference:<br>
-	UPDATE resource SET magic_powder='0', cloth='0', ruby='0', shaft='0', fire='0', seed='0', water='0', light='0', flax='0', screw='0', plastic='0', electron='0', ergonomic='0', imagine='0', metal='0', air='0', magic_stone='0', control_panel='0', seat='0', wheel='0', rope='0', cypress='0', propeller='0', door='0', jet='0', gun='0', elk='0', sound='0', sd_card='0', missile='0', miss_air='0', led_light='0', s_logo='0'<br>
-	UPDATE stronghold SET team='0', highest_score='0'<br>
-          </div>
-        </div>
-      </div>
-      </div>
-	</div>
-<?php
-}
-else{
-	echo "<script> alert('您無權觀看此頁面喔')</script>";
-	echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
-}
-?>
+	?>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

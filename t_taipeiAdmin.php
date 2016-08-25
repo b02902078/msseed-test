@@ -144,11 +144,11 @@ session_start();
                             <td>".$item[0]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                if(!empty($item[3])){
+               /* if(!empty($item[3])){
                     echo    "<td><img height='200px' src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
-                }else{
+                }else{*/
                     echo    "<td>無圖片</td>";
-                }
+                //}
                 if($item[4]==0){
                     echo    "<td><a href='t_missionComplete.php?id=".$item[0]."&team=".$item[1]."'>OK</a> or 
                                  <a href='t_missionFail.php?id=".$item[0]."&team=".$item[1]."'>NOT</a></td>";
@@ -183,7 +183,7 @@ session_start();
         </form>
 
         <hr/>
-        
+
         
 <h1>missionInfo</h1>
     <?php
@@ -208,8 +208,13 @@ session_start();
                             <td>".$item[4]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                if(!empty($item[3])){
+                /*if(!empty($item[3])){
                     echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
+                }else{
+                    echo    "<td>無圖片</td>";
+                }*/
+                if(!empty($item[5])){
+                    echo    "<td><img height='200px' src='".$item[5]."') /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
                 }

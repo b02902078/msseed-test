@@ -1,13 +1,16 @@
 整體
 	- connection close?
 	- move to 望真DB *******
+		- 把所有table從andy複製
 	- 無權限的code清一下
 
 首頁
-	- country: America *****
+
 	- 測試最長名字，機票顯示的下？
 	- wrong password alert
 	- 更改密碼, 查詢密碼
+	- MSAirline圖小一點
+	- peggy, nelly, GM帳號改為email *******
 
 據點地圖
 	- bug: 手機上位置跑掉
@@ -24,7 +27,6 @@
 
 公告
 	- 公告推播提醒
-	- 新增Grace Ma小叮嚀視窗
 
 
 
@@ -32,3 +34,10 @@ $host = "ap-cdbr-azure-east-c.cloudapp.net";
 $user = "bc082d9a91de5b";
 $pwd = "8acf1055";
 $db = "acsm_5e80ee07b9a555e";
+
+
+127.0.0.1:50919<\p>
+
+azure<\p>
+
+password<\p>

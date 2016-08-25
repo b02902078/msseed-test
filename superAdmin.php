@@ -260,7 +260,7 @@ if($_SESSION['authority']==3){
 						<td>".$item[31]."</td>
 						<td>".$item[32]."</td>
 						<td>".$item[33]."</td>
-						<td></td>";
+						<td>".$item[34]."</td>";
 			echo "</tr>";
 		}
 		

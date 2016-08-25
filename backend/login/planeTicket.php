@@ -122,7 +122,9 @@
 	</div>
 
 	<!-- Change Password -->
-	<button type="button" class="btn btn-warning" id="btn-modal" data-toggle="modal" data-target="#change-pwd">更改登入密碼</button>
+	<div class="row center-block">
+		<button type="button" class="btn btn-md btn-warning" id="btn-modal" data-toggle="modal" data-target="#change-pwd">更改登入密碼</button>
+	</div>
 	<!-- Modal -->
 	<div id="change-pwd" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">

@@ -13,7 +13,7 @@
 	* limitations under the License. 
 	*/
 	
-include_once 'taskmodel.php';
+include_once '../backend/taskmodel.php';
 
 //Debugger//
 include 'ChromePhp.php';
@@ -26,12 +26,6 @@ include 'ChromePhp.php';
 	// Debugger //
 	ChromePhp::log($items);
 	// Debugger //
-
-function getGMMessages()
-{
-  $items = getAllGMMessages();
-  return $items;
-}
 	
   echo json_encode($items);
 ?>

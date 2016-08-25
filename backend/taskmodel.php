@@ -29,6 +29,32 @@ function connect()
 		die(print_r($e));
 	}
 	return $conn;
+	/*$connectstr_dbhost = '';
+    $connectstr_dbname = 'msseed13';
+    $connectstr_dbusername = '';
+    $connectstr_dbpassword = '';
+    
+    foreach ($_SERVER as $key => $value) {
+        if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
+            continue;
+        }
+        
+        $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+        $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+        $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
+    }
+    
+    try{
+        $conn = new PDO( "mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        $conn->exec("set names utf8");
+
+    }
+    catch(Exception $e){
+        die(print_r($e));
+    }
+
+    return $conn;*/
 }
 
 function getAllItems()
@@ -763,7 +789,17 @@ function addMessage($time, $client, $content, $color)
 	$stmt->bindValue(4, $color);
 	$stmt->execute();
 }
-
+function addGMMessage($time, $client, $content, $color)
+{
+	$conn = connect();
+	$sql = "INSERT INTO gmmessage (time, client, content, color) VALUES (?, ?, ?, ?)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $time);
+	$stmt->bindValue(2, $client);
+	$stmt->bindValue(3, $content);
+	$stmt->bindValue(4, $color);
+	$stmt->execute();
+}
 function deleteItem($item_id)
 {
 	$conn = connect();
@@ -785,9 +821,9 @@ function deleteMessage($item_id)
 function deleteGMMessage($item_id)
 {
 	$conn = connect();
-	$sql = "DELETE FROM gmmessage WHERE id = ?";
+	$sql = "DELETE FROM gmmessage WHERE id='".$item_id."'";
 	$stmt = $conn->prepare($sql);
-	$stmt->bindValue(1, $item_id);
+	//$stmt->bindValue(1, $item_id);
 	$stmt->execute();
 }
 

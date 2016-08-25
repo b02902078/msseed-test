@@ -122,7 +122,7 @@
 	</div>
 
 	<!-- Change Password -->
-	<div class="center-block">
+	<div class="text-center">
 		<button type="button" class="btn btn-md btn-warning" id="btn-modal" data-toggle="modal" data-target="#change-pwd">更改登入密碼</button>
 	</div>
 	<!-- Modal -->

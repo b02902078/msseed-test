@@ -257,7 +257,7 @@ switch($items[i][0])
 					<td>".$item[31]."</td>
 					<td>".$item[32]."</td>
 					<td>".$item[33]."</td>
-					<td>".$item[34]."</td>";
+					<td>".$item[34]."</td>"
 					echo "</tr>";
 				}
 
@@ -265,7 +265,7 @@ switch($items[i][0])
 			}
 			?>
 
-			<form action="" method="post">
+			<form action="/backend/stronghold/updateResource.php" method="post">
 				<table border="1">
 					<tr>
 						<td>Group: </td>

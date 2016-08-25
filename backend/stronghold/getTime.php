@@ -5,9 +5,9 @@
     if (!empty($day)) 
     { 
     	$_SESSION["time"] = $day[0][1];
-    	if ($_SESSION["time"] <= 10) { echo 'true'; }
-    	else { echo 'false';  } 
+    	if ($_SESSION["time"] <= 10) { return 'true'; }
+    	else { return 'false';  } 
 	}
-    else { echo 'empty'; }
+    else { return 'false'; }
 
 ?>

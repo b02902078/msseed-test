@@ -32,17 +32,17 @@ session_start();
     <?php
       $isOK=0;
       if($mission==1 && $position!=513){
-          echo '<script>alert("請到正確地點再開啟提示!")</script>';
+          echo '<script>alert("這不是正確地點,請在移動迷宮頁面移動到正確地點後再開啟任務提示!")</script>';
       }else if($mission==2 && $position!=300){
-          echo '<script>alert("請到正確地點再開啟提示!")</script>';
+          echo '<script>alert("這不是正確地點,請在移動迷宮頁面移動到正確地點後再開啟任務提示!")</script>';
       }else if($mission==3 && $position!=406 && $position!=509){
-          echo '<script>alert("請到正確地點再開啟提示!")</script>';
+          echo '<script>alert("這不是正確地點,請在移動迷宮頁面移動到正確地點後再開啟任務提示!")</script>';
       }else if($mission==4 && $position!=506){
-          echo '<script>alert("請到正確地點再開啟提示!")</script>';
+          echo '<script>alert("這不是正確地點,請在移動迷宮頁面移動到正確地點後再開啟任務提示!")</script>';
       }else if($mission==5 && $position!=212){
-          echo '<script>alert("請到正確地點再開啟提示!")</script>';
+          echo '<script>alert("這不是正確地點,請在移動迷宮頁面移動到正確地點後再開啟任務提示!")</script>';
       }else if($mission==6 && $position!=505){
-          echo '<script>alert("請到正確地點再開啟提示!")</script>';
+          echo '<script>alert("這不是正確地點,請在移動迷宮頁面移動到正確地點後再開啟任務提示!")</script>';
       }else{
           $isOK=1;
       };
@@ -50,8 +50,9 @@ session_start();
 
     <div class="container">
       <div class="starter-template">
-        <h1><span class="label label-primary">任務提示</span></h1>
-            <div class="thumbnail">
+        <h1><span class="label label-primary" style="color:#337ab7;background-color:white">任務提示</span></h1>
+        <div class=".col-md-10 .col-md-offset-1" style="margin-top: 20px;" >
+            <div class="thumbnail" style="box-shadow: 1px 1px 4px rgba(0,0,0,.3)">
                 <div class=".col-md-10 .col-md-offset-1">
                     <?php
                         if($isOK==1){
@@ -62,6 +63,7 @@ session_start();
                     ?>
                 </div>
             </div>
+        </div>
       </div>
     </div><!-- /.container -->
 

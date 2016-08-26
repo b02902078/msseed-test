@@ -1,13 +1,14 @@
 整體
 	- connection close?
 	- 無權限的code清一下
-	- 公告隨行人員、關主帳密 -> 開放測試 *******
+	- 確認周韋廷 **
+	- 確認筆電 **
 
 首頁
 
 	- 測試最長名字，機票顯示的下？ *******
 	- wrong password alert
-	- 更改密碼, 查詢密碼 ********
+	- 查詢密碼 ********
 	- peggy, nelly, GM帳號改為email *******
 
 據點地圖
@@ -115,21 +116,3 @@ password<\p>
 
 
 =========
-
-<!-- Mission -->
-	<div class="mission">
-		<div class="row col-lg-offset-1 col-xs-offset-0">
-			<div class="col-lg-1 col-xs-2">
-				<img src="/png/target.svg" class="img-responsive" id="target">
-			</div>
-			<div class="col-lg-9 col-xs-8 mission-margin">
-				<div id="mission-title">機密任務</div>	
-				<div class="mission-row">
-					小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>
-				</div>
-				<div class="mission-row">
-					任務內容：<div id="mission-content"><?php echo $_SESSION['mission'] ?></div>
-				</div>
-			</div>
-		</div>
-	</div>

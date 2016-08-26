@@ -7,10 +7,10 @@ var main = function(){
 		$.post("backend/login/changePassword.php", data)
 		.done(function( result ) {
 			if (result == "SUCCESS") { 
-				alert("更改成功！");
+				alert(result);
 			}
 			else {
-				alert("更改失敗！" + result);
+				alert(result);
 			}
 		});
 	});

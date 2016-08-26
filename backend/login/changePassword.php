@@ -10,6 +10,7 @@ $pwd2 = $_POST['pwd2'];
 if ($pwd != $pwd2) { return "兩欄位不同"; }
 
 $sql = "UPDATE account SET password ='".$pwd."' WHERE pid='".$_SESSION['ID']."'";
+echo $sql;
 $stmt = $conn->prepare($sql);
 if ($stmt->execute()) { return "SUCCESS"; }
 else { return "FAIL"; }

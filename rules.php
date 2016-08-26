@@ -25,40 +25,40 @@ if($_SESSION['ID'] != null){
   <div class="container">
     <div class="panel-group" id="accordion">
       <div class="panel panel-warning">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-          <h4 class="panel-title">遊戲目標</h4>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">遊戲目標</a></h4>
         </div>
         <div id="collapse1" class="panel-collapse collapse in">
           <div class="panel-body">解開探險者日記裡的謎題，判斷出屬於自己國家的交通工具，並攻佔部落收集足夠的材料製作交通工具。</div>
         </div>
       </div>
       <div class="panel panel-warning">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-          <h4 class="panel-title">時間週期</h4>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">時間週期</a></h4>
         </div>
         <div id="collapse2" class="panel-collapse collapse">
           <div class="panel-body">在Minecraft裡，每45分鐘為一天，前20分鐘是白天，後25分鐘是黑夜。</div>
         </div>
       </div>
       <div class="panel panel-warning">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-          <h4 class="panel-title">交通工具</h4>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">交通工具</a></h4>
         </div>
         <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">交通工具由原料與零件組成，原料可透過佔領部落或緊急任務獲得，零件可透過原料合成。</div>
         </div>
       </div>
       <div class="panel panel-warning">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-          <h4 class="panel-title">探險者的謎題</h4>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">探險者的謎題</a></h4>
         </div>
         <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">解開「探險者的日記」裡的謎題可以獲得線索，藉由這些線索可以推測出自己國家應製作的交通工具！</br>然而有些線索卻不一定是正確的……</div>
         </div>
       </div>
       <div class="panel panel-warning">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-          <h4 class="panel-title">佔領部落</h4>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5">佔領部落</a></h4>
         </div>
         <div id="collapse5" class="panel-collapse collapse">
           <div class="panel-body">
@@ -88,8 +88,8 @@ if($_SESSION['ID'] != null){
       </div>
       
       <div class="panel panel-warning">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
-          <h4 class="panel-title">NPC</h4>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse7">NPC</a></h4>
         </div>
         <div id="collapse7" class="panel-collapse collapse">
           <div class="panel-body">
@@ -111,8 +111,8 @@ if($_SESSION['ID'] != null){
         </div>
       </div>
       <div class="panel panel-warning">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-          <h4 class="panel-title">緊急任務</h4>
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6">緊急任務</a></h4>
         </div>
         <div id="collapse6" class="panel-collapse collapse">
           <div class="panel-body">在「消息公告」中會不定時發布緊急任務，只要完成緊急任務，就有機會得到材料、特殊零件、線索……等等的獎勵</div>

@@ -232,4 +232,20 @@ function getReportCount(){
 	return $items;
 }
 
+function getTeamMissionState(){
+    $conn = connect();
+    $sql = "SELECT mState FROM taipeiRun where team<13";
+    $stmt = $conn->query($sql);
+    $items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $items;
+}
+
+function getMissionName($id){
+    $conn = connect();
+    $sql = "SELECT position FROM t_missionInfo where id=".$id;
+    $stmt = $conn->query($sql);
+    $items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $items[0][0];
+}
+
 ?>

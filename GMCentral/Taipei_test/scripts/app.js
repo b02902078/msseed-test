@@ -1,69 +1,106 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ["chart.js"]);
 
-// app.controller('BarCtrl', ['$scope', function ($scope) {
-//   		$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-//   		$scope.series = ['Series A', 'Series B'];
+app.controller('cubeController', ['$scope','$http', '$interval', function($scope, $http, $interval){
+      $scope.labels = ['美國', '加拿大', '巴西', '義大利', '德國', '英國', '台灣', '日本', '泰國', '南非', '馬達加斯加', '埃及'];
+      $scope.totalCube = [];
 
-//   		$scope.data = [
-//   		  [65, 59, 80, 81, 56, 55, 40],
-//   		  [28, 48, 40, 19, 86, 27, 90]
-//   		];
-// 	}])
+    $scope.colorCube = [
+                      {
+                        title: "Red Cube",
+                        data : []
+                      },
+                      {
+                        title: "Green Cube",
+                        data : []
+                      },
+                      {
+                        title: "Yellow Cube",
+                        data : []
+                      },
+                      {
+                        title: "Blue Cube",
+                        data : []
+                      }
+                  ];
 
-// 	.controller('cubeController', ['$scope','$http', '$interval', function($scope, $http, $interval){
-//       $scope.teamInfo = [
-//             {
-//                           team: "NULL"
-//                       },
-//             {
-//                         team: "美國"
-//                       },
-//                       {
-//                         team: "加拿大"
-//                       },
-//                       {
-//                         team: "巴西"
-//                       },
-//                       {
-//                         team: "義大利"
-//                       },
-//                       {
-//                         team: "德國"
-//                       },
-//                       {
-//                         team: "英國"
-//                       },
-//                       {
-//                         team: "台灣"
-//                       },
-//                       {
-//                         team: "日本"
-//                       },
-//                       {
-//                         team: "泰國"
-//                       },
-//                       {
-//                         team: "南非"
-//                       },
-//                       {
-//                         team: "馬達加斯加"
-//                       },
-//                       {
-//                         team: "埃及"
-//                       }
-//                   ];
-// 		function getCube() {
-// 			$http.get("scripts/CURD/getCube.php")
-//             .then(function(data){
-//                 console.log("cube get");
-//                 $scope.cubes = data;
-//             } ,function(error){
-//                 console.log("cube error: " + error.message);
-//             });
-//         }
+      $scope.missions = [
+                      {
+                        id: "1",
+                        position: "龍山寺",
+                        title: "動物園",
+                        content: "猜一景點",
+                        picture: "../../TaipeiRun/pic/missionInfo/missionInfo1.png",
+                        hint: "../../TaipeiRun/pic/missionHint/missionHint1.jpg"
+                      },
+                      {
+                        id: "2",
+                        position: "松山_慈祐宮",
+                        title: "不可能的任務",
+                        content: "猜一附近景點",
+                        picture: "../../TaipeiRun/pic/missionInfo/missionInfo2.png",
+                        hint: "../../TaipeiRun/pic/missionHint/missionHint2.jpg"
+                      },
+                      {
+                        id: "3",
+                        position: "忠孝新生_光華",
+                        title: "Oh my God",
+                        content: "猜一地點",
+                        picture: "../../TaipeiRun/pic/missionInfo/missionInfo3.png",
+                        hint: "../../TaipeiRun/pic/missionHint/missionHint3.jpg"
+                      },
+                      {
+                        id: "4",
+                        position: "國父紀念館",
+                        title: "不准動",
+                        content: "猜一站名",
+                        picture: "../../TaipeiRun/pic/missionInfo/missionInfo4.png",
+                        hint: "../../TaipeiRun/pic/missionHint/missionHint4.jpg"
+                      },
+                      {
+                        id: "5",
+                        position: "圓山_花博",
+                        title: "蹦!蹦!蹦!",
+                        content: "猜一站名",
+                        picture: "../../TaipeiRun/pic/missionInfo/missionInfo5.png",
+                        hint: "../../TaipeiRun/pic/missionHint/missionHint5.jpg"
+                      },
+                      {
+                        id: "6",
+                        position: "市政府_微軟",
+                        title: "醉後大丈夫",
+                        content: "猜一地點",
+                        picture: "../../TaipeiRun/pic/missionInfo/missionInfo6.png",
+                        hint: "../../TaipeiRun/pic/missionHint/missionHint6.jpg"
+                      }
+                  ];
+		function getCube() {
+			 $http.get("scripts/CURD/getCube.php")
+             .then(function(response){
+                console.log(response);
+                console.log("cube get");
+                $scope.cubes = response.data;
+                //$scope.cubes = [{"team":"1","cube2":"44","cube3":"10","cube4":"9","cube5":"8","mission":"3"},{"team":"2","cube2":"8","cube3":"11","cube4":"16","cube5":"9","mission":"5"},{"team":"3","cube2":"21","cube3":"29","cube4":"20","cube5":"10","mission":"3"},{"team":"4","cube2":"20","cube3":"10","cube4":"20","cube5":"30","mission":"4"},{"team":"5","cube2":"8","cube3":"8","cube4":"8","cube5":"8","mission":"1"},{"team":"6","cube2":"50","cube3":"50","cube4":"50","cube5":"50","mission":"1"},{"team":"7","cube2":"50","cube3":"50","cube4":"50","cube5":"50","mission":"1"},{"team":"8","cube2":"50","cube3":"50","cube4":"50","cube5":"50","mission":"1"},{"team":"9","cube2":"50","cube3":"50","cube4":"50","cube5":"50","mission":"1"},{"team":"10","cube2":"50","cube3":"50","cube4":"50","cube5":"50","mission":"1"},{"team":"11","cube2":"50","cube3":"50","cube4":"50","cube5":"50","mission":"1"},{"team":"12","cube2":"9","cube3":"5","cube4":"6","cube5":"0","mission":"2"}];
+                
+                for(var index in $scope.cubes)
+                {
+                  console.log(index);
+                  $scope.colorCube[0].data[index] = $scope.cubes[index].cube2;
+                  $scope.colorCube[1].data[index] = $scope.cubes[index].cube3;
+                  $scope.colorCube[2].data[index] = $scope.cubes[index].cube4;
+                  $scope.colorCube[3].data[index] = $scope.cubes[index].cube5;
 
-//         $interval(getCube, 2000);
-// }])
+                  $scope.totalCube[index] = (parseInt($scope.cubes[index].cube2) + parseInt($scope.cubes[index].cube3) + parseInt($scope.cubes[index].cube4) + parseInt($scope.cubes[index].cube5));
+                  console.log($scope.totalCube[index]);
+                  $scope.cubes[index].teamName = $scope.labels[index];
+                  console.log($scope.cubes[index].teamName);
+                }
+             } ,function(error){
+                console.log("cube error: " + error.message);
+             });
+        }
+        getCube();
+        $interval(getCube, 2000);
+}])
 // 	.controller('locationController', ['$scope','$http', '$interval', function($scope, $http, $interval){
 //       $scope.markers = [];
       
@@ -171,7 +208,7 @@ var app = angular.module('app', []);
 //       }
 
 // 	}])
-	app.controller('picController', ['$scope', '$interval', '$http', function($scope, $interval, $http){
+	.controller('picController', ['$scope', '$interval', '$http', function($scope, $interval, $http){
      	$scope.pics =  [
                     {
                       team: "美國",
@@ -305,24 +342,28 @@ var app = angular.module('app', []);
       // var data = [{"team":"1","gpsX":"0","gpsY":"0"},{"team":"2","gpsX":"0","gpsY":"0"},{"team":"3","gpsX":"0","gpsY":"0"},{"team":"4","gpsX":"0","gpsY":"0"},{"team":"5","gpsX":"0","gpsY":"0"},{"team":"6","gpsX":"0","gpsY":"0"},{"team":"7","gpsX":"0","gpsY":"0"},{"team":"8","gpsX":"0","gpsY":"0"},{"team":"9","gpsX":"0","gpsY":"0"},{"team":"10","gpsX":"0","gpsY":"0"},{"team":"11","gpsX":"0","gpsY":"0"},{"team":"12","gpsX":"0","gpsY":"0"}];
       function getLoc(){
         $http.get("scripts/CURD/getLocation.php")
-         .then(function(data){
-            for(var index in data)
+         .then(function(response){
+          $scope.teams = response.data;
+            for(var index in $scope.teams)
             {
-              var team = data[index];
-              console.log(team);
-              console.log($scope.markers[team['team']]);
-              if(team.location != 'null')
+              var perTeam = $scope.teams[index];
+              console.log($scope.teams[index]);
+
+              console.log("perTeam=" + perTeam);
+              console.log(perTeam['team']);
+              console.log($scope.teamInfo[perTeam['team']]);
+              if(perTeam['position'] != 'null')
               {
-                if($scope.markers[team['team']] == undefined)
+                if($scope.markers[perTeam['team']] == undefined)
                 {
-                    console.log('Create new marker');
-                    $scope.markers[team['team']] = new MarkerWithLabel({
-                        position: new google.maps.LatLng(team.gpsX, team.gpsY),
+                    console.log('Create new marker ');
+                    $scope.markers[perTeam['team']] = new MarkerWithLabel({
+                        position: new google.maps.LatLng(perTeam.gpsX, perTeam.gpsY),
                         draggable: true,
                         raiseOnDrag: true,
                         map: map,
-                        icon: $scope.teamInfo[team['team']].picture,
-                        labelContent: $scope.teamInfo[team['team']].team,
+                        icon: $scope.teamInfo[perTeam['team']].picture,
+                        labelContent: $scope.teamInfo[perTeam['team']].team,
                         labelAnchor: new google.maps.Point(22, 0),
                         labelClass: "labels", // the CSS class for the label
                         labelStyle: {opacity: 0.8}
@@ -331,7 +372,7 @@ var app = angular.module('app', []);
                 else
                 {
                     console.log('Move');
-                    $scope.markers[team['team']].setPosition(new google.maps.LatLng(team.gpsX, team.gpsY));
+                    $scope.markers[perTeam['team']].setPosition(new google.maps.LatLng(perTeam.gpsX, perTeam.gpsY));
                 }
               }
             }

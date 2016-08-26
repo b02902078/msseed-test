@@ -198,7 +198,7 @@ if($_SESSION['ID'] != null){
     </a>
 
     <!-- 小巨蛋-->
-    <a class="stronghold" id="icon17" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="小巨蛋">
+    <a class="stronghold" id="icon18" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="小巨蛋">
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
   </div>

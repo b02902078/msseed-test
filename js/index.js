@@ -10,7 +10,7 @@ var main = function(){
 				alert(result);
 			}
 			else {
-				alert(result);
+				alert("合成失敗，請確認原料數量後再試一次！ (" + result + ")");
 			}
 		});
 	});

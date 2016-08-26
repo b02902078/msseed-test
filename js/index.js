@@ -7,10 +7,10 @@ var main = function(){
 		$.post("backend/login/changePassword.php", data)
 		.done(function( result ) {
 			if (result == "SUCCESS") { 
-				alert(result);
+				alert("更改成功！");
 			}
 			else {
-				alert("合成失敗，請確認原料數量後再試一次！ (" + result + ")");
+				alert("更改失敗！" + result);
 			}
 		});
 	});

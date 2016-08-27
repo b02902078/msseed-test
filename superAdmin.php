@@ -644,7 +644,7 @@ if($_SESSION['authority']==3){
 					<th>新訊息:  </th>
 				</tr>";
 			echo 	"<tr>
-						<td>".$items[1][0]."</td>";
+						<td>".$items[0][0]."</td>";
 			echo "</tr>";
 		
 		echo "</table>";

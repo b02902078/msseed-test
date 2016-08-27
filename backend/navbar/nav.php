@@ -126,19 +126,19 @@ switch($_SESSION['authority']){
 		case 'B':
 			if($items[0][1] == '1')
 			{
-				echo '<span class="glyphicon glyphicon-star" style="color:red></span>';
+				echo '<span class="glyphicon glyphicon-star" style="color:red"></span>';
 			}
 			break;
 		case 'C':
 			if($items[0][1] == '1')
 			{
-				echo '<span class="glyphicon glyphicon-star" style="color:red></span>';
+				echo '<span class="glyphicon glyphicon-star" style="color:red"></span>';
 			}
 			break;
 		case 'D':
 			if($items[0][1] == '1')
 			{
-				echo '<span class="glyphicon glyphicon-star" style="color:red></span>';
+				echo '<span class="glyphicon glyphicon-star" style="color:red"></span>';
 			}
 			break;
 	}

@@ -117,7 +117,7 @@ switch($_SESSION['authority']){
 	$items = getRead();
 	if($items[0][0] == '1')
 	{
-		echo'<span class="glyphicon glyphicon-star"></span>'
+		echo '<span class="glyphicon glyphicon-star"></span>';
 	}
 ?>		
 	

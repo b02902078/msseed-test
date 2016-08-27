@@ -17,7 +17,7 @@ switch($_SESSION['authority']){
 		</button>
 		
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營
+		<a class="navbar-brand" href="#">微軟13屆領袖營
 <?php
 	header('Cache-Control: no-store, must-revalidate, no-cache');
 	header('Pragma: no-cache');
@@ -28,25 +28,25 @@ switch($_SESSION['authority']){
 		case 'A':
 			if($items[0][1] == '1')
 			{
-				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
 			}
 			break;
 		case 'B':
 			if($items[1][1] == '1')
 			{
-				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
 			}
 			break;
 		case 'C':
 			if($items[2][1] == '1')
 			{
-				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
 			}
 			break;
 		case 'D':
 			if($items[3][1] == '1')
 			{
-				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
 			}
 			break;
 	}

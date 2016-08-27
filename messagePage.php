@@ -39,7 +39,7 @@ if($_SESSION['ID'] != null){
 	$team = $_SESSION['s_team'];
 	$sql = "UPDATE newmessage SET unreadmsg='0' WHERE team='".$team."'";
 	sqlcode($sql);
-	include_once "backend/navbar/nav.php";
+	include "backend/navbar/nav.php";
   ?>
  
     <iframe src="messagePageGM.php" width="100%" height="180"></iframe>

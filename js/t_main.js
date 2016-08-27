@@ -168,7 +168,7 @@ function lego_refresh(obj){
 	var rest_lego, j, n;
 	if (obj.id.length == 5)
 		n = parseInt(obj.id[4]);
-	else if (obj.id.lego == 6)
+	else if (obj.id.length == 6)
 		n = parseInt(obj.id[4]*10 + obj.id[5]);
 	else {
 		alert("error");
@@ -265,3 +265,7 @@ function send_message(team){
 	window.location = 'TaipeiRun/t_addHelpMsg.php?team=' + team + '&content=' + message;
 }
 
+function send_messageGM(team){
+	var message = document.getElementsByTagName("input")[team-1].value;
+	window.location = '../../TaipeiRun/t_addHelpMsgGM.php?team=' + team + '&content=' + message;
+}

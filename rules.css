@@ -1,0 +1,15 @@
+.panel-title {
+    font-size: 1.25em;
+}
+
+.panel-heading {
+    cursor: pointer;
+}
+
+.container {
+  margin-top: 3em;
+}
+
+body {
+	background-color: #e3bf29;
+}

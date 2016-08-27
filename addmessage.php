@@ -20,7 +20,7 @@ $client = $_POST['client'];
 $content = $_POST['content'];
 $color = $_POST['color'];
 
-if($client == 'ALL'){
+if($client == 'All'){
 	$sql = "UPDATE newmessage SET unreadmsg='1'";
 	sqlcode($sql);
 }

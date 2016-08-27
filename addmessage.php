@@ -15,14 +15,20 @@
 session_start();	
 include_once 'backend/taskmodel.php';
 
-$team = $_SESSION['s_team'];
-$sql = "UPDATE newmessage SET unreadmsg='1' WHERE team='".$team."'";
-sqlcode($sql);
-
 $time = $_POST['time'];
 $client = $_POST['client'];
 $content = $_POST['content'];
 $color = $_POST['color'];
+
+if($client == 'ALL'){
+	$sql = "UPDATE newmessage SET unreadmsg='1'";
+	sqlcode($sql);
+}
+else{
+	$team = $_SESSION['s_team'];
+	$sql = "UPDATE newmessage SET unreadmsg='1' WHERE team='".$team."'";
+	sqlcode($sql);
+}
 
 addMessage($time, $client, $content, $color);
 

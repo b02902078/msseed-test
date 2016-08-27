@@ -18,6 +18,39 @@ switch($_SESSION['authority']){
 		
 		<!-- Message alert -->
 		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+<?php
+	header('Cache-Control: no-store, must-revalidate, no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getRead();
+	$team = $_SESSION['s_team'];
+	switch($team){
+		case 'A':
+			if($items[0][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+		case 'B':
+			if($items[1][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+		case 'C':
+			if($items[2][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+		case 'D':
+			if($items[3][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+	}
+?>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -61,6 +94,39 @@ switch($_SESSION['authority']){
 		</button>
 		<!-- Message alert -->
 		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+<?php
+	header('Cache-Control: no-store, must-revalidate, no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getRead();
+	$team = $_SESSION['s_team'];
+	switch($team){
+		case 'A':
+			if($items[0][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+		case 'B':
+			if($items[1][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+		case 'C':
+			if($items[2][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+		case 'D':
+			if($items[3][1] == '1')
+			{
+				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
+			}
+			break;
+	}
+?>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -143,7 +209,6 @@ switch($_SESSION['authority']){
 			break;
 	}
 ?>		
-	
 		</a>
 		</div>
 		<!-- Navigation Bar Items -->

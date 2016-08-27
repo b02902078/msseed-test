@@ -109,7 +109,20 @@ switch($_SESSION['authority']){
 			<span class="icon-bar"></span>
 		</button>
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營
+		
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getRead();
+	if(!empty($items))
+	{
+		echo $items[0][0];
+	}
+?>		
+		
+		</a>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">

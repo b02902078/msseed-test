@@ -115,7 +115,7 @@ switch($_SESSION['authority']){
 	header('Pragma: no-cache');
 	require_once "getitems.php";
 	$items = getRead();
-	$team = $_SESSION['s_team'];
+	$team = $_SESSION['s_team'];/*
 	switch($team){
 		case 'A':
 			if($items[0][1] == '1')
@@ -141,7 +141,7 @@ switch($_SESSION['authority']){
 				echo '<span class="glyphicon glyphicon-warning-sign" style="color:red"></span>';
 			}
 			break;
-	}
+	}*/
 ?>		
 	
 		</a>

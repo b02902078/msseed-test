@@ -17,7 +17,7 @@ switch($_SESSION['authority']){
 		</button>
 		
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營
 <?php
 	header('Cache-Control: no-store, must-revalidate, no-cache');
 	header('Pragma: no-cache');
@@ -51,6 +51,7 @@ switch($_SESSION['authority']){
 			break;
 	}
 ?>
+		</a>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -93,7 +94,7 @@ switch($_SESSION['authority']){
 			<span class="icon-bar"></span>
 		</button>
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營
 <?php
 	header('Cache-Control: no-store, must-revalidate, no-cache');
 	header('Pragma: no-cache');
@@ -127,6 +128,7 @@ switch($_SESSION['authority']){
 			break;
 	}
 ?>
+		</a>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">

@@ -109,19 +109,18 @@ switch($_SESSION['authority']){
 			<span class="icon-bar"></span>
 		</button>
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營
-		
+		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營	
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
 	$items = getRead();
-	if(!empty($items))
+	if($items[0][0])
 	{
-		echo $items[0][0];
+		echo'<span class="glyphicon glyphicon-star"></span>'
 	}
 ?>		
-		
+	
 		</a>
 		</div>
 		<!-- Navigation Bar Items -->

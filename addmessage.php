@@ -25,8 +25,7 @@ if($client == 'ALL'){
 	sqlcode($sql);
 }
 else{
-	$team = $_SESSION['s_team'];
-	$sql = "UPDATE newmessage SET unreadmsg='1' WHERE team='".$team."'";
+	$sql = "UPDATE newmessage SET unreadmsg='1' WHERE team='".$client."'";
 	sqlcode($sql);
 }
 

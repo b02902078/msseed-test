@@ -176,7 +176,7 @@ if($_SESSION['ID'] != null){
       <?php getStrongholdColor($team[13][0]); ?>
     </a>
     <!-- 鍊金小木屋/金雞獨立-->
-    <a class="stronghold" id="icon15" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" data-viewport="{selector: 'body', padding: 0}" title="鍊金小木屋（PK）" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[14][0]; } ?><br />
+    <a class="stronghold" id="icon15" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="鍊金小木屋（PK）" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[14][0]; } ?><br />
       生產材料：金屬（9個／1min）<br />
       佔領條件：一隊5人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[14][0]; } ?><br />

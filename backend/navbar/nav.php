@@ -111,8 +111,8 @@ switch($_SESSION['authority']){
 		<!-- Message alert -->
 		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營	
 <?php
-	header('Cache-Control: no-cache, must-revalidate, no-cache');
-	header('Pragma: no-store');
+	header('Cache-Control: no-store, must-revalidate, no-cache');
+	header('Pragma: no-cache');
 	require_once "getitems.php";
 	$items = getRead();
 	$team = $_SESSION['s_team'];

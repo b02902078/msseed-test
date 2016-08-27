@@ -115,7 +115,7 @@ switch($_SESSION['authority']){
 	header('Pragma: no-cache');
 	require_once "getitems.php";
 	$items = getRead();
-	if($items[0][0])
+	if($items[0][0] == '1')
 	{
 		echo'<span class="glyphicon glyphicon-star"></span>'
 	}

@@ -36,11 +36,11 @@ if($_SESSION['ID'] != null){
 	</div>
 	<form action="getMission.php" method="post" id="mission-form">
 		<div class="row">
-		<div class="col-xs-8 col-xs-offset-2">
+		<div class="col-xs-8 col-xs-offset-2" style="display:inline">
 		Code: <input type="text" name="code">
 		</div>
 	</form>
-	<div class="row">
+	<div class="row text-center">
 	<button type="submit" class="btn btn-default" form="mission-form" value="Submit">Submit</button>
 	</div>
 

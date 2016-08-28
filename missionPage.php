@@ -30,21 +30,25 @@ session_start();
   include "backend/navbar/nav.php";
 if($_SESSION['ID'] != null){ 
   ?>
-<div class="container text-center">
-<div class="row" style="" align="middle">
-	<h1>Mission</h1><br>
-	</div>
-	<form action="getMission.php" method="post" id="mission-form">
-		<div class="row">
-		<div class="col-xs-8 col-xs-offset-2" style="display:inline">
-		Code: <input type="text" name="code">
-		</div>
-	</form>
-	<div class="row text-center">
-	<button type="submit" class="btn btn-default" form="mission-form" value="Submit">Submit</button>
-	</div>
 
-</div>
+
+	<div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
+      <!-- Title -->
+    <div class="row" style="" align="middle">
+		<h1>Mission</h1><br>
+	</div>  
+      <!-- Login form-->
+      <form role="form" action="getMission.php" method="post" id="mission-form" autocomplete="on">
+        <!-- Password -->
+        <div class="form-group">
+          <label for="code">Code</label>
+          <input type="text" class="form-control" name="code" placeholder="輸入序號">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+
 
 <?php
 }

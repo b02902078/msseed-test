@@ -35,7 +35,7 @@ if($_SESSION['ID'] != null){
 	<div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2 text-center">
       <!-- Title -->
     <div class="row" align="middle">
-		<div class="title"><h1>Mission</h1><br></div>
+		<div class="title">Mission</div>
 	</div>  
       <!-- Login form-->
       <form role="form" action="getMission.php" method="post" id="mission-form" autocomplete="on">

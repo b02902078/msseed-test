@@ -16,7 +16,7 @@
 function connect()
 {
 	// DB connection info
-	$host = "ap-cdbr-azure-east-c.cloudapp.net";
+	/*$host = "ap-cdbr-azure-east-c.cloudapp.net";
 	$user = "b37f8ddf38d21d";
 	$pwd = "1e72c81e";
 	$db = "stronghold";
@@ -28,8 +28,8 @@ function connect()
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	return $conn;
-	/*$connectstr_dbhost = '';
+	return $conn;*/
+	$connectstr_dbhost = '';
     $connectstr_dbname = 'msseed13';
     $connectstr_dbusername = '';
     $connectstr_dbpassword = '';
@@ -54,7 +54,7 @@ function connect()
         die(print_r($e));
     }
 
-    return $conn;*/
+    return $conn;
 }
 
 function getAllItems()
@@ -787,6 +787,15 @@ function addMessage($time, $client, $content, $color)
 	$stmt->bindValue(2, $client);
 	$stmt->bindValue(3, $content);
 	$stmt->bindValue(4, $color);
+	$stmt->execute();
+}
+function addTempMessage($team, $content)
+{
+	$conn = connect();
+	$sql = "INSERT INTO message (team, content) VALUES (?, ?)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $team);
+	$stmt->bindValue(2, $content);
 	$stmt->execute();
 }
 function addGMMessage($time, $client, $content, $color)

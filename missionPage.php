@@ -18,6 +18,10 @@ session_start();
 
 <!-- CSS Style -->
 <link rel="stylesheet" type="text/css" href="#">
+<style>
+
+</style>
+
 
 </head>
 
@@ -26,12 +30,20 @@ session_start();
   include "backend/navbar/nav.php";
 if($_SESSION['ID'] != null){ 
   ?>
-<div style="text-align:center" align="middle">
+<div class="container text-center">
+<div class="row" style="" align="middle">
 	<h1>Mission</h1><br>
-	<form action="getMission.php" method="post">
+	</div>
+	<form action="getMission.php" method="post" id="mission-form">
+		<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
 		Code: <input type="text" name="code">
-		<input type="submit" value="Submit">
+		</div>
 	</form>
+	<div class="row">
+	<button type="submit" class="btn btn-default" form="mission-form" value="Submit">Submit</button>
+	</div>
+
 </div>
 
 <?php

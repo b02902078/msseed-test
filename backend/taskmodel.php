@@ -16,7 +16,7 @@
 function connect()
 {
 	// DB connection info
-	$host = "ap-cdbr-azure-east-c.cloudapp.net";
+	/*$host = "ap-cdbr-azure-east-c.cloudapp.net";
 	$user = "b37f8ddf38d21d";
 	$pwd = "1e72c81e";
 	$db = "stronghold";
@@ -28,8 +28,8 @@ function connect()
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	return $conn;
-	/*$connectstr_dbhost = '';
+	return $conn;*/
+	$connectstr_dbhost = '';
     $connectstr_dbname = 'msseed13';
     $connectstr_dbusername = '';
     $connectstr_dbpassword = '';
@@ -54,7 +54,7 @@ function connect()
         die(print_r($e));
     }
 
-    return $conn;*/
+    return $conn;
 }
 
 function getAllItems()
@@ -164,6 +164,14 @@ function getAllMessages()
 {
 	$conn = connect();
 	$sql = "SELECT * FROM message";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function getAllTempMessages()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM tempmessage";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -792,7 +800,7 @@ function addMessage($time, $client, $content, $color)
 function addTempMessage($team, $content)
 {
 	$conn = connect();
-	$sql = "INSERT INTO message (team, content) VALUES (?, ?)";
+	$sql = "INSERT INTO tempmessage (team, content) VALUES (?, ?)";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $team);
 	$stmt->bindValue(2, $content);

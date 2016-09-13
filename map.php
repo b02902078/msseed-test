@@ -2,8 +2,16 @@
 session_start();
 require_once "backend/taskmodel.php";
 $day = getAllDay();
-if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
-else { $_SESSION["day"] = 1; }
+if (!empty($day)) 
+{ 
+  $_SESSION["day"] = $day[0][0];
+  $_SESSION['night'] = $day[0][2];
+}
+else 
+{ 
+  $_SESSION["day"] = 1;
+  $_SESSION['night'] = 1;
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +26,7 @@ else { $_SESSION["day"] = 1; }
   <link rel="stylesheet" type="text/css" href="css/map.css">
   <!--<link rel="stylesheet" type="text/css" href="css/rain_map.css">-->
   <?php 
-  if ($_SESSION["day"] == 1 || $_SESSION["day"] == 3) { echo '<style>body {background-color: #e3b029;}</style>'; }
+  if ($_SESSION["night"] == 1) { echo '<style>body {background-color: #e3b029;}</style>'; }
   else { echo '<style>body {background-color: #572105;}</style>'; }
   ?>
 </head>
@@ -35,7 +43,7 @@ if($_SESSION['ID'] != null){
   <div class="container map">
     <!-- Map picture (According to Day) -->
     <?php  
-    if ($_SESSION["day"] == 1 || $_SESSION["day"] == 3) { echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>'; }
+    if ($_SESSION["night"] == 1) { echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>'; }
     else { echo '<img src="png/s_map/map_night.gif" class="img-responsive" id="map-picture"/>'; }
     ?>
 
@@ -111,11 +119,19 @@ if($_SESSION['ID'] != null){
       <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
       <?php getStrongholdColor($team[4][0]); ?>
     </a>
-    <!-- 迷幻森林/打水漂 -->
+    <!-- 迷幻森林/打水漂
     <a class="stronghold" id="icon8" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="迷幻森林" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[5][0]; } ?><br />
       生產材料：種子（3個／2mins）<br />
       佔領條件：4人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[5][0]; } ?><br />
+      <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
+      <?php getStrongholdColor($team[5][0]); ?>
+    </a>-->
+    <!-- 迷幻森林/喝水唱歌 -->
+    <a class="stronghold" id="icon8" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="迷幻森林" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[5][0]; } ?><br />
+      生產材料：魔法粉末（9個／1min）<br />
+      佔領條件：8人，需包含：<br />
+      <?php if (!empty($condition)) { echo $condition[16][0]; } ?><br />
       <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
       <?php getStrongholdColor($team[5][0]); ?>
     </a>

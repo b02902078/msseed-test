@@ -17,7 +17,8 @@ session_start();
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- CSS Style -->
-<link rel="stylesheet" type="text/css" href="css/mission.css">
+<link rel="stylesheet" type="text/css" href="#">
+<link rel="stylesheet" href="GMCentral/assets/css/main.css" />
 <style>
 
 </style>
@@ -30,26 +31,19 @@ session_start();
   include "backend/navbar/nav.php";
 if($_SESSION['ID'] != null){ 
   ?>
-
-
-	<div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2 text-center">
-      <!-- Title -->
-    <div class="row title">
-		Mission
-	</div>  
-      <!-- Login form-->
-      <form role="form" action="getMission.php" method="post" id="mission-form" autocomplete="on">
-        <!-- Password -->
-        <div class="form-group">
-          <label for="code">Code</label>
-          <input type="text" class="form-control" name="code" placeholder="輸入序號">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-
-
-
+<div class="main">
+<div class="inner">
+<div class="thumbnails">
+<div class="bigbox" style="text-align:center" align="middle">
+	<h1>Mission</h1><br>
+	<form action="getMission.php" method="post">
+		Code: <input type="text" name="code">
+		<input type="submit" value="Submit">
+	</form>
+</div>
+</div>
+</div>
+</div>
 <?php
 }
 else{
